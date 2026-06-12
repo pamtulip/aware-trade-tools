@@ -838,24 +838,12 @@ const convictionColors = { High: "#dc2626", Medium: "#92400e", Low: "#4b5563" };
 const thesisColors     = { red: "#dc2626", yellow: "#92400e", green: "#15803d" };
 const TABS = ["indicators", "consumer", "markets", "debt", "behind", "ideas", "thesis"];
 const TAB_LABELS = { indicators: "Indicators", consumer: "Consumer", markets: "Markets", debt: "Debt & Credit", behind: "Behind the Numbers", ideas: "Investment Ideas", thesis: "Big Picture" };
-const CATEGORIES = [
-  { id: "all", label: "All" }, { id: "inflation", label: "Inflation" },
-  { id: "labor", label: "Labor" }, { id: "monetary", label: "Monetary" },
-  { id: "consumer", label: "Consumer" },
-  { id: "markets", label: "Markets" }, { id: "economy", label: "Economy" },
-  { id: "debt", label: "Debt & Credit" }, { id: "dollar", label: "Dollar / Petrodollar" },
-  { id: "policy", label: "Policy" },
-];
-
 export default function MacroMonitor() {
-  const [activeCategory, setActiveCategory] = useState("all");
   const [activeTab, setActiveTab] = useState("indicators");
   const [expandedIdea, setExpandedIdea] = useState(null);
   const [expandedBehind, setExpandedBehind] = useState(null);
 
-  const filtered = activeCategory === "all"
-    ? data.indicators
-    : data.indicators.filter((d) => d.category === activeCategory);
+  const filtered = data.indicators;
 
   const pending = data.indicators.filter((d) => d.signal === "gray").length;
   const hot     = data.indicators.filter((d) => d.signal === "red").length;
@@ -904,19 +892,6 @@ export default function MacroMonitor() {
       {/* ── INDICATORS ── */}
       {activeTab === "indicators" && (
         <>
-          <div style={{ padding: "14px 28px", display: "flex", gap: "8px", flexWrap: "wrap", borderBottom: "1px solid #f3f4f6" }}>
-            {CATEGORIES.map((cat) => (
-              <button key={cat.id} onClick={() => setActiveCategory(cat.id)} style={{
-                background: activeCategory === cat.id ? "#eef2ff" : "#f9fafb",
-                border: activeCategory === cat.id ? "1px solid #6366f1" : "1px solid #e5e7eb",
-                color: activeCategory === cat.id ? "#4338ca" : "#4b5563",
-                fontSize: "13px", padding: "5px 14px", borderRadius: "20px",
-                cursor: "pointer", fontFamily: "sans-serif",
-              }}>
-                {cat.label}
-              </button>
-            ))}
-          </div>
           <div style={{ padding: "20px 28px", display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "14px" }}>
             {filtered.map((item) => {
               const c = signalColors[item.signal];
