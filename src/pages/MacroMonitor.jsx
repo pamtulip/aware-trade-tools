@@ -569,74 +569,111 @@ const data = {
       triggers: ["Jobless claims crossing 300K consistently", "High yield spreads widening past 450 bps", "Upper-income quintile UMich sentiment falling"], level: "yellow" },
   ],
   ideas: [
-    { id: "k-intro", theme: "The K-Shape Is Cracking  --  Read First", signal: "red", conviction: "High", assetClass: "Macro Framework", isFramework: true, bestAccount: null,
-      rationale: "The lower half of the K  --  households under $60K  --  is running out of cushion simultaneously. Savings at 2.6%, credit at 21.5% APR, real wages negative, SNAP cuts October 1. When this cohort pulls back: discount retail and fast food lose volume first, then small business suppliers, then regional employment. Dollar stores are not defensive here. They are the first casualties.",
-      instruments: [], caveat: "Framework card. Sets context for ideas below." },
-    { id: "tips", theme: "Inflation Protection  --  TIPS and I-Bonds", signal: "red", conviction: "High", assetClass: "Fixed Income", bestAccount: "IRA / 401k -- TIPS interest is taxed annually even if you do not sell. Shelter in a tax-deferred account. I-Bonds must be held in your own name and cannot go in an IRA.",
-      rationale: "CPI at 4.2% and rising. Real yields on regular bonds are negative. TIPS adjust principal with CPI. VTIP is better than TIP in a rising-rate environment due to shorter duration.",
+    {
+      id: "tbills", theme: "Short-Term Treasury Bills / Notes", weight: "19%",
+      signal: "green", conviction: "High", assetClass: "Fixed Income",
+      bestAccount: "Taxable -- T-bill interest is exempt from state and local taxes. Useful in high-tax states like Connecticut. Works in IRA too.",
+      rationale: "The largest allocation in the model and the right call in this environment. Fed on hold at 3.50-3.75% with no June cut. Short-term paper captures today's rates without duration risk. If inflation re-accelerates, longer bonds lose value while T-bills roll over at higher rates.",
       instruments: [
-        { name: "iShares TIPS Bond ETF", ticker: "TIP", type: "ETF" },
-        { name: "Vanguard Short-Term Inflation-Protected", ticker: "VTIP", type: "ETF" },
-        { name: "I-Bonds via TreasuryDirect.gov", ticker: null, type: "Direct" },
-      ],
-      caveat: "TIPS underperform when inflation falls fast. I-Bonds capped at $10K per person per year." },
-    { id: "energy", theme: "Energy Exposure", bestAccount: "Roth IRA — if you believe energy has significant upside, tax-free growth is the best outcome. Taxable works for long-term holds.", signal: "red", conviction: "High", assetClass: "Equities / Commodities",
-      rationale: "Energy CPI up 23.5%. WTI near $91, up 42% year over year. Strait of Hormuz near-closed with no timeline. Midstream pipelines paid on volume not oil price, with inflation-linked contract escalators  --  more stable than pure exploration.",
-      instruments: [
-        { name: "Energy Select Sector SPDR", ticker: "XLE", type: "ETF" },
-        { name: "Alerian MLP ETF  --  midstream pipelines", ticker: "AMLP", type: "ETF" },
-        { name: "iShares U.S. Oil & Gas Exploration", ticker: "IEO", type: "ETF" },
-      ],
-      caveat: "Iran ceasefire could reverse quickly. AMLP more stable than USO for long holds." },
-    { id: "gold", theme: "Hard Asset Hedge  --  Gold", signal: "red", conviction: "Medium", assetClass: "Commodities", bestAccount: "IRA -- Gold ETFs (GLD, IAU) are taxed as collectibles at 28% in taxable accounts. Holding in an IRA avoids that rate. Physical gold has no account.",
-      rationale: "Elevated inflation, dollar erosion, geopolitical conflict, central banks buying 1,000+ tonnes annually. Gold pays no yield but does not lose purchasing power. Central banks are hedging dollar dependency  --  individual investors can do the same.",
-      instruments: [
-        { name: "SPDR Gold Shares", ticker: "GLD", type: "ETF" },
-        { name: "iShares Gold Trust  --  lower expense ratio", ticker: "IAU", type: "ETF" },
-        { name: "Physical gold via reputable dealer", ticker: null, type: "Direct" },
-      ],
-      caveat: "Volatile short-term. Responds to real rates and dollar strength. Size as a hedge not a primary position." },
-    { id: "shortduration", theme: "Short-Term Bonds and Cash", bestAccount: "Taxable — T-bill and SGOV interest is exempt from state and local taxes, which matters in high-tax states like Connecticut. Works in IRA too.", signal: "yellow", conviction: "High", assetClass: "Fixed Income / Cash",
-      rationale: "Fed on hold at 3.50-3.75% with June cut ruled out. Short-term instruments capture today's rates without duration risk. If inflation re-accelerates, longer bonds lose value while short paper rolls over at higher rates.",
-      instruments: [
-        { name: "3-Month T-Bills via TreasuryDirect.gov or brokerage", ticker: null, type: "Direct" },
         { name: "iShares 0-3 Month Treasury Bond ETF", ticker: "SGOV", type: "ETF" },
+        { name: "3-Month T-Bills direct via TreasuryDirect.gov", ticker: null, type: "Direct" },
         { name: "Vanguard Ultra-Short Bond ETF", ticker: "VUSB", type: "ETF" },
       ],
-      caveat: "Yield advantage disappears when Fed cuts. Watch September 2026 FOMC." },
-    { id: "k-winners", theme: "K-Shape Winners  --  Upper Half Still Spending", signal: "yellow", conviction: "Medium", assetClass: "Equities", bestAccount: "Taxable -- long-term capital gains rates apply if held over a year. QUAL and VDC have low turnover and minimal annual tax drag.",
-      rationale: "The upper K is under pressure but still spending  --  trading down within categories. Warehouse clubs serve cost-conscious upper-income households. Companies with true pricing power outperform in stagflation. The top 10% account for nearly half of all consumer spending.",
+      caveat: "Yield advantage disappears when the Fed cuts. Watch September 2026 FOMC closely.",
+    },
+    {
+      id: "domestic-eq", theme: "Domestic Equity", weight: "28%",
+      signal: "yellow", conviction: "Medium", assetClass: "Equities",
+      bestAccount: "Taxable for long-term holds (capital gains rates). Roth IRA for highest-conviction names with growth potential.",
+      rationale: "Broad domestic equity exposure with a tilt toward industrials, utilities, and energy services. The equal-weight allocation avoids mega-cap concentration. Shiller CAPE at 39.9 implies low expected returns from index exposure -- stock selection and sector tilt matter more than they did in the 2010s bull market.",
       instruments: [
-        { name: "Costco Wholesale  --  cost-conscious upper income", ticker: "COST", type: "Stock" },
-        { name: "iShares MSCI USA Quality Factor ETF", ticker: "QUAL", type: "ETF" },
-        { name: "Vanguard Consumer Staples ETF", ticker: "VDC", type: "ETF" },
+        { name: "US Industrials ETF", ticker: "XLI", type: "ETF" },
+        { name: "US Utilities ETF", ticker: "XLU", type: "ETF" },
+        { name: "US Oil & Gas Equipment & Services ETF", ticker: "OIH", type: "ETF" },
+        { name: "US Large Cap Equal Weight ETF", ticker: "RSP", type: "ETF" },
+        { name: "US Small Cap Core Blend ETF", ticker: "SCHA", type: "ETF" },
+        { name: "US Biotech ETF", ticker: "XBI", type: "ETF" },
       ],
-      caveat: "Costco is consensus  --  valuation already reflects its defensive status. QUAL and VDC more diversified." },
-    { id: "healthcare", theme: "Medicaid Managed Care  --  Policy Tailwind", signal: "yellow", conviction: "Medium", assetClass: "Equities", bestAccount: "Roth IRA -- policy-driven growth potential makes this a good candidate for tax-free compounding. Individual names over ETF if you want concentration.",
-      rationale: "When SNAP cuts reduce food security, healthcare utilization rises in lower-income populations. Medicaid managed care companies are paid per enrolled member regardless of markets. As states offset federal cuts, Medicaid enrollment expands. This benefits from the same environment hurting consumers.",
+      caveat: "Small cap has meaningful lower-K consumer exposure. If Stage 3 contagion arrives in Q4, small caps feel it first. Biotech is macro-independent -- trades on drug approvals, not economic cycles.",
+    },
+    {
+      id: "intl-eq", theme: "International Equity", weight: "20%",
+      signal: "yellow", conviction: "Medium", assetClass: "Equities",
+      bestAccount: "Taxable -- foreign tax credits on international dividends are only usable in taxable accounts, not IRAs. Latin America and EM have higher yields.",
+      rationale: "Dollar weakness is the thesis. DXY down 10% from January 2025 peak. When the dollar falls, international assets outperform in dollar terms. Latin America at 5% is the most direct dollar-weakness play. Developed international and emerging markets provide diversification away from U.S. valuation risk.",
       instruments: [
-        { name: "Molina Healthcare  --  concentrated Medicaid", ticker: "MOH", type: "Stock" },
-        { name: "Centene Corporation  --  largest Medicaid operator", ticker: "CNC", type: "Stock" },
+        { name: "Latin America ETF", ticker: "ILF", type: "ETF" },
+        { name: "Developed International Markets ETF", ticker: "EFA", type: "ETF" },
+        { name: "Emerging Markets ETF", ticker: "EEM", type: "ETF" },
+        { name: "Global Metals & Mining Producers ETF", ticker: "PICK", type: "ETF" },
+      ],
+      caveat: "Dollar weakness thesis reverses if Iran conflict drives safe-haven dollar demand. Emerging markets carry geopolitical risk. Size Latin America carefully -- concentrated single-region exposure.",
+    },
+    {
+      id: "gold-assets", theme: "Gold & Monetary Assets", weight: "12.5%",
+      signal: "green", conviction: "High", assetClass: "Commodities",
+      bestAccount: "IRA -- gold ETFs taxed as collectibles at 28% in taxable accounts. Holding GLD or IAU in an IRA avoids that rate. Miners in Roth if you want leveraged upside tax-free. Physical gold has no account.",
+      rationale: "Central banks bought 1,000+ tonnes for the third consecutive year. Dollar reserve share below 57% for the first time since 1995. Petrodollar agreement expired June 2024. The conditions that historically drive gold outperformance are all present. Miners add leverage to the gold price move. Silver adds monetary asset diversification.",
+      instruments: [
+        { name: "Gold Bullion ETF", ticker: "GLD", type: "ETF" },
+        { name: "iShares Gold Trust -- lower expense ratio", ticker: "IAU", type: "ETF" },
+        { name: "Precious Metals Miners & Royalty ETF", ticker: "GDX", type: "ETF" },
+        { name: "Silver Bullion ETF", ticker: "SLV", type: "ETF" },
+      ],
+      caveat: "Gold is volatile short-term. Responds to real rates and dollar strength, not just inflation. If the dollar surges on geopolitical safe-haven demand, gold can sell off even with elevated CPI.",
+    },
+    {
+      id: "bonds", theme: "Bonds", weight: "15%",
+      signal: "yellow", conviction: "Medium", assetClass: "Fixed Income",
+      bestAccount: "IRA / 401k -- bond interest taxed as ordinary income annually. Shelter in tax-deferred accounts. EM bonds especially benefit from IRA treatment.",
+      rationale: "The most debated allocation in this environment. Intermediate Treasuries provide rate exposure. Long-term Treasuries at 7.5% are a direct bet on the Warsh cut thesis -- if the Fed cuts before hiking, long bonds rally. The data trigger: June CPI below 3.8% and claims above 260K consistently strengthens the cut case. EM bonds in local currency add yield and dollar-weakness exposure.",
+      instruments: [
+        { name: "Long-Term Treasury Bond ETF", ticker: "TLT", type: "ETF" },
+        { name: "Intermediate-Term Treasury Bond ETF", ticker: "IEF", type: "ETF" },
+        { name: "EM Bonds Local Currency ETF", ticker: "EBND", type: "ETF" },
+      ],
+      caveat: "TLT is a thesis-dependent position. With CPI at 4.2% and the Fed on hold, long bonds carry duration risk. If the Warsh cut thesis is wrong, this position loses value. Monitor June CPI and September FOMC.",
+    },
+    {
+      id: "commodities", theme: "Commodities Basket", weight: "5%",
+      signal: "green", conviction: "Medium", assetClass: "Commodities",
+      bestAccount: "IRA -- commodity ETFs generate K-1 tax forms in taxable accounts, which is an administrative burden. Holding in an IRA eliminates that complexity.",
+      rationale: "Broad inflation hedge. Energy CPI at 23.5%, food price pressure building into Q4. A diversified commodities basket captures multiple inflation vectors simultaneously without concentration in any single commodity.",
+      instruments: [
+        { name: "Invesco DB Commodity Index Tracking Fund", ticker: "DBC", type: "ETF" },
+        { name: "iShares GSCI Commodity Dynamic Roll Strategy ETF", ticker: "COMT", type: "ETF" },
+      ],
+      caveat: "Commodities are volatile. The basket smooths single-commodity risk but still moves significantly. Size as an inflation hedge, not a primary growth position.",
+    },
+    {
+      id: "tips-add", theme: "Consider Adding: TIPS", weight: "Replace some IEF",
+      signal: "yellow", conviction: "Medium", assetClass: "Fixed Income",
+      bestAccount: "IRA / 401k -- TIPS interest is taxed annually on the inflation adjustment even if you do not sell. Always hold in a tax-deferred account.",
+      rationale: "The model has no direct CPI linkage in its bond allocation. With inflation at 4.2% and re-accelerating, swapping a portion of intermediate Treasury exposure into TIPS adds direct purchasing power protection. TIPS adjust principal with CPI -- your real return is protected as long as inflation stays elevated.",
+      instruments: [
+        { name: "Vanguard Short-Term Inflation-Protected Securities ETF", ticker: "VTIP", type: "ETF" },
+        { name: "iShares TIPS Bond ETF", ticker: "TIP", type: "ETF" },
+      ],
+      caveat: "TIPS underperform when inflation falls faster than expected. VTIP is better than TIP in a rising-rate environment due to shorter duration.",
+    },
+    {
+      id: "medicaid-add", theme: "Consider Adding: Medicaid Managed Care", weight: "3-5% new position",
+      signal: "yellow", conviction: "Medium", assetClass: "Equities",
+      bestAccount: "Roth IRA -- policy-driven growth potential and counter-cyclical characteristics make this a good candidate for tax-free compounding.",
+      rationale: "Not in the current model. When SNAP cuts hit October 1 and lower-K health stress rises, Medicaid enrollment expands. Managed care companies are paid per enrolled member regardless of market conditions. This is the one equity position that directly benefits from the same policy environment hurting consumers.",
+      instruments: [
+        { name: "Molina Healthcare -- concentrated Medicaid exposure", ticker: "MOH", type: "Stock" },
+        { name: "Centene Corporation -- largest Medicaid operator", ticker: "CNC", type: "Stock" },
         { name: "Health Care Select Sector SPDR", ticker: "XLV", type: "ETF" },
       ],
-      caveat: "Subject to state contract risk. OBBBA cuts are federal  --  states may reduce managed care contracts to offset costs. Research state exposure before investing." },
-    { id: "k-victims", theme: "K-Shape Victims  --  Handle With Serious Care", signal: "red", conviction: "High", assetClass: "Equities  --  Caution", bestAccount: "Taxable -- if holding for a potential short-term correction, taxable preserves flexibility. Tax-loss harvesting available if positions decline.",
-      rationale: "Businesses dependent on discretionary spending by households under $60K are most exposed. Dollar stores look defensive but are not  --  when SNAP shrinks and savings are gone, even $1.25 items get cut. Not a short call. A flag that Q4 2026 earnings will surprise to the downside.",
-      instruments: [
-        { name: "Dollar General  --  primary lower-K exposure", ticker: "DG", type: "Caution" },
-        { name: "Dollar Tree / Family Dollar", ticker: "DLTR", type: "Caution" },
-        { name: "Consumer Discretionary SPDR", ticker: "XLY", type: "Caution" },
-        { name: "Darden Restaurants  --  casual dining", ticker: "DRI", type: "Caution" },
-      ],
-      caveat: "Not a recommendation to short. A Q4 earnings risk flag. Dollar stores serve the lower K  --  when that cohort has nothing left, even dollar stores lose." },
-    { id: "avoid-duration", theme: "Avoid Long Duration", bestAccount: "N/A — this is a caution flag, not a buy recommendation. If you hold TLT in any account, the duration risk applies regardless of account type.", signal: "red", conviction: "High", assetClass: "Fixed Income  --  Avoid",
-      rationale: "Long-duration bonds lose value when inflation stays high. TLT has lost roughly 45% since 2020. With CPI at 4.2% and the Fed on hold, conditions for long-duration recovery are not present. The 60/40 is broken because bonds stopped cushioning stock losses when inflation is high.",
-      instruments: [
-        { name: "iShares 20+ Year Treasury Bond ETF", ticker: "TLT", type: "Avoid" },
-        { name: "ARK Innovation ETF  --  high-duration growth", ticker: "ARKK", type: "Avoid" },
-        { name: "iShares Core U.S. Aggregate Bond ETF", ticker: "AGG", type: "Watch" },
-      ],
-      caveat: "AGG is Watch not Avoid  --  shorter duration than TLT provides some benefit. Argument is against long duration specifically, not bonds entirely." },
+      caveat: "Subject to state contract risk. OBBBA cuts are federal -- states may reduce managed care contracts to offset costs. Research state-specific exposure before investing in individual names.",
+    },
+  ],
+  caution: [
+    { id: "c1", theme: "Long-Duration Bonds (standalone)", ticker: "TLT", reason: "TLT held outside the Warsh cut thesis carries pure duration risk. With CPI at 4.2% and the Fed on hold, there is no near-term catalyst for long bond recovery. The 7.5% allocation in the model is thesis-dependent -- size accordingly." },
+    { id: "c2", theme: "Dollar Store / Lower-K Consumer", ticker: "DG, DLTR", reason: "Dollar General and Dollar Tree look defensive but are not. When SNAP shrinks and savings are gone, even $1.25 items get cut. Q4 2026 earnings will likely surprise to the downside as Stage 3 contagion arrives." },
+    { id: "c3", theme: "Consumer Discretionary Broad", ticker: "XLY", reason: "Real wages negative, SNAP cuts October 1, savings at 2.6%. The consumer discretionary sector faces pressure from multiple directions simultaneously in Q4 2026." },
+    { id: "c4", theme: "ARK Innovation / High-Duration Growth", ticker: "ARKK", reason: "High-multiple growth stocks are vulnerable if the Fed holds or is forced to hike. No near-term catalyst for rate cuts with CPI at 4.2%." },
   ],
 };
 
@@ -878,71 +915,70 @@ export default function MacroMonitor() {
 
       {/* ── IDEAS ── */}
       {activeTab === "ideas" && (
-        <div style={{ padding: "28px", maxWidth: "760px" }}>
+        <div style={{ padding: "28px", maxWidth: "800px" }}>
+
           {/* Disclaimer */}
-          <div style={{ background: "#eef2ff", border: "1px solid #c7d2fe", borderLeft: "4px solid #4f46e5", borderRadius: "0 6px 6px 0", padding: "16px 20px", marginBottom: "24px" }}>
-            <div style={{ fontSize: "13px", color: "#4338ca", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "6px", fontFamily: "sans-serif" }}>For Informational Purposes Only</div>
-            <div style={{ fontSize: "14px", color: "#374151", lineHeight: 1.7, fontFamily: "sans-serif" }}>
-              These ideas reflect directional thinking based on current economic data. They are not personalized investment advice. Past performance does not guarantee future results. Consult a financial advisor before making investment decisions. Tickers shown are examples, not endorsements.
+          <div style={{ background: "#eef2ff", border: "1px solid #c7d2fe", borderLeft: "4px solid #4f46e5", borderRadius: "0 6px 6px 0", padding: "14px 18px", marginBottom: "24px" }}>
+            <div style={{ fontSize: "12px", color: "#4338ca", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "5px", fontFamily: "sans-serif" }}>For Informational Purposes Only</div>
+            <div style={{ fontSize: "13px", color: "#374151", lineHeight: 1.6, fontFamily: "sans-serif" }}>
+              These ideas reflect directional thinking based on current macro data. They are not personalized investment advice. Past performance does not guarantee future results. Consult a financial advisor before making investment decisions. Tickers shown are examples, not endorsements.
             </div>
           </div>
-          <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+
+          {/* Header */}
+          <div style={{ marginBottom: "20px" }}>
+            <div style={{ fontSize: "18px", fontWeight: "700", color: "#111827", marginBottom: "6px" }}>Hedged Tactical Model</div>
+            <div style={{ fontSize: "14px", color: "#6b7280", fontFamily: "sans-serif", lineHeight: 1.6 }}>
+              A diversified allocation built for the current macro environment: elevated inflation, Fed on hold, K-shape consumer stress, dollar erosion, and geopolitical energy risk. Weights are approximate and should be adjusted to your own situation.
+            </div>
+          </div>
+
+          {/* Recommended positions */}
+          <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginBottom: "32px" }}>
             {data.ideas.map((idea) => {
               const c = signalColors[idea.signal];
               const isExpanded = expandedIdea === idea.id;
-
-              // Framework card  --  full display, no collapse
-              if (idea.isFramework) {
-                return (
-                  <div key={idea.id} style={{ background: "#fff5f5", border: "2px solid #fca5a5", borderLeft: "5px solid #dc2626", borderRadius: "6px", padding: "20px 22px" }}>
-                    <div style={{ fontSize: "13px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "10px", fontFamily: "sans-serif" }}>
-                      Framework  --  Read First
-                    </div>
-                    <div style={{ fontSize: "16px", fontWeight: "700", color: "#111827", fontFamily: "sans-serif", marginBottom: "10px" }}>{idea.theme}</div>
-                    <div style={{ fontSize: "15px", color: "#1f2937", lineHeight: 1.8, fontFamily: "sans-serif" }}>{idea.rationale}</div>
-                  </div>
-                );
-              }
-
               return (
                 <div key={idea.id} style={{ background: "#f9fafb", border: `1px solid ${isExpanded ? c.border : "#e5e7eb"}`, borderRadius: "6px", overflow: "hidden" }}>
-                  <div onClick={() => setExpandedIdea(isExpanded ? null : idea.id)} style={{ padding: "18px 20px", cursor: "pointer", display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: "16px" }}>
+                  <div onClick={() => setExpandedIdea(isExpanded ? null : idea.id)} style={{ padding: "16px 18px", cursor: "pointer", display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: "16px" }}>
                     <div style={{ flex: 1 }}>
-                      <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "6px", flexWrap: "wrap" }}>
-                        <span style={{ fontSize: "16px", fontWeight: "700", color: "#111827", fontFamily: "sans-serif" }}>{idea.theme}</span>
-                        <span style={{ fontSize: "11px", color: "#6b7280", fontFamily: "sans-serif", background: "#f3f4f6", border: "1px solid #e5e7eb", padding: "2px 8px", borderRadius: "3px" }}>{idea.assetClass}</span>
-                        {idea.conviction && <span style={{ fontSize: "12px", fontWeight: "600", color: convictionColors[idea.conviction], fontFamily: "sans-serif" }}>{idea.conviction} conviction</span>}
+                      <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "5px", flexWrap: "wrap" }}>
+                        <span style={{ fontSize: "15px", fontWeight: "700", color: "#111827", fontFamily: "sans-serif" }}>{idea.theme}</span>
+                        {idea.weight && (
+                          <span style={{ fontSize: "11px", padding: "2px 8px", borderRadius: "3px", background: "#f0f0f0", color: "#374151", fontFamily: "sans-serif", border: "1px solid #e5e7eb" }}>{idea.weight}</span>
+                        )}
+                        <span style={{ fontSize: "11px", fontWeight: "600", color: convictionColors[idea.conviction], fontFamily: "sans-serif" }}>{idea.conviction} conviction</span>
                       </div>
-                      <div style={{ fontSize: "14px", color: "#4b5563", lineHeight: 1.5, fontFamily: "sans-serif" }}>
-                        {idea.rationale.slice(0, 130)}{idea.rationale.length > 130 && !isExpanded ? "..." : ""}
+                      <div style={{ fontSize: "13px", color: "#4b5563", lineHeight: 1.5, fontFamily: "sans-serif" }}>
+                        {idea.rationale.slice(0, 120)}{idea.rationale.length > 120 && !isExpanded ? "..." : ""}
                       </div>
                     </div>
-                    <div style={{ fontSize: "20px", color: "#9ca3af", flexShrink: 0, marginTop: "2px", transform: isExpanded ? "rotate(180deg)" : "rotate(0deg)" }}>▾</div>
+                    <div style={{ fontSize: "18px", color: "#9ca3af", flexShrink: 0, marginTop: "2px", transform: isExpanded ? "rotate(180deg)" : "rotate(0deg)" }}>▾</div>
                   </div>
                   {isExpanded && (
-                    <div style={{ borderTop: `1px solid ${c.border}`, padding: "18px 20px", background: c.bg }}>
-                      <p style={{ fontSize: "15px", color: "#1f2937", lineHeight: 1.8, marginTop: 0, marginBottom: idea.instruments.length > 0 ? "18px" : "0", fontFamily: "sans-serif" }}>{idea.rationale}</p>
+                    <div style={{ borderTop: `1px solid ${c.border}`, padding: "16px 18px", background: c.bg }}>
+                      <p style={{ fontSize: "14px", color: "#1f2937", lineHeight: 1.8, marginTop: 0, marginBottom: "16px", fontFamily: "sans-serif" }}>{idea.rationale}</p>
                       {idea.instruments.length > 0 && (
                         <>
-                          <div style={{ fontSize: "13px", color: "#6b7280", fontWeight: "600", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "10px", fontFamily: "sans-serif" }}>Example instruments</div>
-                          <div style={{ display: "flex", flexDirection: "column", gap: "8px", marginBottom: "18px" }}>
+                          <div style={{ fontSize: "11px", color: "#6b7280", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "8px", fontFamily: "sans-serif" }}>Sample ETFs</div>
+                          <div style={{ display: "flex", flexDirection: "column", gap: "6px", marginBottom: "14px" }}>
                             {idea.instruments.map((inst, i) => (
-                              <div key={i} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "10px 14px", background: "#ffffff", borderRadius: "4px", border: "1px solid #e5e7eb" }}>
-                                <span style={{ fontSize: "14px", color: "#1f2937", fontFamily: "sans-serif", paddingRight: "12px" }}>{inst.name}</span>
+                              <div key={i} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "8px 12px", background: "#ffffff", borderRadius: "4px", border: "1px solid #e5e7eb" }}>
+                                <span style={{ fontSize: "13px", color: "#1f2937", fontFamily: "sans-serif", paddingRight: "12px" }}>{inst.name}</span>
                                 <div style={{ display: "flex", gap: "8px", alignItems: "center", flexShrink: 0 }}>
-                                  {inst.ticker && <span style={{ fontSize: "15px", fontWeight: "700", color: c.text, fontFamily: "sans-serif" }}>{inst.ticker}</span>}
-                                  <span style={{ fontSize: "11px", color: "#9ca3af", border: "1px solid #e5e7eb", padding: "2px 7px", borderRadius: "3px", fontFamily: "sans-serif" }}>{inst.type}</span>
+                                  {inst.ticker && <span style={{ fontSize: "14px", fontWeight: "700", color: c.text, fontFamily: "sans-serif" }}>{inst.ticker}</span>}
+                                  <span style={{ fontSize: "10px", color: "#9ca3af", border: "1px solid #e5e7eb", padding: "1px 6px", borderRadius: "2px", fontFamily: "sans-serif" }}>{inst.type}</span>
                                 </div>
                               </div>
                             ))}
                           </div>
                         </>
                       )}
-                      <div style={{ fontSize: "14px", color: "#4b5563", borderTop: `1px solid ${c.border}`, paddingTop: "12px", lineHeight: 1.7, fontFamily: "sans-serif" }}>
+                      <div style={{ fontSize: "13px", color: "#4b5563", borderTop: `1px solid ${c.border}`, paddingTop: "10px", lineHeight: 1.7, fontFamily: "sans-serif", marginBottom: "8px" }}>
                         <span style={{ fontWeight: "700" }}>Watch: </span>{idea.caveat}
                       </div>
                       {idea.bestAccount && (
-                        <div style={{ fontSize: "14px", color: "#374151", borderTop: `1px solid ${c.border}`, paddingTop: "12px", marginTop: "8px", lineHeight: 1.7, fontFamily: "sans-serif", background: "#f9fafb", padding: "10px 12px", borderRadius: "4px" }}>
+                        <div style={{ fontSize: "13px", color: "#374151", background: "#f0fdf4", border: "1px solid #86efac", padding: "8px 12px", borderRadius: "4px", lineHeight: 1.7, fontFamily: "sans-serif" }}>
                           <span style={{ fontWeight: "700", color: "#15803d" }}>Best account: </span>{idea.bestAccount}
                         </div>
                       )}
@@ -953,96 +989,43 @@ export default function MacroMonitor() {
             })}
           </div>
 
-          {/* Portfolio Context  --  Hedged Tactical Model */}
-          <div style={{ marginTop: "36px" }}>
-            <div style={{ fontSize: "13px", color: "#4338ca", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "6px", fontFamily: "sans-serif" }}>
-              Portfolio Context  --  Hedged Tactical Model
+          {/* Caution section */}
+          <div>
+            <div style={{ fontSize: "13px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "6px", fontFamily: "sans-serif" }}>Handle With Care</div>
+            <div style={{ fontSize: "13px", color: "#6b7280", marginBottom: "14px", fontFamily: "sans-serif" }}>
+              Not recommended at current valuations or in the current macro environment.
             </div>
-            <div style={{ fontSize: "14px", color: "#6b7280", marginBottom: "20px", fontFamily: "sans-serif", lineHeight: 1.6 }}>
-              How the current allocation maps against the macro thesis. As of April 21, 2026.
-            </div>
-
-            {/* Covered */}
-            <div style={{ marginBottom: "16px" }}>
-              <div style={{ fontSize: "12px", color: "#15803d", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "10px", fontFamily: "sans-serif", display: "flex", alignItems: "center", gap: "8px" }}>
-                <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#22c55e", display: "inline-block" }} />
-                Well Covered
-              </div>
-              <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-                {[
-                  { pos: "T-Bills / Short-Term Notes  --  19%", note: "Captures current rates without duration risk. Exactly aligned with the short-duration thesis." },
-                  { pos: "Gold Bullion + Miners + Silver  --  12.5%", note: "Central banks buying 1,000+ tonnes annually. Dollar erosion and geopolitical risk both support this." },
-                  { pos: "Oil & Gas Equipment & Services  --  5%", note: "Service company revenue, not spot price exposure. More stable than pure E&P in a volatile oil environment." },
-                  { pos: "Commodities Basket  --  5%", note: "Broad inflation hedge. Consistent with energy and food price trajectory through Q4." },
-                  { pos: "Latin America  --  5%", note: "Dollar weakness play. When DXY falls, EM and Latin American assets tend to outperform." },
-                  { pos: "Emerging Market Bonds Local Currency  --  2.5%", note: "Dollar weakness play. Benefits if the Fed cuts and the dollar softens." },
-                ].map((item, i) => (
-                  <div key={i} style={{ background: "#f0fdf4", border: "1px solid #86efac", borderRadius: "4px", padding: "12px 14px" }}>
-                    <div style={{ fontSize: "14px", fontWeight: "600", color: "#15803d", fontFamily: "sans-serif", marginBottom: "4px" }}>{item.pos}</div>
-                    <div style={{ fontSize: "13px", color: "#374151", fontFamily: "sans-serif", lineHeight: 1.5 }}>{item.note}</div>
+            <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+              {data.caution.map((item) => (
+                <div key={item.id} style={{ background: "#fff5f5", border: "1px solid #fca5a5", borderRadius: "4px", padding: "12px 16px" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "12px" }}>
+                    <div>
+                      <div style={{ fontSize: "14px", fontWeight: "700", color: "#dc2626", fontFamily: "sans-serif", marginBottom: "4px" }}>{item.theme}</div>
+                      <div style={{ fontSize: "12px", color: "#6b7280", fontFamily: "sans-serif", marginBottom: "6px" }}>{item.ticker}</div>
+                      <div style={{ fontSize: "13px", color: "#374151", lineHeight: 1.6, fontFamily: "sans-serif" }}>{item.reason}</div>
+                    </div>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
-
-            {/* Watch */}
-            <div style={{ marginBottom: "16px" }}>
-              <div style={{ fontSize: "12px", color: "#92400e", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "10px", fontFamily: "sans-serif", display: "flex", alignItems: "center", gap: "8px" }}>
-                <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#f59e0b", display: "inline-block" }} />
-                Worth a Conversation With Your Advisor
-              </div>
-              <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-                {[
-                  { pos: "Long-Term Treasury Bonds  --  7.5%", note: "The tension in this portfolio. With CPI at 4.2% and the Fed on hold, long bonds carry duration risk. Your advisor's thesis: Warsh cuts before hiking, which..." },
-                  { pos: "US Small Cap Core Blend  --  4%", note: "Small cap has meaningful lower-K consumer exposure. If Stage 3 contagion arrives in Q4, small caps feel it before large caps. Worth asking whether the..." },
-                  { pos: "US Biotech  --  3%", note: "Macro-independent  --  trades on drug approvals and pipeline events. Probably fine but worth understanding the specific thesis for inclusion alongside the..." },
-                ].map((item, i) => (
-                  <div key={i} style={{ background: "#fffbeb", border: "1px solid #fcd34d", borderRadius: "4px", padding: "12px 14px" }}>
-                    <div style={{ fontSize: "14px", fontWeight: "600", color: "#92400e", fontFamily: "sans-serif", marginBottom: "4px" }}>{item.pos}</div>
-                    <div style={{ fontSize: "13px", color: "#374151", fontFamily: "sans-serif", lineHeight: 1.5 }}>{item.note}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Gaps */}
-            <div style={{ marginBottom: "16px" }}>
-              <div style={{ fontSize: "12px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "10px", fontFamily: "sans-serif", display: "flex", alignItems: "center", gap: "8px" }}>
-                <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#ef4444", display: "inline-block" }} />
-                Gaps to Consider Adding
-              </div>
-              <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-                {[
-                  { pos: "Medicaid Managed Care  --  MOH, CNC (3-5%)", note: "Not in the portfolio. Paid per enrolled member regardless of markets. When SNAP cuts hit and lower-K health stress rises, Medicaid enrollment expands...." },
-                  { pos: "Pricing Power Screen  --  QUAL (2-3%)", note: "Hedged Tactical Model has Large Cap Equal Weight at 2.5% which gives broad exposure without quality filter. QUAL screens specifically for high return on equity, stable..." },
-                  { pos: "TIPS or VTIP (replace some intermediate bonds)", note: "The intermediate Treasury bond allocation at 5% provides rate exposure but no CPI linkage. Swapping a portion into VTIP would add direct inflation..." },
-                ].map((item, i) => (
-                  <div key={i} style={{ background: "#fff5f5", border: "1px solid #fca5a5", borderRadius: "4px", padding: "12px 14px" }}>
-                    <div style={{ fontSize: "14px", fontWeight: "600", color: "#dc2626", fontFamily: "sans-serif", marginBottom: "4px" }}>{item.pos}</div>
-                    <div style={{ fontSize: "13px", color: "#374151", fontFamily: "sans-serif", lineHeight: 1.5 }}>{item.note}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Warsh thesis note */}
-            <div style={{ background: "#f5f3ff", border: "1px solid #c4b5fd", borderLeft: "4px solid #7c3aed", borderRadius: "0 6px 6px 0", padding: "16px 18px" }}>
-              <div style={{ fontSize: "12px", color: "#5b21b6", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "8px", fontFamily: "sans-serif" }}>The Warsh Rate Cut Thesis</div>
-              <div style={{ fontSize: "14px", color: "#374151", lineHeight: 1.7, fontFamily: "sans-serif" }}>
-                Warsh cut thesis: if he cuts before hiking, long bonds rally, the dollar softens, and EM benefits. The 7.5% long bond is the bet; 19% short-term paper is the hedge. Data trigger: June CPI above 4% = thesis weakens. CPI below 3.8% and claims above 260K consistently = thesis strengthens. Watch September 2026 FOMC.
-              </div>
-            </div>
-
           </div>
+
         </div>
       )}
 
-      {/* ── THESIS ── */}
       {activeTab === "thesis" && (
         <div style={{ padding: "28px", maxWidth: "760px" }}>
           <p style={{ fontSize: "16px", color: "#6b7280", marginTop: 0, marginBottom: "24px", lineHeight: 1.6, fontFamily: "sans-serif" }}>
             How today's data connects to the Coercive Capitalism thesis.
           </p>
+
+          {/* K-shape framework */}
+          <div style={{ background: "#fff5f5", border: "2px solid #fca5a5", borderLeft: "5px solid #dc2626", borderRadius: "6px", padding: "18px 22px", marginBottom: "24px" }}>
+            <div style={{ fontSize: "12px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "8px", fontFamily: "sans-serif" }}>The K-Shape Is Cracking</div>
+            <div style={{ fontSize: "15px", color: "#1f2937", lineHeight: 1.8, fontFamily: "sans-serif" }}>
+              The lower half of the K -- households under $60K -- is running out of cushion simultaneously. Savings at 2.6%, credit cards at 21.5% APR, real wages negative, SNAP cuts October 1. When this cohort pulls back: discount retail and fast food lose volume first, then small business suppliers, then regional employment. Dollar stores are not defensive here. They are the first casualties.
+            </div>
+          </div>
 
           {/* Thesis signals */}
           <div style={{ display: "flex", flexDirection: "column", gap: "12px", marginBottom: "36px" }}>
