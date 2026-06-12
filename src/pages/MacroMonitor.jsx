@@ -835,8 +835,9 @@ const data = {
         { name: "iShares 0-3 Month Treasury Bond ETF", ticker: "SGOV", type: "ETF" },
         { name: "Fidelity Government Money Market Fund", ticker: "SPAXX", type: "Fund" },
         { name: "Vanguard Federal Money Market Fund", ticker: "VMFXX", type: "Fund" },
+        { name: "X Money -- 6% APY, FDIC-insured via Cross River Bank, no minimum", ticker: "X Money", type: "Platform" },
       ],
-      caveat: "Cash drag is real if the market keeps rising.",
+      caveat: "X Money platform risk: X controls your account through its terms of service. If your account is suspended, access to funds is not fully defined in the terms. For a cash buffer that needs to be accessible when markets dislocate, platform risk is a material consideration. SGOV and money market funds carry no equivalent risk. Cash drag is real if the market keeps rising.",
     },
   ],
 };
