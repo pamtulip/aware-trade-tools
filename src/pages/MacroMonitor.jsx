@@ -686,14 +686,27 @@ const data = {
       ],
       caveat: "Commodities are volatile. The basket smooths single-commodity risk but still moves significantly.",
     },
+    {
+      id: "healthcare-broad", theme: "Healthcare", weight: "3-5% new position",
+      signal: "green", conviction: "High", assetClass: "Equities",
+      bestAccount: "Taxable -- qualified dividends at lower tax rate. Roth IRA for highest-growth names like LLY.",
+      rationale: "Healthcare demand is non-discretionary. People do not stop needing medication or insurance when inflation is high. Stress -- financial, food insecurity, deferred care -- increases utilization over time. Healthcare has.",
+      instruments: [
+        { name: "Health Care Select Sector SPDR -- broad exposure", ticker: "XLV", type: "ETF" },
+        { name: "Vanguard Health Care ETF -- lower expense ratio", ticker: "VHT", type: "ETF" },
+        { name: "Capital Group Health Care ETF -- active, tilts toward pharma and managed care", ticker: "CGHC", type: "Active ETF" },
+        { name: "Eli Lilly -- GLP-1 tailwind, largely macro-independent", ticker: "LLY", type: "Stock" },
+      ],
+      caveat: "Avoid healthcare REITs (WELL, VTR) -- rate-sensitive like all REITs. Medical devices more cyclical; elective procedures get deferred in a.",
+    },
   ],
   caution: [
     { id: "c0", theme: "S&P 500 Index Funds -- Know What You Own", ticker: "SPY, VOO, IVV",
       reason: "Index funds are not bad -- they are the right answer most of the time." },
     { id: "c05", theme: "American Balanced Fund / 60/40 Mutual Funds", ticker: "ABALX, AMECX",
-      reason: "Classic 60/40 structure in active clothing. Active management does not fix the structural problem when stocks and bonds fall together in an inflationary environment. The bond sleeve carries duration risk regardless of who manages it. CGCP is a better alternative for the bond allocation specifically." },
+      reason: "Classic 60/40 structure in active clothing. Active management does not fix the structural problem when stocks and bonds." },
     { id: "c06", theme: "Growth Fund of America", ticker: "AGTHX",
-      reason: "Large cap U.S. growth tilt at Shiller CAPE 39.9. High-quality management does not change the valuation problem. The S&P 500 passive issue applies here too -- expensive entry point with 1.9% implied decade returns." },
+      reason: "Large cap U.S. growth tilt at Shiller CAPE 39.9. High-quality management does not change the valuation problem. The S&P." },
     { id: "c1", theme: "Long-Duration Bonds (standalone)", ticker: "TLT", reason: "TLT held outside the Warsh cut thesis carries pure duration risk." },
     { id: "c2", theme: "Dollar Store / Lower-K Consumer", ticker: "DG, DLTR", reason: "Dollar General and Dollar Tree look defensive but are not." },
     { id: "c3", theme: "Consumer Discretionary Broad", ticker: "XLY", reason: "Real wages negative, SNAP cuts October 1, savings at 2.6%." },
@@ -729,7 +742,7 @@ const data = {
       id: "staples", theme: "Consumer Staples", ticker: "VDC, XLP",
       signal: "yellow", conviction: "Medium", assetClass: "Equities",
       bestAccount: "Taxable -- low turnover, qualified dividends. Works in IRA too.",
-      rationale: "This is not a lower-K play. It is an upper-K defensive play. Lower-K households are cutting spending including staples -- the savings rate and SNAP data confirm it. The thesis is pricing power and upper-K trading-down behavior. When upper-income consumers feel squeezed, they trade down within categories: premium olive oil becomes store brand, restaurants become grocery runs. Staples companies with broad price-point coverage capture that trade-down. They can also raise prices without losing volume -- which is what outperforms in stagflation. Volume may soften at the bottom of the income scale; margins hold because the products are genuinely necessary for most of the distribution.",
+      rationale: "This is not a lower-K play. It is an upper-K defensive play. Lower-K households are cutting spending including staples -- the savings rate and SNAP data confirm it. The thesis is pricing power and upper-K trading-down.",
       instruments: [
         { name: "Vanguard Consumer Staples ETF", ticker: "VDC", type: "ETF" },
         { name: "Consumer Staples Select Sector SPDR", ticker: "XLP", type: "ETF" },
@@ -747,6 +760,33 @@ const data = {
         { name: "Capital Group International Equity ETF -- active, can overweight Japan", ticker: "CGIE", type: "Active ETF" },
       ],
       caveat: "DXJ hedges out the yen, which is better if the dollar strengthens.",
+    },
+    {
+      id: "stablecoin-infra", theme: "Stablecoin & Payment Infrastructure", ticker: "V, MA, COIN",
+      signal: "green", conviction: "High", assetClass: "Equities",
+      bestAccount: "Taxable -- long-term capital gains if held over a year. V and MA are low-turnover holds.",
+      rationale: "The petrodollar agreement expired June 2024 with no renewal. The dollar cannot maintain global dominance through reserve status alone. Programmable financial infrastructure is the response. Visa and Mastercard own the.",
+      instruments: [
+        { name: "Visa -- X Money runs on Visa Direct, Trusted Agent Protocol, stablecoin payout pilot", ticker: "V", type: "Stock" },
+        { name: "Mastercard -- BVNK acquisition, Agent Pay, Recorded Future data fusion", ticker: "MA", type: "Stock" },
+        { name: "Coinbase -- JPM Coin launched on Base, institutional settlement infrastructure", ticker: "COIN", type: "Stock" },
+      ],
+      caveat: "Pure crypto plays (BTC, ETH) are volatile and speculative -- not infrastructure. Circle (USDC issuer) is not yet public. Fiserv, FIS, and.",
+    },
+    {
+      id: "ai-surveillance", theme: "AI & Surveillance Infrastructure", ticker: "PLTR, NVDA, MSI, AXON",
+      signal: "red", conviction: "High", assetClass: "Equities",
+      bestAccount: "Roth IRA for PLTR and NVDA if you believe in multi-year compounding. Taxable works for long-term holds with.",
+      rationale: "This is not a recommendation to buy AI because it is exciting. These are specific companies building the infrastructure this publication documents. Palantir holds the IRS mega-API, no-bid contracts at USDA, SSA, and VA,.",
+      instruments: [
+        { name: "Palantir -- U.S. government surveillance infrastructure, $687M Q1 2026 govt revenue", ticker: "PLTR", type: "Stock" },
+        { name: "Nvidia -- data center and government inference compute", ticker: "NVDA", type: "Stock" },
+        { name: "Motorola Solutions -- video surveillance, command center, public safety", ticker: "MSI", type: "Stock" },
+        { name: "Axon Enterprise -- body cameras, Fusus network aggregation, sensor layer", ticker: "AXON", type: "Stock" },
+        { name: "Constellation Energy -- nuclear power for AI data centers", ticker: "CEG", type: "Stock" },
+        { name: "Broadcom -- custom AI chips for hyperscalers, less headline risk than NVDA", ticker: "AVGO", type: "Stock" },
+      ],
+      caveat: "Palantir is the most direct play and the most ethically complex. Investing in Palantir is investing in the architecture documented in the.",
     },
     {
       id: "cash", theme: "Cash Buffer", ticker: "SGOV, Money Market",
@@ -1211,16 +1251,31 @@ export default function MacroMonitor() {
             <div style={{ fontSize: "13px", color: "#6b7280", marginBottom: "14px", fontFamily: "sans-serif" }}>
               Not recommended at current valuations or in the current macro environment.
             </div>
-            <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-              {data.caution.map((item) => (
-                <div key={item.id} style={{ background: "#fff5f5", border: "1px solid #fca5a5", borderRadius: "4px", padding: "12px 16px" }}>
-                  <div>
-                    <div style={{ fontSize: "14px", fontWeight: "700", color: "#dc2626", fontFamily: "sans-serif", marginBottom: "4px" }}>{item.theme}</div>
-                    <div style={{ fontSize: "12px", color: "#9ca3af", fontFamily: "sans-serif", marginBottom: "6px" }}>{item.ticker}</div>
-                    <div style={{ fontSize: "13px", color: "#374151", lineHeight: 1.6, fontFamily: "sans-serif" }}>{item.reason}</div>
+            <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+              {data.caution.map((item) => {
+                const isExpanded = expandedIdea === item.id;
+                return (
+                  <div key={item.id} style={{ background: "#fff5f5", border: `1px solid ${isExpanded ? "#fca5a5" : "#fecaca"}`, borderRadius: "6px", overflow: "hidden" }}>
+                    <div onClick={() => setExpandedIdea(isExpanded ? null : item.id)} style={{ padding: "14px 16px", cursor: "pointer", display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: "12px" }}>
+                      <div style={{ flex: 1 }}>
+                        <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "4px", flexWrap: "wrap" }}>
+                          <span style={{ fontSize: "14px", fontWeight: "700", color: "#dc2626", fontFamily: "sans-serif" }}>{item.theme}</span>
+                          <span style={{ fontSize: "11px", padding: "1px 7px", borderRadius: "3px", background: "#fee2e2", color: "#dc2626", fontFamily: "sans-serif", border: "1px solid #fca5a5" }}>{item.ticker}</span>
+                        </div>
+                        <div style={{ fontSize: "13px", color: "#4b5563", lineHeight: 1.5, fontFamily: "sans-serif" }}>
+                          {item.reason.slice(0, 100)}{item.reason.length > 100 && !isExpanded ? "..." : ""}
+                        </div>
+                      </div>
+                      <div style={{ fontSize: "16px", color: "#9ca3af", flexShrink: 0, marginTop: "2px", transform: isExpanded ? "rotate(180deg)" : "rotate(0deg)" }}>▾</div>
+                    </div>
+                    {isExpanded && (
+                      <div style={{ borderTop: "1px solid #fca5a5", padding: "14px 16px", background: "#fff5f5" }}>
+                        <div style={{ fontSize: "14px", color: "#374151", lineHeight: 1.8, fontFamily: "sans-serif" }}>{item.reason}</div>
+                      </div>
+                    )}
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
 
