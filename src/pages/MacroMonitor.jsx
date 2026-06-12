@@ -290,6 +290,34 @@ export default function MacroMonitor() {
           <p style={{ fontSize: "14px", color: "#6b7280", marginTop: 0, marginBottom: "16px", fontFamily: "sans-serif", lineHeight: 1.5 }}>
             The Fed, interest rates, and the financial infrastructure decisions that shape access to money.
           </p>
+
+          {/* Summary card */}
+          <div style={{ background: "#fff5f5", border: "1px solid #fca5a5", borderLeft: "4px solid #dc2626", borderRadius: "0 6px 6px 0", padding: "16px 20px", marginBottom: "16px" }}>
+            <div style={{ fontSize: "12px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "8px", fontFamily: "sans-serif" }}>Money & Policy in One Paragraph</div>
+            <div style={{ fontSize: "14px", color: "#1f2937", lineHeight: 1.8, fontFamily: "sans-serif" }}>
+              The Fed is on hold at 3.50-3.75% with no cut expected until September at the earliest. It cannot cut because CPI is 4.2%. It cannot hike because the labor market is fragile and $39 trillion in debt means higher rates would make interest payments unmanageable. The April committee vote was 8-4 -- the most divided in decades. Meanwhile the bond market is imposing its own discipline: Treasury auction demand is weakening, foreign holders are diversifying away from U.S. debt, and the term premium is rising. The Fed controls the short end of the yield curve. The market controls the long end. Right now both are working against the consumer.
+            </div>
+          </div>
+
+          {/* Three-box status */}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "10px", marginBottom: "20px" }}>
+            {[
+              { label: "Fed Funds Rate", value: "3.50-3.75%", status: "On hold", signal: "yellow" },
+              { label: "10-Year Yield", value: "~4.5%", status: "Rising with fiscal risk", signal: "red" },
+              { label: "Auction Demand", value: "Weakening", status: "Bond vigilantes active", signal: "red" },
+            ].map((item, i) => {
+              const colors = { red: { bg: "#fff5f5", border: "#fca5a5", text: "#dc2626" }, yellow: { bg: "#fffbeb", border: "#fcd34d", text: "#92400e" } };
+              const c = colors[item.signal];
+              return (
+                <div key={i} style={{ background: c.bg, border: `1px solid ${c.border}`, borderRadius: "4px", padding: "12px 14px", textAlign: "center" }}>
+                  <div style={{ fontSize: "11px", color: "#6b7280", fontFamily: "sans-serif", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: "4px" }}>{item.label}</div>
+                  <div style={{ fontSize: "18px", fontWeight: "700", color: "#111827", fontFamily: "sans-serif", marginBottom: "2px" }}>{item.value}</div>
+                  <div style={{ fontSize: "11px", color: c.text, fontFamily: "sans-serif", fontWeight: "600" }}>{item.status}</div>
+                </div>
+              );
+            })}
+          </div>
+
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "14px", marginBottom: "24px" }}>
             {data.indicators.filter(d => d.category === "monetary" || d.category === "money" || d.category === "policy").map((item) => {
               const c = signalColors[item.signal];
