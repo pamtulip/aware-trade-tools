@@ -72,6 +72,32 @@ export default function MacroMonitor() {
           <p style={{ fontSize: "14px", color: "#6b7280", marginTop: 0, marginBottom: "16px", fontFamily: "sans-serif", lineHeight: 1.5 }}>
             What prices are doing and why. Energy is the driver. The Fed cannot fix this.
           </p>
+
+          {/* Stagflation risk card */}
+          <div style={{ background: "#fff5f5", border: "2px solid #dc2626", borderRadius: "6px", padding: "16px 20px", marginBottom: "16px" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "8px" }}>
+              <span style={{ fontSize: "11px", fontWeight: "700", color: "#ffffff", background: "#dc2626", padding: "2px 10px", borderRadius: "3px", fontFamily: "sans-serif", letterSpacing: "0.08em" }}>STAGFLATION</span>
+              <span style={{ fontSize: "12px", color: "#dc2626", fontFamily: "sans-serif", fontWeight: "600" }}>Current condition — confirmed</span>
+            </div>
+            <div style={{ fontSize: "14px", color: "#1f2937", lineHeight: 1.7, fontFamily: "sans-serif" }}>
+              Stagflation is the simultaneous condition of persistent inflation and stagnating growth. The U.S. is in it. CPI at 4.2% prevents the Fed from cutting. Jobless claims at 242,000 and tech layoffs at 1,136/day prevent the Fed from hiking. The committee is 8-4 -- the most divided in decades. There is no exit that does not hurt.
+            </div>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "10px", marginTop: "12px" }}>
+              {[
+                { label: "Inflation", value: "4.2% CPI", status: "Too high to cut" },
+                { label: "Growth", value: "Slowing", status: "Too fragile to hike" },
+                { label: "Fed", value: "On hold", status: "Trapped" },
+              ].map((item, i) => (
+                <div key={i} style={{ background: "#ffffff", border: "1px solid #fca5a5", borderRadius: "4px", padding: "10px 12px", textAlign: "center" }}>
+                  <div style={{ fontSize: "11px", color: "#9ca3af", fontFamily: "sans-serif", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "4px" }}>{item.label}</div>
+                  <div style={{ fontSize: "15px", fontWeight: "700", color: "#dc2626", fontFamily: "sans-serif", marginBottom: "2px" }}>{item.value}</div>
+                  <div style={{ fontSize: "11px", color: "#6b7280", fontFamily: "sans-serif" }}>{item.status}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Energy callout */}
           <div style={{ background: "#fff5f5", border: "1px solid #fca5a5", borderLeft: "4px solid #dc2626", borderRadius: "0 6px 6px 0", padding: "14px 18px", marginBottom: "20px" }}>
             <div style={{ fontSize: "12px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "6px", fontFamily: "sans-serif" }}>Energy Is Doing the Work</div>
             <div style={{ fontSize: "14px", color: "#1f2937", lineHeight: 1.7, fontFamily: "sans-serif" }}>Energy CPI up 23.5% year over year. Gasoline at $4.12 nationally. Every other price is affected -- diesel moves freight, fertilizer feeds crops, heating bills arrive in Q4.</div>
@@ -123,8 +149,36 @@ export default function MacroMonitor() {
             <div style={{ fontSize: "12px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "8px", fontFamily: "sans-serif" }}>The Stagflation Trap</div>
             <div style={{ fontSize: "15px", color: "#1f2937", lineHeight: 1.8 }}>CPI at 4.2% is a three-year high driven by energy from the Iran conflict. PPI at -0.2% means producer costs are cooling -- but consumers pay energy prices directly. Core inflation at 2.9% shows the problem is spreading beyond energy. The Fed cannot.</div>
           </div>
+
+          {/* Recession risk card */}
+          <div style={{ background: "#fffbeb", border: "1px solid #fcd34d", borderRadius: "6px", padding: "16px 20px", marginTop: "16px" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "8px" }}>
+              <span style={{ fontSize: "11px", fontWeight: "700", color: "#92400e", background: "#fef3c7", padding: "2px 10px", borderRadius: "3px", fontFamily: "sans-serif", letterSpacing: "0.08em", border: "1px solid #fcd34d" }}>RECESSION RISK</span>
+              <span style={{ fontSize: "12px", color: "#92400e", fontFamily: "sans-serif", fontWeight: "600" }}>Q4 2026 scenario — not yet base case</span>
+            </div>
+            <div style={{ fontSize: "14px", color: "#1f2937", lineHeight: 1.7, fontFamily: "sans-serif", marginBottom: "12px" }}>
+              Stagflation becomes recession when consumer spending collapses under the combined weight of negative real wages, SNAP cuts, and exhausted credit. The October 1 SNAP cuts are the trigger date to watch. If retail sales in November and December confirm a spending cliff, the recession signal becomes actionable.
+            </div>
+            <div style={{ fontSize: "12px", color: "#92400e", fontFamily: "sans-serif", fontWeight: "600", marginBottom: "6px", textTransform: "uppercase", letterSpacing: "0.06em" }}>The sequence to watch</div>
+            <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+              {[
+                { date: "Oct 1", event: "SNAP cuts take effect", risk: "Lower-K spending cliff begins" },
+                { date: "Nov 12", event: "October CPI", risk: "Does inflation stay elevated through the shock?" },
+                { date: "Jan 2027", event: "Q4 earnings -- Dollar General, Dollar Tree, Darden", risk: "First earnings confirmation of Stage 3 contagion" },
+              ].map((item, i) => (
+                <div key={i} style={{ display: "flex", gap: "12px", alignItems: "flex-start", padding: "8px 10px", background: "#ffffff", borderRadius: "4px", border: "1px solid #fde68a" }}>
+                  <span style={{ fontSize: "11px", fontWeight: "700", color: "#92400e", fontFamily: "sans-serif", whiteSpace: "nowrap", minWidth: "50px" }}>{item.date}</span>
+                  <div>
+                    <div style={{ fontSize: "13px", fontWeight: "600", color: "#111827", fontFamily: "sans-serif" }}>{item.event}</div>
+                    <div style={{ fontSize: "12px", color: "#6b7280", fontFamily: "sans-serif" }}>{item.risk}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
         </div>
-      )}
+      )}  )}
 
       {activeTab === "labor" && (
         <div style={{ padding: "20px 28px" }}>
