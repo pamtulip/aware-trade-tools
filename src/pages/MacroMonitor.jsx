@@ -802,7 +802,7 @@ export default function MacroMonitor() {
               { id: "inflation", label: "Inflation", tab: null },
               { id: "labor", label: "Labor", tab: null },
               { id: "monetary", label: "Monetary", tab: null },
-              { id: "consumer", label: "Consumer", tab: "consumer" },
+              { id: "consumer", label: "Consumer", tab: "consumer", includeStress: true },
               { id: "markets", label: "Markets", tab: "markets" },
               { id: "debt", label: "Debt & Credit", tab: "debt" },
               { id: "dollar", label: "Dollar / Petrodollar", tab: null },
@@ -811,7 +811,8 @@ export default function MacroMonitor() {
               const catItems = filtered.filter(d => d.category === catId || (catId === "consumer" && d.category === "stress"));
               if (catItems.length === 0) return null;
               const priority = ["red","yellow","gray","green"];
-              const lead = catItems.sort((a,b) => priority.indexOf(a.signal) - priority.indexOf(b.signal))[0];
+              const lead = [...catItems].sort((a,b) => priority.indexOf(a.signal) - priority.indexOf(b.signal))[0];
+              if (!lead) return null;
               const c = signalColors[lead.signal];
               const isOpen = expandedBehind === lead.id;
               return (
