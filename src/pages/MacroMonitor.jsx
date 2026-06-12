@@ -864,55 +864,6 @@ export default function MacroMonitor() {
               );
             })}
           </div>
-        </>
-      )}
-              const c = signalColors[item.signal];
-              const isOpen = expandedBehind === item.id;
-              return (
-                <div key={item.id} style={{ background: c.bg, border: `1px solid ${c.border}`, borderRadius: "6px", overflow: "hidden" }}>
-                  <div style={{ padding: "18px 20px" }}>
-                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "10px" }}>
-                      <div style={{ fontSize: "13px", color: "#4b5563", fontFamily: "sans-serif", fontWeight: "600", textTransform: "uppercase", letterSpacing: "0.05em" }}>{item.label}</div>
-                      <span style={{ fontSize: "11px", color: c.text, fontFamily: "sans-serif", fontWeight: "600", display: "flex", alignItems: "center", gap: "5px" }}>
-                        <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: c.dot, display: "inline-block" }} />
-                        {item.signalLabel}
-                      </span>
-                    </div>
-                    <div style={{ fontSize: "32px", fontWeight: "700", color: "#111827", lineHeight: 1, marginBottom: "6px" }}>{item.value}</div>
-                    <div style={{ fontSize: "15px", color: "#374151", marginBottom: "10px", fontFamily: "sans-serif" }}>{item.sub}</div>
-                    <div style={{ fontSize: "14px", color: "#4b5563", borderTop: `1px solid ${c.border}`, paddingTop: "10px", lineHeight: 1.6, fontFamily: "sans-serif" }}>{item.note}</div>
-                  </div>
-                  {item.behind && item.behind.length > 0 && (
-                    <>
-                      <button onClick={() => setExpandedBehind(isOpen ? null : item.id)} style={{
-                        width: "100%", background: "none", border: "none",
-                        borderTop: `1px solid ${c.border}`,
-                        padding: "10px 20px", fontSize: "13px", color: c.text,
-                        fontWeight: "600", cursor: "pointer", fontFamily: "sans-serif",
-                        display: "flex", justifyContent: "space-between", alignItems: "center",
-                      }}>
-                        <span>Behind the numbers</span>
-                        <span style={{ fontSize: "16px", transform: isOpen ? "rotate(180deg)" : "rotate(0deg)", display: "inline-block" }}>▾</span>
-                      </button>
-                      {isOpen && (
-                        <div style={{ borderTop: `1px solid ${c.border}`, padding: "14px 20px", display: "flex", flexDirection: "column", gap: "14px" }}>
-                          {item.behind.map((b, i) => (
-                            <div key={i}>
-                              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: "12px", marginBottom: "4px" }}>
-                                <span style={{ fontSize: "13px", color: "#374151", fontFamily: "sans-serif" }}>{b.stat}</span>
-                                <span style={{ fontSize: "15px", fontWeight: "700", color: c.text, fontFamily: "sans-serif", whiteSpace: "nowrap" }}>{b.value}</span>
-                              </div>
-                              <div style={{ fontSize: "13px", color: "#6b7280", lineHeight: 1.6, fontFamily: "sans-serif" }}>{b.context}</div>
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                    </>
-                  )}
-                </div>
-              );
-            })}
-          </div>
       )}
 
       {/* ── MARKETS ── */}
