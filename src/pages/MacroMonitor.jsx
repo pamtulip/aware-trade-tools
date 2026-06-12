@@ -1434,10 +1434,9 @@ export default function MacroMonitor() {
               })}
             </div>
           </div>
-        </div>
 
-        {/* Key Dates */}
-        <div style={{ background: "#f9fafb", border: "1px solid #e5e7eb", borderRadius: "6px", overflow: "hidden" }}>
+          {/* Key Dates */}
+          <div style={{ background: "#f9fafb", border: "1px solid #e5e7eb", borderRadius: "6px", overflow: "hidden" }}>
           <div style={{ padding: "12px 20px", background: "#f0f0f8", borderBottom: "1px solid #e5e7eb" }}>
             <div style={{ fontSize: "13px", color: "#4338ca", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", fontFamily: "sans-serif" }}>Key Dates -- Rest of 2026</div>
           </div>
@@ -1471,9 +1470,8 @@ export default function MacroMonitor() {
           </div>
         </div>
 
-      </div>
+        </div>
       )}
-
       <div style={{ padding: "16px 28px", borderTop: "1px solid #f3f4f6", fontSize: "12px", color: "#9ca3af", fontFamily: "sans-serif" }}>
         Sources: BLS, Federal Reserve, FinCEN, CBO, Center for American Progress  --  awaretrade.com
       </div>
