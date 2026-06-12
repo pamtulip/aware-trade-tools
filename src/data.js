@@ -260,6 +260,23 @@ const monitorData = {
       category: "money",
     },
     {
+      id: "treasury-auction",
+      label: "Treasury Auction Demand",
+      value: "Weakening",
+      sub: "Bid-to-cover declining on 10 and 30-year auctions. Term premium rising.",
+      note: "Primary dealers absorbing more supply -- means the market did not want the paper at that yield.",
+      signal: "red",
+      signalLabel: "WATCH",
+      category: "money",
+      behind: [
+        { stat: "What bid-to-cover measures", value: "Demand per dollar of supply", context: "Above 2.5x is healthy. Below 2.3x on 10 and 30-year auctions is a stress signal. Primary dealers must absorb what the market refuses." },
+        { stat: "Top foreign holders Feb 2026", value: "Japan $1.24T, UK $897B, China $693B", context: "China has been reducing Treasury holdings since 2022. Japan and UK stable but any coordinated reduction requires domestic buyers at higher yields." },
+        { stat: "Term premium", value: "Rising -- ACM model", context: "The extra yield investors demand to hold long bonds rather than rolling short paper. Rising term premium means the market does not trust the fiscal trajectory." },
+        { stat: "The bond vigilante mechanism", value: "Market sets the long end", context: "The Fed controls short-term rates. The market controls long-term rates. Weak auction demand pushes 10 and 30-year yields up regardless of what the Fed does. Mortgage rates follow." },
+        { stat: "The Warsh cut ceiling", value: "Fed can cut -- long yields may not follow", context: "Even if Warsh cuts the Fed funds rate, the long end may keep rising if fiscal credibility erodes. Fed cutting with 30-year yields rising simultaneously is the Japan scenario." },
+      ],
+    },
+    {
       id: "mortgage-rate",
       label: "30-Year Mortgage Rate",
       value: "6.55%",
