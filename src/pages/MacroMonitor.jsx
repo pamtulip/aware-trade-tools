@@ -32,7 +32,7 @@ const data = {
       id: "ppi",
       label: "PPI (May)",
       value: "−0.2%",
-      sub: "Month over month. Forecast was +0.7%. First monthly decline.",
+      sub: "Month over month. Forecast was +0.7%. First monthly.",
       note: "Wholesale inflation cooling. Gives the Fed more room. Pipeline.",
       signal: "green",
       signalLabel: "COOL",
@@ -67,7 +67,7 @@ const data = {
       id: "unemployment",
       label: "Unemployment Rate",
       value: "4.3%",
-      sub: "Unchanged. Has held between 4.3% and 4.5% since July 2025.",
+      sub: "Unchanged. Has held between 4.3% and 4.5% since July.",
       note: "The broader U-6 rate is 8.1%. Long-term unemployed: 27.5% of all.",
       signal: "yellow",
       signalLabel: "WATCH",
@@ -81,7 +81,7 @@ const data = {
       note: "Real wages are negative. Prices are rising faster than pay.",
       signal: "red",
       signalLabel: "SQUEEZE",
-      category: "consumer",
+      category: "labor",
     },
     {
       id: "jobless",
@@ -97,7 +97,7 @@ const data = {
       id: "umich",
       label: "Consumer Sentiment (June prelim.)",
       value: "48.9",
-      sub: "June 12, 2026. Up from 44.8 May final. Still near historic.",
+      sub: "June 12, 2026. Up from 44.8 May final. Still near.",
       note: "Relief rally, not recovery. Gas dropped $4.56 to $4.12 -- prices.",
       signal: "red",
       signalLabel: "NEAR LOWS",
@@ -138,7 +138,7 @@ const data = {
       note: "Using an ITIN is now a red flag. So is sharing an address.",
       signal: "red",
       signalLabel: "ACTIVE",
-      category: "policy",
+      category: "money",
     },
     {
       id: "cc-delinquency",
@@ -154,7 +154,7 @@ const data = {
       id: "auto-delinquency",
       label: "Auto Loan Delinquency",
       value: "5.6%",
-      sub: "Q1 2026. 90+ days past due. Near post-financial-crisis high.",
+      sub: "Q1 2026. 90+ days past due. Near post-financial-crisis.",
       note: "Subprime auto at record highs. Car payments are the last bill.",
       signal: "red",
       signalLabel: "STRESS",
@@ -178,7 +178,7 @@ const data = {
       note: "4.8% of all outstanding debt is in some stage of delinquency.",
       signal: "yellow",
       signalLabel: "WATCH",
-      category: "economy",
+      category: "debt",
     },
     {
       id: "sp500",
@@ -243,22 +243,17 @@ const data = {
       note: "Mortgage rates, auto loans, corporate debt, and the U.S.",
       signal: "yellow",
       signalLabel: "ELEVATED",
-      category: "economy",
-      behind: [
-        { stat: "30-year mortgage rate right now", value: "6.55%", context: "Bankrate June 11, 2026. The 10-year yield drives mortgage." },
-        { stat: "Spread: mortgage over 10-year", value: "~2.05 percentage points", context: "Historically the spread runs 1.5 to 2 points." },
-        { stat: "CBO 10-year yield forecast, end 2026", value: "4.1%", context: "The Congressional Budget Office projects yields to ease to." },
-      ],
+      category: "money",
     },
     {
       id: "mortgage-rate",
       label: "30-Year Mortgage Rate",
       value: "6.55%",
-      sub: "June 11, 2026. Up from 6.48% last week. Freddie Mac: 6.48%.",
+      sub: "June 11, 2026. Up from 6.48% last week. Freddie Mac:.",
       note: "Hopes for sub-6% rates in 2026 keep fading.",
       signal: "red",
       signalLabel: "STUCK",
-      category: "economy",
+      category: "consumer",
     },
     {
       id: "home-affordability",
@@ -268,7 +263,7 @@ const data = {
       note: "Buying a home now requires more than 7 years of gross household.",
       signal: "red",
       signalLabel: "CRISIS",
-      category: "economy",
+      category: "consumer",
     },
     {
       id: "savings-rate",
@@ -284,7 +279,7 @@ const data = {
       id: "retail-sales",
       label: "Retail Sales (April / May due Jun 17)",
       value: "+0.5%",
-      sub: "April month over month. May report releases June 17 -- the.",
+      sub: "April month over month. May report releases June 17 --.",
       note: "Nominal numbers look healthy but are inflated by high gas prices..",
       signal: "yellow",
       signalLabel: "WATCH",
@@ -305,7 +300,7 @@ const data = {
       note: "Trump says Iran deal is close -- Tehran denies. If deal closes:.",
       signal: "red",
       signalLabel: "ELEVATED",
-      category: "economy",
+      category: "inflation",
       behind: [
         { stat: "Price one year ago", value: "~$64/barrel", context: "Oil is up roughly 42% year over year." },
         { stat: "EIA peak forecast", value: "$115/barrel Q2 2026", context: "The Energy Information Administration forecast Brent." },
@@ -317,34 +312,34 @@ const data = {
       id: "tech-layoffs",
       label: "Tech Layoffs (2026 YTD)",
       value: "184,000+",
-      sub: "Through June 2026. 1,136 layoffs per day -- double 2025 pace.",
-      note: "48% explicitly attributed to AI displacement. Amazon, Oracle, Meta, Intuit leading. On pace for 370,000 full year.",
+      sub: "Through June 2026. 1,136 layoffs per day -- double.",
+      note: "48% explicitly attributed to AI displacement. Amazon, Oracle, Meta,.",
       signal: "red",
       signalLabel: "ACCELERATING",
       category: "labor",
       behind: [
-        { stat: "2026 vs 2025 pace", value: "1,136/day vs 564/day", context: "The 2026 pace is double 2025. 33% increase over same period last year. On pace to approach the 2023 post-pandemic record of 430,000." },
-        { stat: "AI attribution rate", value: "48% of Q1 cuts", context: "Nearly half of Q1 2026 tech layoffs explicitly attributed to AI by the companies themselves. Up from under 8% in 2025. The euphemism is gone." },
-        { stat: "Largest cuts", value: "Amazon 30K, Oracle 30K, Meta 8K", context: "All announced record AI capital expenditure the same quarter they cut headcount. Combined hyperscaler AI capex: $700 billion in 2026." },
-        { stat: "Young engineer impact", value: "Software dev employment under 26 down 20% since 2024", context: "Stanford HAI data. AI is not just displacing entry-level workers -- it is closing the entry point entirely." },
-        { stat: "The Aware Trade thesis connection", value: "Workers built the tool that eliminated their leverage", context: "Project Maven 2018 to 2026: the same workers who built AI infrastructure are being displaced by it. Upper-K job losses compress the spending assumptions the consumer thesis relies on." },
+        { stat: "2026 vs 2025 pace", value: "1,136/day vs 564/day", context: "The 2026 pace is double 2025. 33% increase over same period." },
+        { stat: "AI attribution rate", value: "48% of Q1 cuts", context: "Nearly half of Q1 2026 tech layoffs explicitly attributed." },
+        { stat: "Largest cuts", value: "Amazon 30K, Oracle 30K, Meta 8K", context: "All announced record AI capital expenditure the same." },
+        { stat: "Young engineer impact", value: "Software dev employment under 26 down 20% since 2024", context: "Stanford HAI data. AI is not just displacing entry-level." },
+        { stat: "The Aware Trade thesis connection", value: "Workers built the tool that eliminated their leverage", context: "Project Maven 2018 to 2026: the same workers who built AI." },
       ],
     },
     {
       id: "nfib",
       label: "NFIB Small Business Optimism",
       value: "95.3",
-      sub: "May 2026. Below 52-year average of 98.0 for second straight.",
+      sub: "May 2026. Below 52-year average of 98.0 for second.",
       note: "Uncertainty index at 91  --  well above historical average of 68.",
       signal: "yellow",
       signalLabel: "FRAGILE",
-      category: "economy",
+      category: "labor",
     },
     {
       id: "fed-debt",
       label: "Federal Debt",
       value: "$39 trillion",
-      sub: "Gross debt eclipsed $39T March 17 2026. Debt-to-GDP above.",
+      sub: "Gross debt eclipsed $39T March 17 2026. Debt-to-GDP.",
       note: "Interest payments hit $1T annually -- surpassing defense spending.",
       signal: "red",
       signalLabel: "CRITICAL",
@@ -414,7 +409,7 @@ const data = {
       id: "mbridge",
       label: "mBridge  --  Cross-Border CBDC",
       value: "$55.5B settled",
-      sub: "2,500x increase since 2022. 15-second settlement. No SWIFT.",
+      sub: "2,500x increase since 2022. 15-second settlement. No.",
       note: "China, UAE, Saudi Arabia, Thailand, Hong Kong. BIS withdrew Oct.",
       signal: "red",
       signalLabel: "ACTIVE",
@@ -424,7 +419,7 @@ const data = {
       id: "agora",
       label: "Project Agora  --  Western Response",
       value: "Real-value testing 2026",
-      sub: "7 central banks, 40+ institutions. Prototype confirmed May.",
+      sub: "7 central banks, 40+ institutions. Prototype confirmed.",
       note: "Fed NY, Bank of England, Bank of Japan.",
       signal: "yellow",
       signalLabel: "BUILDING",
@@ -441,44 +436,22 @@ const data = {
       category: "dollar",
     },
   ],
-  behind_narrative: [
-    { label: "Today's Data: Two Stories, One Direction", text: "PPI fell 0.2%  --  wholesale inflation cooling. But jobless claims hit 242,000, highest since August 2023.", level: "yellow" },
-    { label: "The Job Quality Problem", text: "172,000 jobs added in May. But financial services lost 22,000  --  down 107,000 from its peak.", level: "red" },
-    { label: "The Real Wage Trap", text: "Wages up 3.4%. Prices up 4.2%. The gap costs a $60K household roughly $480 a year.", level: "red" },
-    { label: "The Stagflation Setup", text: "Fed on hold. Cannot cut: CPI 4.2%. Cannot hike: labor fragile. April vote 8-4, most divided in decades.", level: "yellow" },
-    { label: "The Economy in Plain Language", text: "Mortgage rate 6.55%. Home prices at 7x median income. Savings rate 2.6% vs. 8.4% historical average. NFIB below average two.", level: "red" },
-    { label: "The Debt Trap Beneath the Headline", text: "Americans added $482B in credit card debt since 2021 at 21.52% APR. Subprime auto delinquency hit a record 6.9% in January.", level: "red" },
-    { label: "The K-Shape Is Cracking", text: "Savings at 2.6%, credit maxed at 21.5% APR, real wages negative, SNAP cuts October 1.", level: "red" },
-    { label: "The Dollar Is Losing Ground", text: "Dollar reserve share below 57% for the first time since 1995, down from 72% in 2001. DXY down 10% from January 2025 peak.", level: "yellow" },
-    { label: "The Market Is Expensive", text: "Shiller CAPE at 39.9 implies 1.9% annual returns over 10 years  --  below inflation.", level: "red" },
-    { label: "Your Bank Is Now an Immigration File", text: "June 5: five federal agencies directed banks to flag customers by immigration status.", level: "red" },
-  ],
-    thesis: [
-    { label: "Real Wage Gap", text: "Wages up 3.4%. Prices up 4.2%. Workers are losing purchasing power every month this gap continues.", level: "red" },
-    { label: "Stagflation Risk", text: "Strong headline jobs, frozen hiring, inflation re-accelerating. The Fed cannot cut. Classic trap.", level: "yellow" },
-    { label: "Benefits Cliff", text: "SNAP cuts take effect October 1. Same quarter energy bills peak and surveillance pricing accelerates.", level: "red" },
-    { label: "Payment Rail Weaponization", text: "FinCEN advisory turns every bank account into an immigration file. The architecture was already built. Now it is being used.", level: "red" },
-  ],
-  contagion: [
+    contagion:  contagion: [
     { stage: "Stage 1", status: "complete", label: "Lower-K Balance Sheets Broke", date: "2023-2025",
-      text: "Subprime auto delinquency hit record highs. Small bank credit card delinquency reached 6.4%. FHA mortgage delinquency at 11.52%.",
-      triggers: [], level: "red" },
+      text: "Subprime auto delinquency hit record highs. Small bank credit card delinquency reached 6.4%. FHA mortgage delinquency.", level: "red" },
     { stage: "Stage 2", status: "active", label: "Lower-K Spending Contracting", date: "Now  --  Q3 2026",
-      text: "NFIB retail sector most pessimistic of all industries. Jobless claims jumped to 242,000. Small business hiring at lowest since.",
-      triggers: ["NFIB retail optimism lowest of all sectors", "Jobless claims 242K, highest since Aug 2023", "Small business job openings lowest since May 2020"], level: "red" },
+      text: "NFIB retail sector most pessimistic of all industries. Jobless claims jumped to 242,000. Small business hiring at.", level: "red" },
     { stage: "Stage 3", status: "approaching", label: "Corporate Earnings Miss  --  Lower-K Visible", date: "Q4 2026 / Jan-Feb 2027",
-      text: "SNAP cuts land October 1. Energy bills peak seasonally. Lower-K spending cliff becomes visible in earnings for the first time.",
-      triggers: ["SNAP cuts October 1  --  watch November retail sales", "October CPI  --  does energy spike persist?", "Dollar General and Dollar Tree Q3 guidance"], level: "yellow" },
+      text: "SNAP cuts land October 1. Energy bills peak seasonally. Lower-K spending cliff becomes visible in earnings for the.", level: "yellow" },
     { stage: "Stage 4", status: "risk", label: "Upper-K Contagion", date: "Q4 2026  --  Q2 2027",
-      text: "The upper K is insulated until three things happen: unemployment rises into the professional class, home equity stops functioning.",
-      triggers: ["Jobless claims crossing 300K consistently", "High yield spreads widening past 450 bps", "Upper-income quintile UMich sentiment falling"], level: "yellow" },
+      text: "The upper K is insulated until three things happen: unemployment rises into the professional class, home equity stops.", level: "yellow" },
   ],
   ideas: [
     {
       id: "tbills", theme: "Short-Term Treasury Bills / Notes", weight: "19%",
       signal: "green", conviction: "High", assetClass: "Fixed Income",
       bestAccount: "Taxable -- T-bill interest is exempt from state and local taxes.",
-      rationale: "The largest allocation in the model and the right call in this environment. Fed on hold at 3.50-3.75% with no June cut.",
+      rationale: "The largest allocation in the model and the right call in this environment. Fed on hold at 3.50-3.75% with no.",
       instruments: [
         { name: "iShares 0-3 Month Treasury Bond ETF", ticker: "SGOV", type: "ETF" },
         { name: "3-Month T-Bills direct via TreasuryDirect.gov", ticker: null, type: "Direct" },
@@ -490,52 +463,52 @@ const data = {
       id: "domestic-eq", theme: "Domestic Equity", weight: "28%",
       signal: "yellow", conviction: "Medium", assetClass: "Equities",
       bestAccount: "Taxable for long-term holds (capital gains rates).",
-      rationale: "Broad domestic equity with a tilt toward industrials, utilities, and energy services. Broad small cap (SCHA) replaced with quality-screened.",
+      rationale: "Broad domestic equity with a tilt toward industrials, utilities, and energy services. Broad small cap (SCHA).",
       instruments: [
         { name: "US Industrials ETF", ticker: "XLI", type: "ETF" },
         { name: "US Utilities ETF", ticker: "XLU", type: "ETF" },
         { name: "US Oil & Gas Equipment & Services ETF", ticker: "OIH", type: "ETF" },
         { name: "US Large Cap Equal Weight ETF", ticker: "RSP", type: "ETF" },
-        { name: "Capital Group Conservative Equity ETF -- active, strong balance sheets, dividends", ticker: "CGCV", type: "Active ETF" },
-        { name: "Washington Mutual Investors Fund -- value tilt, income, est. 1952", ticker: "AWSHX", type: "Mutual Fund" },
-        { name: "O'Shares US Small-Cap Quality Dividend ETF -- quality-screened small cap", ticker: "OUSM", type: "ETF" },
+        { name: "Capital Group Conservative Equity ETF -- active,...", ticker: "CGCV", type: "Active ETF" },
+        { name: "Washington Mutual Investors Fund -- value tilt,...", ticker: "AWSHX", type: "Mutual Fund" },
+        { name: "O'Shares US Small-Cap Quality Dividend ETF --...", ticker: "OUSM", type: "ETF" },
         { name: "US Biotech ETF", ticker: "XBI", type: "ETF" },
       ],
-      caveat: "OUSM screens for quality and dividends within small cap -- better than broad SCHA in this environment..",
+      caveat: "OUSM screens for quality and dividends within small cap -- better than broad SCHA in this.",
     },
     {
       id: "intl-eq", theme: "International Equity", weight: "20%",
       signal: "yellow", conviction: "Medium", assetClass: "Equities",
-      bestAccount: "Taxable -- foreign tax credits on international dividends are only usable in taxable.",
-      rationale: "Dollar weakness is the thesis. DXY down 10% from January 2025 peak. When the dollar falls, international assets outperform in dollar terms.",
+      bestAccount: "Taxable -- foreign tax credits on international dividends are only usable in.",
+      rationale: "Dollar weakness is the thesis. DXY down 10% from January 2025 peak. When the dollar falls, international.",
       instruments: [
         { name: "Latin America ETF", ticker: "ILF", type: "ETF" },
         { name: "Developed International Markets ETF", ticker: "EFA", type: "ETF" },
         { name: "Emerging Markets ETF", ticker: "EEM", type: "ETF" },
         { name: "Global Metals & Mining Producers ETF", ticker: "PICK", type: "ETF" },
-        { name: "Capital Group International Core Equity ETF -- active, dividend focus, incl. EM", ticker: "CGIC", type: "Active ETF" },
-        { name: "Capital Group New Geography Equity ETF -- active EM, revenue-based not domicile, 34.7% 12-month return", ticker: "CGNG", type: "Active ETF" },
+        { name: "Capital Group International Core Equity ETF --...", ticker: "CGIC", type: "Active ETF" },
+        { name: "Capital Group New Geography Equity ETF -- active...", ticker: "CGNG", type: "Active ETF" },
       ],
-      caveat: "Dollar weakness thesis reverses if Iran conflict drives safe-haven dollar demand. CGNG note: Rob Lovelace,.",
+      caveat: "Dollar weakness thesis reverses if Iran conflict drives safe-haven dollar demand. CGNG note:.",
     },
     {
       id: "gold-assets", theme: "Gold, Silver & Industrial Metals", weight: "12.5%",
       signal: "green", conviction: "High", assetClass: "Commodities",
       bestAccount: "IRA -- gold and silver ETFs taxed as collectibles at 28% in taxable accounts.",
-      rationale: "Two distinct theses in one allocation. Gold and silver as monetary hedges: when governments print money to service debt -- the only exit.",
+      rationale: "Two distinct theses in one allocation. Gold and silver as monetary hedges: when governments print money to.",
       instruments: [
         { name: "Gold Bullion ETF", ticker: "GLD", type: "ETF" },
         { name: "iShares Gold Trust -- lower expense ratio than GLD", ticker: "IAU", type: "ETF" },
-        { name: "Sprott Active Gold & Silver Miners ETF -- active, royalty/streaming tilt, only active miners ETF", ticker: "GBUG", type: "Active ETF" },
-        { name: "Precious Metals Miners & Royalty ETF -- passive miners alternative", ticker: "GDX", type: "ETF" },
+        { name: "Sprott Active Gold & Silver Miners ETF -- active,...", ticker: "GBUG", type: "Active ETF" },
+        { name: "Precious Metals Miners & Royalty ETF -- passive...", ticker: "GDX", type: "ETF" },
         { name: "Silver Bullion ETF -- monetary and industrial demand", ticker: "SLV", type: "ETF" },
-        { name: "abrdn Physical Silver Shares ETF -- lower expense ratio than SLV", ticker: "SIVR", type: "ETF" },
-        { name: "abrdn Physical Precious Metals Basket -- gold, silver, platinum, palladium in one, K-1, use in IRA", ticker: "GLTR", type: "ETF" },
-        { name: "Sprott Active Metals & Miners ETF -- active, copper, uranium, lithium, rare earths", ticker: "METL", type: "Active ETF" },
+        { name: "abrdn Physical Silver Shares ETF -- lower expense...", ticker: "SIVR", type: "ETF" },
+        { name: "abrdn Physical Precious Metals Basket -- gold,...", ticker: "GLTR", type: "ETF" },
+        { name: "Sprott Active Metals & Miners ETF -- active,...", ticker: "METL", type: "Active ETF" },
         { name: "Global X Copper Miners ETF -- passive copper miners", ticker: "COPX", type: "ETF" },
-        { name: "US Copper Index Fund -- direct copper futures, K-1, use in IRA", ticker: "CPER", type: "ETF" },
+        { name: "US Copper Index Fund -- direct copper futures, K-1,...", ticker: "CPER", type: "ETF" },
       ],
-      caveat: "Gold and silver ETFs (GLD, IAU, SLV, SIVR) are taxed as collectibles at 28% in taxable accounts -- always.",
+      caveat: "Gold and silver ETFs (GLD, IAU, SLV, SIVR) are taxed as collectibles at 28% in taxable.",
     },
     {
       id: "bonds", theme: "Bonds", weight: "15%",
@@ -546,35 +519,35 @@ const data = {
         { name: "Long-Term Treasury Bond ETF", ticker: "TLT", type: "ETF" },
         { name: "Intermediate-Term Treasury Bond ETF", ticker: "IEF", type: "ETF" },
         { name: "EM Bonds Local Currency ETF", ticker: "EBND", type: "ETF" },
-        { name: "Capital Group Core Plus Income ETF -- active duration management", ticker: "CGCP", type: "Active ETF" },
+        { name: "Capital Group Core Plus Income ETF -- active...", ticker: "CGCP", type: "Active ETF" },
       ],
-      caveat: "TLT is a thesis-dependent position. With CPI at 4.2% and the Fed on hold, long bonds carry duration risk.",
+      caveat: "TLT is a thesis-dependent position. With CPI at 4.2% and the Fed on hold, long bonds carry.",
     },
     {
       id: "commodities", theme: "Commodities Basket", weight: "5%",
       signal: "green", conviction: "Medium", assetClass: "Commodities",
-      bestAccount: "Taxable for PDBC, PDBA, EVMT -- no K-1, no administrative burden. IRA for DBC which.",
+      bestAccount: "Taxable for PDBC, PDBA, EVMT -- no K-1, no administrative burden. IRA for DBC.",
       rationale: "Broad inflation hedge. Energy CPI at 23.5%, food price pressure building into Q4.",
       instruments: [
-        { name: "Invesco Optimum Yield Diversified Commodity Strategy -- broad basket, no K-1", ticker: "PDBC", type: "ETF" },
-        { name: "Invesco Agriculture Commodity Strategy -- food as strategic reserve, no K-1", ticker: "PDBA", type: "ETF" },
-        { name: "Invesco EV Metals Commodity Strategy -- lithium, cobalt, nickel, copper, no K-1", ticker: "EVMT", type: "ETF" },
-        { name: "Invesco DB Commodity Index Tracking Fund -- broad basket, K-1, use in IRA", ticker: "DBC", type: "ETF" },
+        { name: "Invesco Optimum Yield Diversified Commodity...", ticker: "PDBC", type: "ETF" },
+        { name: "Invesco Agriculture Commodity Strategy -- food as...", ticker: "PDBA", type: "ETF" },
+        { name: "Invesco EV Metals Commodity Strategy -- lithium,...", ticker: "EVMT", type: "ETF" },
+        { name: "Invesco DB Commodity Index Tracking Fund -- broad...", ticker: "DBC", type: "ETF" },
       ],
-      caveat: "Critical tax note: commodity ETFs holding futures directly generate K-1 forms in taxable accounts, delaying.",
+      caveat: "Critical tax note: commodity ETFs holding futures directly generate K-1 forms in taxable.",
     },
     {
       id: "healthcare-broad", theme: "Healthcare", weight: "3-5% new position",
       signal: "green", conviction: "High", assetClass: "Equities",
-      bestAccount: "Taxable -- qualified dividends at lower tax rate. Roth IRA for highest-growth names like.",
-      rationale: "Healthcare demand is non-discretionary. People do not stop needing medication or insurance when inflation is high. Stress -- financial,.",
+      bestAccount: "Taxable -- qualified dividends at lower tax rate. Roth IRA for highest-growth.",
+      rationale: "Healthcare demand is non-discretionary. People do not stop needing medication or insurance when inflation is.",
       instruments: [
         { name: "Health Care Select Sector SPDR -- broad exposure", ticker: "XLV", type: "ETF" },
         { name: "Vanguard Health Care ETF -- lower expense ratio", ticker: "VHT", type: "ETF" },
-        { name: "Capital Group Health Care ETF -- active, tilts toward pharma and managed care", ticker: "CGHC", type: "Active ETF" },
+        { name: "Capital Group Health Care ETF -- active, tilts...", ticker: "CGHC", type: "Active ETF" },
         { name: "Eli Lilly -- GLP-1 tailwind, largely macro-independent", ticker: "LLY", type: "Stock" },
       ],
-      caveat: "Avoid healthcare REITs (WELL, VTR) -- rate-sensitive like all REITs. Medical devices more cyclical; elective.",
+      caveat: "Avoid healthcare REITs (WELL, VTR) -- rate-sensitive like all REITs. Medical devices more.",
     },
   ],
   caution: [
@@ -587,15 +560,15 @@ const data = {
       ],
     },
     { id: "c05", theme: "American Balanced / 60/40 Funds and Fund-of-Funds",
-      reason: "Two cautions. American Balanced (ABALX) is classic 60/40 in active clothing -- active.",
+      reason: "Two cautions. American Balanced (ABALX) is classic 60/40 in active clothing --.",
       instruments: [
         { name: "American Balanced Fund", ticker: "ABALX", type: "Caution" },
         { name: "Income Fund of America", ticker: "AMECX", type: "Caution" },
-        { name: "Growth and Income Portfolio -- fund-of-funds, double fee layer", ticker: "GAIOX", type: "Caution" },
+        { name: "Growth and Income Portfolio -- fund-of-funds,...", ticker: "GAIOX", type: "Caution" },
       ],
     },
     { id: "c06", theme: "Growth Fund of America",
-      reason: "Large cap U.S. growth tilt at Shiller CAPE 39.9. High-quality management does not change.",
+      reason: "Large cap U.S. growth tilt at Shiller CAPE 39.9. High-quality management does.",
       instruments: [
         { name: "Growth Fund of America", ticker: "AGTHX", type: "Caution" },
         { name: "American Funds New Perspective", ticker: "ANWPX", type: "Caution" },
@@ -624,14 +597,14 @@ const data = {
       ],
     },
     { id: "c4", theme: "ARK Innovation / High-Duration Growth",
-      reason: "High-multiple growth stocks are vulnerable if the Fed holds or is forced to hike.",
+      reason: "High-multiple growth stocks are vulnerable if the Fed holds or is forced to.",
       instruments: [
         { name: "ARK Innovation ETF", ticker: "ARKK", type: "Caution" },
         { name: "ARK Next Generation Internet ETF", ticker: "ARKW", type: "Caution" },
       ],
     },
     { id: "c5", theme: "REITs",
-      reason: "Mortgage rates at 6.55%, FHA delinquency at 11.52%, foreclosure pipeline filling.",
+      reason: "Mortgage rates at 6.55%, FHA delinquency at 11.52%, foreclosure pipeline.",
       instruments: [
         { name: "Vanguard Real Estate ETF", ticker: "VNQ", type: "Caution" },
         { name: "Realty Income -- net lease REIT", ticker: "O", type: "Caution" },
@@ -643,13 +616,13 @@ const data = {
     {
       id: "qual", theme: "Quality Factor Screen", ticker: "QUAL",
       signal: "yellow", conviction: "High", assetClass: "Equities",
-      bestAccount: "Taxable -- low turnover means minimal annual tax drag. Long-term capital gains rates.",
+      bestAccount: "Taxable -- low turnover means minimal annual tax drag. Long-term capital gains.",
       rationale: "The model has Large Cap Equal Weight at 2.5% but no quality filter.",
       instruments: [
         { name: "iShares MSCI USA Quality Factor ETF", ticker: "QUAL", type: "ETF" },
-        { name: "Capital Group Conservative Equity ETF -- same team as American Mutual", ticker: "CGCV", type: "Active ETF" },
+        { name: "Capital Group Conservative Equity ETF -- same team...", ticker: "CGCV", type: "Active ETF" },
       ],
-      caveat: "Quality stocks still carry market risk. They outperform in relative terms but still fall in a broad selloff.",
+      caveat: "Quality stocks still carry market risk. They outperform in relative terms but still fall in a.",
     },
     {
       id: "dividends", theme: "Dividend Income", ticker: "VIG, DVY",
@@ -657,75 +630,75 @@ const data = {
       bestAccount: "Taxable for qualified dividends (lower tax rate).",
       rationale: "Real wages are negative. Consumers need income from somewhere.",
       instruments: [
-        { name: "Vanguard Dividend Appreciation ETF -- dividend growth focus", ticker: "VIG", type: "ETF" },
+        { name: "Vanguard Dividend Appreciation ETF -- dividend...", ticker: "VIG", type: "ETF" },
         { name: "iShares Select Dividend ETF -- current yield focus", ticker: "DVY", type: "ETF" },
         { name: "Schwab U.S. Dividend Equity ETF", ticker: "SCHD", type: "ETF" },
-        { name: "Capital Group Dividend Value ETF -- active, avoids yield traps", ticker: "CGDV", type: "Active ETF" },
+        { name: "Capital Group Dividend Value ETF -- active, avoids...", ticker: "CGDV", type: "Active ETF" },
       ],
-      caveat: "Dividend stocks are rate-sensitive. If rates rise further, high-yield dividend stocks face headwinds.",
+      caveat: "Dividend stocks are rate-sensitive. If rates rise further, high-yield dividend stocks face.",
     },
     {
       id: "staples", theme: "Consumer Staples", ticker: "VDC, XLP",
       signal: "yellow", conviction: "Medium", assetClass: "Equities",
       bestAccount: "Taxable -- low turnover, qualified dividends. Works in IRA too.",
-      rationale: "This is not a lower-K play. It is an upper-K defensive play. Lower-K households are cutting spending including staples -- the savings rate.",
+      rationale: "This is not a lower-K play. It is an upper-K defensive play. Lower-K households are cutting spending.",
       instruments: [
         { name: "Vanguard Consumer Staples ETF", ticker: "VDC", type: "ETF" },
         { name: "Consumer Staples Select Sector SPDR", ticker: "XLP", type: "ETF" },
       ],
-      caveat: "Staples are not immune to inflation -- input costs rise with energy and food prices. Actively managed staples.",
+      caveat: "Staples are not immune to inflation -- input costs rise with energy and food prices. Actively.",
     },
     {
       id: "japan", theme: "Japan (Developed International Tilt)", ticker: "EWJ",
       signal: "yellow", conviction: "Medium", assetClass: "International Equities",
-      bestAccount: "Taxable -- foreign tax credits on Japanese dividends are only usable in taxable accounts,.",
-      rationale: "Within developed international exposure, Japan deserves a specific allocation. Weak yen makes Japanese exports competitive globally.",
+      bestAccount: "Taxable -- foreign tax credits on Japanese dividends are only usable in taxable.",
+      rationale: "Within developed international exposure, Japan deserves a specific allocation. Weak yen makes Japanese.",
       instruments: [
         { name: "iShares MSCI Japan ETF", ticker: "EWJ", type: "ETF" },
         { name: "WisdomTree Japan Hedged Equity Fund -- currency hedged", ticker: "DXJ", type: "ETF" },
-        { name: "Capital Group International Equity ETF -- active, can overweight Japan", ticker: "CGIE", type: "Active ETF" },
+        { name: "Capital Group International Equity ETF -- active,...", ticker: "CGIE", type: "Active ETF" },
       ],
       caveat: "DXJ hedges out the yen, which is better if the dollar strengthens.",
     },
     {
       id: "stablecoin-infra", theme: "Stablecoin & Payment Infrastructure", ticker: "V, MA, COIN",
       signal: "green", conviction: "High", assetClass: "Equities",
-      bestAccount: "Taxable -- long-term capital gains if held over a year. V and MA are low-turnover holds.",
-      rationale: "The petrodollar agreement expired June 2024 with no renewal. The dollar cannot maintain global dominance through reserve status alone..",
+      bestAccount: "Taxable -- long-term capital gains if held over a year. V and MA are.",
+      rationale: "The petrodollar agreement expired June 2024 with no renewal. The dollar cannot maintain global dominance.",
       instruments: [
-        { name: "Visa -- X Money runs on Visa Direct, Trusted Agent Protocol, stablecoin payout pilot", ticker: "V", type: "Stock" },
-        { name: "Mastercard -- BVNK acquisition, Agent Pay, Recorded Future data fusion", ticker: "MA", type: "Stock" },
-        { name: "Coinbase -- JPM Coin launched on Base, institutional settlement infrastructure", ticker: "COIN", type: "Stock" },
+        { name: "Visa -- X Money runs on Visa Direct, Trusted Agent...", ticker: "V", type: "Stock" },
+        { name: "Mastercard -- BVNK acquisition, Agent Pay, Recorded...", ticker: "MA", type: "Stock" },
+        { name: "Coinbase -- JPM Coin launched on Base,...", ticker: "COIN", type: "Stock" },
       ],
-      caveat: "Pure crypto plays (BTC, ETH) are volatile and speculative -- not infrastructure. Circle (USDC issuer) is not.",
+      caveat: "Pure crypto plays (BTC, ETH) are volatile and speculative -- not infrastructure. Circle (USDC.",
     },
     {
       id: "ai-surveillance", theme: "AI & Surveillance Infrastructure", ticker: "PLTR, NVDA, MSI, AXON",
       signal: "red", conviction: "High", assetClass: "Equities",
-      bestAccount: "Roth IRA for PLTR and NVDA if you believe in multi-year compounding. Taxable works for.",
-      rationale: "This is not a recommendation to buy AI because it is exciting. These are specific companies building the infrastructure this publication.",
+      bestAccount: "Roth IRA for PLTR and NVDA if you believe in multi-year compounding. Taxable.",
+      rationale: "This is not a recommendation to buy AI because it is exciting. These are specific companies building the.",
       instruments: [
-        { name: "Palantir -- U.S. government surveillance infrastructure, $687M Q1 2026 govt revenue", ticker: "PLTR", type: "Stock" },
+        { name: "Palantir -- U.S. government surveillance...", ticker: "PLTR", type: "Stock" },
         { name: "Nvidia -- data center and government inference compute", ticker: "NVDA", type: "Stock" },
-        { name: "Motorola Solutions -- video surveillance, command center, public safety", ticker: "MSI", type: "Stock" },
-        { name: "Axon Enterprise -- body cameras, Fusus network aggregation, sensor layer", ticker: "AXON", type: "Stock" },
-        { name: "Constellation Energy -- nuclear power for AI data centers", ticker: "CEG", type: "Stock" },
-        { name: "Broadcom -- custom AI chips for hyperscalers, less headline risk than NVDA", ticker: "AVGO", type: "Stock" },
+        { name: "Motorola Solutions -- video surveillance, command...", ticker: "MSI", type: "Stock" },
+        { name: "Axon Enterprise -- body cameras, Fusus network...", ticker: "AXON", type: "Stock" },
+        { name: "Constellation Energy -- nuclear power for AI data...", ticker: "CEG", type: "Stock" },
+        { name: "Broadcom -- custom AI chips for hyperscalers, less...", ticker: "AVGO", type: "Stock" },
       ],
-      caveat: "Palantir is the most direct play and the most ethically complex. Investing in Palantir is investing in the.",
+      caveat: "Palantir is the most direct play and the most ethically complex. Investing in Palantir is.",
     },
     {
       id: "cash", theme: "Cash Buffer", ticker: "SGOV, Money Market",
       signal: "green", conviction: "High", assetClass: "Cash",
-      bestAccount: "Taxable -- state tax exemption on T-bill interest is only useful in taxable accounts.",
-      rationale: "The model carries 0.5% cash. In an environment where Stage 3 contagion arrives in Q4, having 5 to 10% in cash is optionality, not waste.",
+      bestAccount: "Taxable -- state tax exemption on T-bill interest is only useful in taxable.",
+      rationale: "The model carries 0.5% cash. In an environment where Stage 3 contagion arrives in Q4, having 5 to 10% in cash.",
       instruments: [
         { name: "iShares 0-3 Month Treasury Bond ETF", ticker: "SGOV", type: "ETF" },
         { name: "Fidelity Government Money Market Fund", ticker: "SPAXX", type: "Fund" },
         { name: "Vanguard Federal Money Market Fund", ticker: "VMFXX", type: "Fund" },
-        { name: "X Money -- 6% APY, FDIC-insured via Cross River Bank, no minimum", ticker: "X Money", type: "Platform" },
+        { name: "X Money -- 6% APY, FDIC-insured via Cross River...", ticker: "X Money", type: "Platform" },
       ],
-      caveat: "X Money platform risk: X controls your account through its terms of service. If your account is suspended,.",
+      caveat: "X Money platform risk: X controls your account through its terms of service. If your account.",
     },
   ],
 };
@@ -738,10 +711,10 @@ const signalColors = {
 };
 const convictionColors = { High: "#dc2626", Medium: "#92400e", Low: "#4b5563" };
 const thesisColors     = { red: "#dc2626", yellow: "#92400e", green: "#15803d" };
-const TABS = ["indicators", "consumer", "markets", "debt", "behind", "ideas", "thesis"];
-const TAB_LABELS = { indicators: "Indicators", consumer: "Consumer", markets: "Markets", debt: "Debt & Credit", behind: "Behind the Numbers", ideas: "Investment Ideas", thesis: "Big Picture" };
+const TABS = ["inflation", "labor", "money", "consumer", "markets", "debt", "dollar", "ideas", "thesis"];
+const TAB_LABELS = { inflation: "Inflation", labor: "Labor", money: "Money & Policy", consumer: "Consumer", markets: "Markets", debt: "Debt & Credit", dollar: "Dollar & Global", ideas: "Investment Ideas", thesis: "Big Picture" };
 export default function MacroMonitor() {
-  const [activeTab, setActiveTab] = useState("indicators");
+  const [activeTab, setActiveTab] = useState("inflation");
   const [expandedIdea, setExpandedIdea] = useState(null);
   const [expandedBehind, setExpandedBehind] = useState(null);
 
@@ -792,167 +765,44 @@ export default function MacroMonitor() {
       </div>
 
       {/* ── INDICATORS ── */}
-      {activeTab === "indicators" && (
-          <div style={{ padding: "20px 28px" }}>
-            <p style={{ fontSize: "14px", color: "#6b7280", marginTop: 0, marginBottom: "20px", fontFamily: "sans-serif", lineHeight: 1.6 }}>
-              The most important signal from each category. Click a tab above for the full picture.
-            </p>
-            {[
-              { id: "inflation", label: "Inflation", tab: null },
-              { id: "labor", label: "Labor", tab: null },
-              { id: "monetary", label: "Monetary", tab: null },
-              { id: "consumer", label: "Consumer", tab: "consumer", includeStress: true },
-              { id: "markets", label: "Markets", tab: "markets" },
-              { id: "debt", label: "Debt & Credit", tab: "debt" },
-              { id: "dollar", label: "Dollar / Petrodollar", tab: null },
-              { id: "policy", label: "Policy", tab: null },
-            ].map(({ id: catId, label: catLabel, tab: catTab }) => {
-              const catItems = filtered.filter(d => d.category === catId || (catId === "consumer" && d.category === "stress"));
-              if (catItems.length === 0) return null;
-              const priority = ["red","yellow","gray","green"];
-              const lead = [...catItems].sort((a,b) => priority.indexOf(a.signal) - priority.indexOf(b.signal))[0];
-              if (!lead) return null;
-              const c = signalColors[lead.signal];
-              const isOpen = expandedBehind === lead.id;
-              return (
-                <div key={catId} style={{ marginBottom: "20px" }}>
-                  <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "10px" }}>
-                    <div style={{ fontSize: "11px", color: "#6b7280", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.12em", fontFamily: "sans-serif", whiteSpace: "nowrap" }}>{catLabel}</div>
-                    <div style={{ flex: 1, height: "1px", background: "#f3f4f6" }} />
-                    {catTab && (
-                      <button onClick={() => setActiveTab(catTab)} style={{ background: "none", border: "none", fontSize: "11px", color: "#4f46e5", cursor: "pointer", fontFamily: "sans-serif", whiteSpace: "nowrap", padding: "0" }}>
-                        Full view →
-                      </button>
-                    )}
-                  </div>
-                  <div style={{ background: c.bg, border: `1px solid ${c.border}`, borderRadius: "6px", overflow: "hidden" }}>
-                    <div style={{ padding: "16px 18px" }}>
-                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px" }}>
-                        <div style={{ fontSize: "12px", color: "#4b5563", fontFamily: "sans-serif", fontWeight: "600", textTransform: "uppercase", letterSpacing: "0.05em" }}>{lead.label}</div>
-                        <span style={{ fontSize: "10px", color: c.text, fontFamily: "sans-serif", fontWeight: "600", display: "flex", alignItems: "center", gap: "4px" }}>
-                          <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: c.dot, display: "inline-block" }} />
-                          {lead.signalLabel}
-                        </span>
-                      </div>
-                      <div style={{ fontSize: "26px", fontWeight: "700", color: "#111827", lineHeight: 1, marginBottom: "4px" }}>{lead.value}</div>
-                      <div style={{ fontSize: "13px", color: "#6b7280", fontFamily: "sans-serif", marginBottom: "8px" }}>{lead.sub}</div>
-                      <div style={{ borderTop: `1px solid ${c.border}`, paddingTop: "8px", fontSize: "13px", color: "#4b5563", fontFamily: "sans-serif", lineHeight: 1.5 }}>{lead.note}</div>
-                    </div>
-                    {lead.behind && lead.behind.length > 0 && (
-                      <>
-                        <button onClick={() => setExpandedBehind(isOpen ? null : lead.id)} style={{ width: "100%", background: "none", border: "none", borderTop: `1px solid ${c.border}`, padding: "8px 18px", fontSize: "12px", color: c.text, fontWeight: "600", cursor: "pointer", fontFamily: "sans-serif", display: "flex", justifyContent: "space-between" }}>
-                          <span>Behind the numbers</span>
-                          <span style={{ transform: isOpen ? "rotate(180deg)" : "none" }}>▾</span>
-                        </button>
-                        {isOpen && (
-                          <div style={{ borderTop: `1px solid ${c.border}`, padding: "12px 18px", display: "flex", flexDirection: "column", gap: "10px" }}>
-                            {lead.behind.map((b, i) => (
-                              <div key={i}>
-                                <div style={{ display: "flex", justifyContent: "space-between", gap: "8px", marginBottom: "2px" }}>
-                                  <span style={{ fontSize: "13px", color: "#374151", fontFamily: "sans-serif" }}>{b.stat}</span>
-                                  <span style={{ fontSize: "13px", fontWeight: "700", color: c.text, fontFamily: "sans-serif", whiteSpace: "nowrap" }}>{b.value}</span>
-                                </div>
-                                <div style={{ fontSize: "12px", color: "#6b7280", lineHeight: 1.5, fontFamily: "sans-serif" }}>{b.context}</div>
-                              </div>
-                            ))}
-                          </div>
-                        )}
-                      </>
-                    )}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-      )}
-
-      {/* ── MARKETS ── */}
-      {activeTab === "markets" && (
+      {activeTab === "inflation" && (
         <div style={{ padding: "20px 28px" }}>
-          <p style={{ fontSize: "16px", color: "#6b7280", marginTop: 0, marginBottom: "24px", lineHeight: 1.6, fontFamily: "sans-serif" }}>
-            Valuation, volatility, and retirement portfolio health. All data as of June 10–11, 2026.
+          <p style={{ fontSize: "14px", color: "#6b7280", marginTop: 0, marginBottom: "16px", fontFamily: "sans-serif", lineHeight: 1.5 }}>
+            What prices are doing and why. Energy is the driver. The Fed cannot fix this.
           </p>
-
-          {/* Valuation callout */}
-          <div style={{ background: "#fff5f5", border: "1px solid #fca5a5", borderLeft: "4px solid #dc2626", borderRadius: "0 6px 6px 0", padding: "16px 20px", marginBottom: "24px" }}>
-            <div style={{ fontSize: "13px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "6px", fontFamily: "sans-serif" }}>Is the Market Overvalued?</div>
-            <div style={{ fontSize: "15px", color: "#1f2937", lineHeight: 1.7, fontFamily: "sans-serif" }}>
-              Shiller CAPE at 39.9 implies 1.9% annual returns over the next decade  --  below 4.2% inflation. High yield spreads near 2007 tights while actual defaults run 4.2-4.5%. The 60/40 portfolio is broken when inflation is high.
-            </div>
+          <div style={{ background: "#fff5f5", border: "1px solid #fca5a5", borderLeft: "4px solid #dc2626", borderRadius: "0 6px 6px 0", padding: "14px 18px", marginBottom: "20px" }}>
+            <div style={{ fontSize: "12px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "6px", fontFamily: "sans-serif" }}>Energy Is Doing the Work</div>
+            <div style={{ fontSize: "14px", color: "#1f2937", lineHeight: 1.7, fontFamily: "sans-serif" }}>Energy CPI up 23.5% year over year. Gasoline at $4.12 nationally. Every other price is affected -- diesel moves freight, fertilizer feeds crops, heating bills arrive in Q4.</div>
           </div>
-          {/* Markets grid from indicators */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "14px", marginBottom: "28px" }}>
-            {data.indicators.filter(d => d.category === "markets").map((item) => {
-              const c = signalColors[item.signal];
-              return (
-                <div key={item.id} style={{ background: c.bg, border: `1px solid ${c.border}`, borderRadius: "6px", padding: "18px 20px" }}>
-                  <div style={{ fontSize: "13px", color: "#4b5563", fontFamily: "sans-serif", fontWeight: "600", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "10px" }}>{item.label}</div>
-                  <div style={{ fontSize: "28px", fontWeight: "700", color: "#111827", lineHeight: 1, marginBottom: "4px" }}>{item.value}</div>
-                  <div style={{ fontSize: "13px", color: "#6b7280", fontFamily: "sans-serif", marginBottom: "10px" }}>{item.sub}</div>
-                  <div style={{ borderTop: `1px solid ${c.border}`, paddingTop: "10px", fontSize: "13px", color: "#4b5563", fontFamily: "sans-serif", lineHeight: 1.5 }}>{item.note}</div>
-                </div>
-              );
-            })}
-          </div>
-                    {/* 60/40 explainer */}
-          <div style={{ background: "#f9fafb", border: "1px solid #e5e7eb", borderLeft: "4px solid #dc2626", borderRadius: "0 6px 6px 0", padding: "20px 24px" }}>
-            <div style={{ fontSize: "13px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "10px", fontFamily: "sans-serif" }}>The 60/40 Problem  --  In Plain Language</div>
-            <div style={{ fontSize: "16px", color: "#1f2937", lineHeight: 1.8 }}>
-              For 40 years, the standard retirement portfolio was 60% stocks and 40% bonds. When stocks fell, bonds went up. The bond portion cushioned the blow. That relationship held because inflation was low and the Fed could cut rates in a crisis. When rates fell, bond prices rose. The cushion worked. When inflation is high  --  as it is today.
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* ── DEBT & CREDIT ── */}
-      {activeTab === "debt" && (
-        <div style={{ padding: "20px 28px" }}>
-          <p style={{ fontSize: "16px", color: "#6b7280", marginTop: 0, marginBottom: "24px", lineHeight: 1.6, fontFamily: "sans-serif" }}>
-            The slow-motion repricing of everything that was built on cheap money. Federal debt, commercial real estate, private equity, and the pension funds caught in between.
-          </p>
-
-          {/* Thesis callout */}
-          <div style={{ background: "#fff5f5", border: "1px solid #fca5a5", borderLeft: "4px solid #dc2626", borderRadius: "0 6px 6px 0", padding: "16px 20px", marginBottom: "24px" }}>
-            <div style={{ fontSize: "13px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "6px", fontFamily: "sans-serif" }}>The Connective Tissue</div>
-            <div style={{ fontSize: "15px", color: "#1f2937", lineHeight: 1.7, fontFamily: "sans-serif" }}>
-              Federal debt, CRE, and private equity all relied on near-zero rates. All are now refinancing at rates 400 to 500 basis points higher. The losses flow to pension funds, community banks, and insurance companies -- the institutions that hold ordinary Americans' savings and retirement accounts. The people who made the decisions will not bear the losses. The people who had no choice will.
-            </div>
-          </div>
-
-          {/* Debt grid from indicators */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "14px", marginBottom: "28px" }}>
-            {data.indicators.filter(d => d.category === "debt").map((item) => {
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "14px", marginBottom: "24px" }}>
+            {data.indicators.filter(d => d.category === "inflation").map((item) => {
               const c = signalColors[item.signal];
               const isOpen = expandedBehind === item.id;
               return (
                 <div key={item.id} style={{ background: c.bg, border: `1px solid ${c.border}`, borderRadius: "6px", overflow: "hidden" }}>
-                  <div style={{ padding: "18px 20px" }}>
-                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "10px" }}>
-                      <div style={{ fontSize: "13px", color: "#4b5563", fontFamily: "sans-serif", fontWeight: "600", textTransform: "uppercase", letterSpacing: "0.05em" }}>{item.label}</div>
+                  <div style={{ padding: "16px 18px" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px" }}>
+                      <div style={{ fontSize: "12px", color: "#4b5563", fontFamily: "sans-serif", fontWeight: "600", textTransform: "uppercase", letterSpacing: "0.05em" }}>{item.label}</div>
                       <span style={{ fontSize: "10px", color: c.text, fontFamily: "sans-serif", fontWeight: "600", display: "flex", alignItems: "center", gap: "4px" }}>
                         <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: c.dot, display: "inline-block" }} />
                         {item.signalLabel}
                       </span>
                     </div>
                     <div style={{ fontSize: "28px", fontWeight: "700", color: "#111827", lineHeight: 1, marginBottom: "4px" }}>{item.value}</div>
-                    <div style={{ fontSize: "13px", color: "#6b7280", fontFamily: "sans-serif", marginBottom: "10px" }}>{item.sub}</div>
-                    <div style={{ borderTop: `1px solid ${c.border}`, paddingTop: "10px", fontSize: "13px", color: "#4b5563", fontFamily: "sans-serif", lineHeight: 1.5 }}>{item.note}</div>
+                    <div style={{ fontSize: "13px", color: "#6b7280", fontFamily: "sans-serif", marginBottom: "8px" }}>{item.sub}</div>
+                    <div style={{ borderTop: `1px solid ${c.border}`, paddingTop: "8px", fontSize: "13px", color: "#4b5563", fontFamily: "sans-serif", lineHeight: 1.5 }}>{item.note}</div>
                   </div>
                   {item.behind && item.behind.length > 0 && (
                     <>
-                      <button onClick={() => setExpandedBehind(isOpen ? null : item.id)} style={{
-                        width: "100%", background: "none", border: "none", borderTop: `1px solid ${c.border}`,
-                        padding: "8px 20px", fontSize: "12px", color: c.text, fontWeight: "600",
-                        cursor: "pointer", fontFamily: "sans-serif", display: "flex", justifyContent: "space-between",
-                      }}>
+                      <button onClick={() => setExpandedBehind(isOpen ? null : item.id)} style={{ width: "100%", background: "none", border: "none", borderTop: `1px solid ${c.border}`, padding: "8px 18px", fontSize: "12px", color: c.text, fontWeight: "600", cursor: "pointer", fontFamily: "sans-serif", display: "flex", justifyContent: "space-between" }}>
                         <span>Behind the numbers</span>
                         <span style={{ transform: isOpen ? "rotate(180deg)" : "none" }}>▾</span>
                       </button>
                       {isOpen && (
-                        <div style={{ borderTop: `1px solid ${c.border}`, padding: "12px 20px", display: "flex", flexDirection: "column", gap: "12px" }}>
+                        <div style={{ borderTop: `1px solid ${c.border}`, padding: "12px 18px", display: "flex", flexDirection: "column", gap: "10px" }}>
                           {item.behind.map((b, i) => (
                             <div key={i}>
-                              <div style={{ display: "flex", justifyContent: "space-between", gap: "8px", marginBottom: "3px" }}>
+                              <div style={{ display: "flex", justifyContent: "space-between", gap: "8px", marginBottom: "2px" }}>
                                 <span style={{ fontSize: "13px", color: "#374151", fontFamily: "sans-serif" }}>{b.stat}</span>
                                 <span style={{ fontSize: "13px", fontWeight: "700", color: c.text, fontFamily: "sans-serif", whiteSpace: "nowrap" }}>{b.value}</span>
                               </div>
@@ -967,39 +817,186 @@ export default function MacroMonitor() {
               );
             })}
           </div>
-
-          {/* Narrative */}
-          <div style={{ background: "#f9fafb", border: "1px solid #e5e7eb", borderLeft: "4px solid #dc2626", borderRadius: "0 6px 6px 0", padding: "20px 24px" }}>
-            <div style={{ fontSize: "13px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "10px", fontFamily: "sans-serif" }}>The Debt Crisis Nobody Is Talking About</div>
-            <div style={{ fontSize: "16px", color: "#1f2937", lineHeight: 1.8 }}>
-              Federal debt hit $39 trillion in March 2026. Interest payments exceeded $1 trillion annually for the first time -- surpassing defense spending. Office loan delinquency hit a record 12.34%. Regional banks hold 44% of their loan portfolios in CRE. $1 trillion in CRE loans mature in 2026. Private equity has $1 trillion in unrealized.
-            </div>
+          <div style={{ background: "#f9fafb", border: "1px solid #e5e7eb", borderLeft: "4px solid #dc2626", borderRadius: "0 6px 6px 0", padding: "18px 22px" }}>
+            <div style={{ fontSize: "12px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "8px", fontFamily: "sans-serif" }}>The Stagflation Trap</div>
+            <div style={{ fontSize: "15px", color: "#1f2937", lineHeight: 1.8 }}>CPI at 4.2% is a three-year high driven by energy from the Iran conflict. PPI at -0.2% means producer costs are cooling -- but consumers pay energy prices directly. Core inflation at 2.9% shows the problem is spreading beyond energy. The Fed cannot.</div>
           </div>
         </div>
       )}
 
-      {/* ── BEHIND THE NUMBERS ── */}
-      {activeTab === "behind" && (
-        <div style={{ padding: "28px", maxWidth: "760px" }}>
-          <p style={{ fontSize: "16px", color: "#6b7280", marginTop: 0, marginBottom: "28px", lineHeight: 1.6, fontFamily: "sans-serif" }}>
-            What the headline numbers do not say  --  in plain language.
+      {activeTab === "labor" && (
+        <div style={{ padding: "20px 28px" }}>
+          <p style={{ fontSize: "14px", color: "#6b7280", marginTop: 0, marginBottom: "16px", fontFamily: "sans-serif", lineHeight: 1.5 }}>
+            Who has jobs, who is losing them, and what those jobs pay.
           </p>
-          <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-            {data.behind_narrative.map((item, i) => (
-              <div key={i} style={{
-                background: "#f9fafb", border: "1px solid #e5e7eb",
-                borderLeft: `4px solid ${thesisColors[item.level]}`,
-                borderRadius: "0 6px 6px 0", padding: "20px 24px",
-              }}>
-                <div style={{ fontSize: "13px", color: thesisColors[item.level], fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "10px", fontFamily: "sans-serif" }}>{item.label}</div>
-                <div style={{ fontSize: "16px", color: "#1f2937", lineHeight: 1.8 }}>{item.text}</div>
-              </div>
-            ))}
+          <div style={{ background: "#fff5f5", border: "1px solid #fca5a5", borderLeft: "4px solid #dc2626", borderRadius: "0 6px 6px 0", padding: "14px 18px", marginBottom: "20px" }}>
+            <div style={{ fontSize: "12px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "6px", fontFamily: "sans-serif" }}>Tech Layoffs Are an Upper-K Story</div>
+            <div style={{ fontSize: "14px", color: "#1f2937", lineHeight: 1.7, fontFamily: "sans-serif" }}>184,000 tech workers have lost jobs in 2026. Nearly half attributed to AI displacement. Software developer employment under 26 is down 20% since 2024. These are not lower-K jobs. This is the spending class being trimmed.</div>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "14px", marginBottom: "24px" }}>
+            {data.indicators.filter(d => d.category === "labor").map((item) => {
+              const c = signalColors[item.signal];
+              const isOpen = expandedBehind === item.id;
+              return (
+                <div key={item.id} style={{ background: c.bg, border: `1px solid ${c.border}`, borderRadius: "6px", overflow: "hidden" }}>
+                  <div style={{ padding: "16px 18px" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px" }}>
+                      <div style={{ fontSize: "12px", color: "#4b5563", fontFamily: "sans-serif", fontWeight: "600", textTransform: "uppercase", letterSpacing: "0.05em" }}>{item.label}</div>
+                      <span style={{ fontSize: "10px", color: c.text, fontFamily: "sans-serif", fontWeight: "600", display: "flex", alignItems: "center", gap: "4px" }}>
+                        <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: c.dot, display: "inline-block" }} />
+                        {item.signalLabel}
+                      </span>
+                    </div>
+                    <div style={{ fontSize: "28px", fontWeight: "700", color: "#111827", lineHeight: 1, marginBottom: "4px" }}>{item.value}</div>
+                    <div style={{ fontSize: "13px", color: "#6b7280", fontFamily: "sans-serif", marginBottom: "8px" }}>{item.sub}</div>
+                    <div style={{ borderTop: `1px solid ${c.border}`, paddingTop: "8px", fontSize: "13px", color: "#4b5563", fontFamily: "sans-serif", lineHeight: 1.5 }}>{item.note}</div>
+                  </div>
+                  {item.behind && item.behind.length > 0 && (
+                    <>
+                      <button onClick={() => setExpandedBehind(isOpen ? null : item.id)} style={{ width: "100%", background: "none", border: "none", borderTop: `1px solid ${c.border}`, padding: "8px 18px", fontSize: "12px", color: c.text, fontWeight: "600", cursor: "pointer", fontFamily: "sans-serif", display: "flex", justifyContent: "space-between" }}>
+                        <span>Behind the numbers</span>
+                        <span style={{ transform: isOpen ? "rotate(180deg)" : "none" }}>▾</span>
+                      </button>
+                      {isOpen && (
+                        <div style={{ borderTop: `1px solid ${c.border}`, padding: "12px 18px", display: "flex", flexDirection: "column", gap: "10px" }}>
+                          {item.behind.map((b, i) => (
+                            <div key={i}>
+                              <div style={{ display: "flex", justifyContent: "space-between", gap: "8px", marginBottom: "2px" }}>
+                                <span style={{ fontSize: "13px", color: "#374151", fontFamily: "sans-serif" }}>{b.stat}</span>
+                                <span style={{ fontSize: "13px", fontWeight: "700", color: c.text, fontFamily: "sans-serif", whiteSpace: "nowrap" }}>{b.value}</span>
+                              </div>
+                              <div style={{ fontSize: "12px", color: "#6b7280", lineHeight: 1.5, fontFamily: "sans-serif" }}>{b.context}</div>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+          <div style={{ background: "#f9fafb", border: "1px solid #e5e7eb", borderLeft: "4px solid #dc2626", borderRadius: "0 6px 6px 0", padding: "18px 22px" }}>
+            <div style={{ fontSize: "12px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "8px", fontFamily: "sans-serif" }}>Hollowing, Not Collapsing</div>
+            <div style={{ fontSize: "15px", color: "#1f2937", lineHeight: 1.8 }}>Headline unemployment at 4.3% looks manageable. The composition does not. Tech layoffs running at 1,136 per day with 48% attributed to AI are upper-K job losses -- the cohort whose spending props up the consumer thesis. Jobless claims at 242,000 are.</div>
           </div>
         </div>
       )}
 
-      {/* ── CONSUMER ── */}
+      {activeTab === "money" && (
+        <div style={{ padding: "20px 28px" }}>
+          <p style={{ fontSize: "14px", color: "#6b7280", marginTop: 0, marginBottom: "16px", fontFamily: "sans-serif", lineHeight: 1.5 }}>
+            The Fed, interest rates, and the financial infrastructure decisions that shape access to money.
+          </p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "14px", marginBottom: "24px" }}>
+            {data.indicators.filter(d => d.category === "monetary" || d.category === "money" || d.category === "policy").map((item) => {
+              const c = signalColors[item.signal];
+              const isOpen = expandedBehind === item.id;
+              return (
+                <div key={item.id} style={{ background: c.bg, border: `1px solid ${c.border}`, borderRadius: "6px", overflow: "hidden" }}>
+                  <div style={{ padding: "16px 18px" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px" }}>
+                      <div style={{ fontSize: "12px", color: "#4b5563", fontFamily: "sans-serif", fontWeight: "600", textTransform: "uppercase", letterSpacing: "0.05em" }}>{item.label}</div>
+                      <span style={{ fontSize: "10px", color: c.text, fontFamily: "sans-serif", fontWeight: "600", display: "flex", alignItems: "center", gap: "4px" }}>
+                        <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: c.dot, display: "inline-block" }} />
+                        {item.signalLabel}
+                      </span>
+                    </div>
+                    <div style={{ fontSize: "28px", fontWeight: "700", color: "#111827", lineHeight: 1, marginBottom: "4px" }}>{item.value}</div>
+                    <div style={{ fontSize: "13px", color: "#6b7280", fontFamily: "sans-serif", marginBottom: "8px" }}>{item.sub}</div>
+                    <div style={{ borderTop: `1px solid ${c.border}`, paddingTop: "8px", fontSize: "13px", color: "#4b5563", fontFamily: "sans-serif", lineHeight: 1.5 }}>{item.note}</div>
+                  </div>
+                  {item.behind && item.behind.length > 0 && (
+                    <>
+                      <button onClick={() => setExpandedBehind(isOpen ? null : item.id)} style={{ width: "100%", background: "none", border: "none", borderTop: `1px solid ${c.border}`, padding: "8px 18px", fontSize: "12px", color: c.text, fontWeight: "600", cursor: "pointer", fontFamily: "sans-serif", display: "flex", justifyContent: "space-between" }}>
+                        <span>Behind the numbers</span>
+                        <span style={{ transform: isOpen ? "rotate(180deg)" : "none" }}>▾</span>
+                      </button>
+                      {isOpen && (
+                        <div style={{ borderTop: `1px solid ${c.border}`, padding: "12px 18px", display: "flex", flexDirection: "column", gap: "10px" }}>
+                          {item.behind.map((b, i) => (
+                            <div key={i}>
+                              <div style={{ display: "flex", justifyContent: "space-between", gap: "8px", marginBottom: "2px" }}>
+                                <span style={{ fontSize: "13px", color: "#374151", fontFamily: "sans-serif" }}>{b.stat}</span>
+                                <span style={{ fontSize: "13px", fontWeight: "700", color: c.text, fontFamily: "sans-serif", whiteSpace: "nowrap" }}>{b.value}</span>
+                              </div>
+                              <div style={{ fontSize: "12px", color: "#6b7280", lineHeight: 1.5, fontFamily: "sans-serif" }}>{b.context}</div>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+          <div style={{ background: "#f9fafb", border: "1px solid #e5e7eb", borderLeft: "4px solid #dc2626", borderRadius: "0 6px 6px 0", padding: "18px 22px" }}>
+            <div style={{ fontSize: "12px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "8px", fontFamily: "sans-serif" }}>The Fed's Impossible Position</div>
+            <div style={{ fontSize: "15px", color: "#1f2937", lineHeight: 1.8 }}>The Fed is on hold at 3.50-3.75%. It cannot cut because CPI is 4.2%. It cannot hike because labor is fragile and the debt service burden would become untenable. The April vote was 8-4, the most divided committee in decades. The Warsh cut thesis: if.</div>
+          </div>
+        </div>
+      )}
+
+      {activeTab === "dollar" && (
+        <div style={{ padding: "20px 28px" }}>
+          <p style={{ fontSize: "14px", color: "#6b7280", marginTop: 0, marginBottom: "16px", fontFamily: "sans-serif", lineHeight: 1.5 }}>
+            Reserve currency status, petrodollar mechanics, and the infrastructure being built to replace the dollar system.
+          </p>
+          <div style={{ background: "#fff5f5", border: "1px solid #fca5a5", borderLeft: "4px solid #dc2626", borderRadius: "0 6px 6px 0", padding: "14px 18px", marginBottom: "20px" }}>
+            <div style={{ fontSize: "12px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "6px", fontFamily: "sans-serif" }}>The Pozsar Frame</div>
+            <div style={{ fontSize: "14px", color: "#1f2937", lineHeight: 1.7, fontFamily: "sans-serif" }}>Cheap commodities from Russia and China underwrote Western inflation stability for 30 years. That bargain fractured in 2022 when the West weaponized dollar reserves. Commodity nations are building the exit infrastructure now.</div>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "14px", marginBottom: "24px" }}>
+            {data.indicators.filter(d => d.category === "dollar").map((item) => {
+              const c = signalColors[item.signal];
+              const isOpen = expandedBehind === item.id;
+              return (
+                <div key={item.id} style={{ background: c.bg, border: `1px solid ${c.border}`, borderRadius: "6px", overflow: "hidden" }}>
+                  <div style={{ padding: "16px 18px" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px" }}>
+                      <div style={{ fontSize: "12px", color: "#4b5563", fontFamily: "sans-serif", fontWeight: "600", textTransform: "uppercase", letterSpacing: "0.05em" }}>{item.label}</div>
+                      <span style={{ fontSize: "10px", color: c.text, fontFamily: "sans-serif", fontWeight: "600", display: "flex", alignItems: "center", gap: "4px" }}>
+                        <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: c.dot, display: "inline-block" }} />
+                        {item.signalLabel}
+                      </span>
+                    </div>
+                    <div style={{ fontSize: "28px", fontWeight: "700", color: "#111827", lineHeight: 1, marginBottom: "4px" }}>{item.value}</div>
+                    <div style={{ fontSize: "13px", color: "#6b7280", fontFamily: "sans-serif", marginBottom: "8px" }}>{item.sub}</div>
+                    <div style={{ borderTop: `1px solid ${c.border}`, paddingTop: "8px", fontSize: "13px", color: "#4b5563", fontFamily: "sans-serif", lineHeight: 1.5 }}>{item.note}</div>
+                  </div>
+                  {item.behind && item.behind.length > 0 && (
+                    <>
+                      <button onClick={() => setExpandedBehind(isOpen ? null : item.id)} style={{ width: "100%", background: "none", border: "none", borderTop: `1px solid ${c.border}`, padding: "8px 18px", fontSize: "12px", color: c.text, fontWeight: "600", cursor: "pointer", fontFamily: "sans-serif", display: "flex", justifyContent: "space-between" }}>
+                        <span>Behind the numbers</span>
+                        <span style={{ transform: isOpen ? "rotate(180deg)" : "none" }}>▾</span>
+                      </button>
+                      {isOpen && (
+                        <div style={{ borderTop: `1px solid ${c.border}`, padding: "12px 18px", display: "flex", flexDirection: "column", gap: "10px" }}>
+                          {item.behind.map((b, i) => (
+                            <div key={i}>
+                              <div style={{ display: "flex", justifyContent: "space-between", gap: "8px", marginBottom: "2px" }}>
+                                <span style={{ fontSize: "13px", color: "#374151", fontFamily: "sans-serif" }}>{b.stat}</span>
+                                <span style={{ fontSize: "13px", fontWeight: "700", color: c.text, fontFamily: "sans-serif", whiteSpace: "nowrap" }}>{b.value}</span>
+                              </div>
+                              <div style={{ fontSize: "12px", color: "#6b7280", lineHeight: 1.5, fontFamily: "sans-serif" }}>{b.context}</div>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+          <div style={{ background: "#f9fafb", border: "1px solid #e5e7eb", borderLeft: "4px solid #dc2626", borderRadius: "0 6px 6px 0", padding: "18px 22px" }}>
+            <div style={{ fontSize: "12px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "8px", fontFamily: "sans-serif" }}>Bretton Woods III in Real Time</div>
+            <div style={{ fontSize: "15px", color: "#1f2937", lineHeight: 1.8 }}>The dollar reserve share is below 57% for the first time since 1995. The petrodollar agreement expired June 2024 with no renewal. mBridge settles $55.5 billion outside the dollar system. Project Agora is the Western response. Saudi Arabia joined.</div>
+          </div>
+        </div>
+      )}
+
       {activeTab === "consumer" && (
         <div style={{ padding: "20px 28px" }}>
 
@@ -1086,8 +1083,102 @@ export default function MacroMonitor() {
           <div style={{ background: "#f9fafb", border: "1px solid #e5e7eb", borderLeft: "4px solid #dc2626", borderRadius: "0 6px 6px 0", padding: "20px 24px" }}>
             <div style={{ fontSize: "13px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "10px", fontFamily: "sans-serif" }}>The Debt Trap Beneath the Headline</div>
             <div style={{ fontSize: "15px", color: "#1f2937", lineHeight: 1.8 }}>
-              Americans have added $482 billion in credit card debt since 2021, using plastic to absorb the inflation that wages did not cover. The interest rate on those cards averages 21.52%. At that rate, a $5,000 balance costs more than $1,000 a year just to carry. Subprime auto delinquency hit a record in January. FHA mortgage delinquency is near 12%. The pandemic-era relief that kept those numbers lower expired in September 2025. The squeeze is not coming. It is already running.
+              Americans have added $482 billion in credit card debt since 2021. At 21.52% APR, a $5,000 balance costs $1,000+ annually. Subprime auto delinquency hit a record. FHA mortgage delinquency near 12%. The squeeze is already running.
             </div>
+          </div>
+        </div>
+      )}
+
+      {activeTab === "markets" && (
+        <div style={{ padding: "20px 28px" }}>
+          <p style={{ fontSize: "14px", color: "#6b7280", marginTop: 0, marginBottom: "16px", fontFamily: "sans-serif", lineHeight: 1.5 }}>
+            Valuation, volatility, and credit conditions. All data as of June 10-11, 2026.
+          </p>
+          <div style={{ background: "#fff5f5", border: "1px solid #fca5a5", borderLeft: "4px solid #dc2626", borderRadius: "0 6px 6px 0", padding: "14px 18px", marginBottom: "20px" }}>
+            <div style={{ fontSize: "12px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "6px", fontFamily: "sans-serif" }}>Overvalued and Complacent</div>
+            <div style={{ fontSize: "14px", color: "#1f2937", lineHeight: 1.7, fontFamily: "sans-serif" }}>Shiller CAPE at 39.9 implies roughly 1.9% annual returns over the next decade -- below current 4.2% inflation. VIX at 22.2 is elevated but not panicked. High yield spreads near 300bps while defaults run 4.2-4.5%. The market is pricing in a soft.</div>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "14px", marginBottom: "24px" }}>
+            {data.indicators.filter(d => d.category === "markets").map((item) => {
+              const c = signalColors[item.signal];
+              const isOpen = expandedBehind === item.id;
+              return (
+                <div key={item.id} style={{ background: c.bg, border: `1px solid ${c.border}`, borderRadius: "6px", overflow: "hidden" }}>
+                  <div style={{ padding: "16px 18px" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px" }}>
+                      <div style={{ fontSize: "12px", color: "#4b5563", fontFamily: "sans-serif", fontWeight: "600", textTransform: "uppercase", letterSpacing: "0.05em" }}>{item.label}</div>
+                      <span style={{ fontSize: "10px", color: c.text, fontFamily: "sans-serif", fontWeight: "600", display: "flex", alignItems: "center", gap: "4px" }}>
+                        <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: c.dot, display: "inline-block" }} />
+                        {item.signalLabel}
+                      </span>
+                    </div>
+                    <div style={{ fontSize: "28px", fontWeight: "700", color: "#111827", lineHeight: 1, marginBottom: "4px" }}>{item.value}</div>
+                    <div style={{ fontSize: "13px", color: "#6b7280", fontFamily: "sans-serif", marginBottom: "8px" }}>{item.sub}</div>
+                    <div style={{ borderTop: `1px solid ${c.border}`, paddingTop: "8px", fontSize: "13px", color: "#4b5563", fontFamily: "sans-serif", lineHeight: 1.5 }}>{item.note}</div>
+                  </div>
+                  {item.behind && item.behind.length > 0 && (
+                    <>
+                      <button onClick={() => setExpandedBehind(isOpen ? null : item.id)} style={{ width: "100%", background: "none", border: "none", borderTop: `1px solid ${c.border}`, padding: "8px 18px", fontSize: "12px", color: c.text, fontWeight: "600", cursor: "pointer", fontFamily: "sans-serif", display: "flex", justifyContent: "space-between" }}>
+                        <span>Behind the numbers</span>
+                        <span style={{ transform: isOpen ? "rotate(180deg)" : "none" }}>▾</span>
+                      </button>
+                      {isOpen && (
+                        <div style={{ borderTop: `1px solid ${c.border}`, padding: "12px 18px", display: "flex", flexDirection: "column", gap: "10px" }}>
+                          {item.behind.map((b, i) => (
+                            <div key={i}>
+                              <div style={{ display: "flex", justifyContent: "space-between", gap: "8px", marginBottom: "2px" }}>
+                                <span style={{ fontSize: "13px", color: "#374151", fontFamily: "sans-serif" }}>{b.stat}</span>
+                                <span style={{ fontSize: "13px", fontWeight: "700", color: c.text, fontFamily: "sans-serif", whiteSpace: "nowrap" }}>{b.value}</span>
+                              </div>
+                              <div style={{ fontSize: "12px", color: "#6b7280", lineHeight: 1.5, fontFamily: "sans-serif" }}>{b.context}</div>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+          <div style={{ background: "#f9fafb", border: "1px solid #e5e7eb", borderLeft: "4px solid #dc2626", borderRadius: "0 6px 6px 0", padding: "18px 22px" }}>
+            <div style={{ fontSize: "12px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "8px", fontFamily: "sans-serif" }}>The 60/40 Is Broken</div>
+            <div style={{ fontSize: "15px", color: "#1f2937", lineHeight: 1.8 }}>When stocks and bonds fall together -- which they do in inflationary environments -- the 60/40 portfolio fails as a hedge. CAPE at 39.9 means expected equity returns are near-zero after inflation. Long bonds carry duration risk with CPI at 4.2%. The.</div>
+          </div>
+        </div>
+      )}
+
+      {activeTab === "debt" && (
+        <div style={{ padding: "20px 28px" }}>
+          <p style={{ fontSize: "14px", color: "#6b7280", marginTop: 0, marginBottom: "16px", fontFamily: "sans-serif", lineHeight: 1.5 }}>
+            The slow-motion repricing of everything built on cheap money.
+          </p>
+          <div style={{ background: "#fff5f5", border: "1px solid #fca5a5", borderLeft: "4px solid #dc2626", borderRadius: "0 6px 6px 0", padding: "14px 18px", marginBottom: "20px" }}>
+            <div style={{ fontSize: "12px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "6px", fontFamily: "sans-serif" }}>The Connective Tissue</div>
+            <div style={{ fontSize: "14px", color: "#1f2937", lineHeight: 1.7, fontFamily: "sans-serif" }}>Federal debt, CRE, and private equity all relied on near-zero rates. All are now refinancing at rates 400-500bps higher. The losses flow to pension funds, community banks, and insurance companies -- the institutions that hold ordinary Americans.</div>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "14px", marginBottom: "24px" }}>
+            {data.indicators.filter(d => d.category === "debt").map((item) => {
+              const c = signalColors[item.signal];
+              return (
+                <div key={item.id} style={{ background: c.bg, border: `1px solid ${c.border}`, borderRadius: "6px", padding: "16px 18px" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px" }}>
+                    <div style={{ fontSize: "12px", color: "#4b5563", fontFamily: "sans-serif", fontWeight: "600", textTransform: "uppercase", letterSpacing: "0.05em" }}>{item.label}</div>
+                    <span style={{ fontSize: "10px", color: c.text, fontFamily: "sans-serif", fontWeight: "600", display: "flex", alignItems: "center", gap: "4px" }}>
+                      <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: c.dot, display: "inline-block" }} />
+                      {item.signalLabel}
+                    </span>
+                  </div>
+                  <div style={{ fontSize: "28px", fontWeight: "700", color: "#111827", lineHeight: 1, marginBottom: "4px" }}>{item.value}</div>
+                  <div style={{ fontSize: "13px", color: "#6b7280", fontFamily: "sans-serif", marginBottom: "8px" }}>{item.sub}</div>
+                  <div style={{ borderTop: `1px solid ${c.border}`, paddingTop: "8px", fontSize: "13px", color: "#4b5563", fontFamily: "sans-serif", lineHeight: 1.5 }}>{item.note}</div>
+                </div>
+              );
+            })}
+          </div>
+          <div style={{ background: "#f9fafb", border: "1px solid #e5e7eb", borderLeft: "4px solid #dc2626", borderRadius: "0 6px 6px 0", padding: "18px 22px" }}>
+            <div style={{ fontSize: "12px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "8px", fontFamily: "sans-serif" }}>The Debt Crisis Nobody Is Talking About</div>
+            <div style={{ fontSize: "15px", color: "#1f2937", lineHeight: 1.8 }}>Federal debt hit $39 trillion in March 2026. Interest payments exceeded $1 trillion annually -- surpassing defense spending. Office loan delinquency at record 12.34%. Regional banks hold 44% of loan portfolios in CRE. $1 trillion in CRE loans mature.</div>
           </div>
         </div>
       )}
@@ -1285,7 +1376,7 @@ export default function MacroMonitor() {
           <div style={{ background: "#fff5f5", border: "2px solid #fca5a5", borderLeft: "5px solid #dc2626", borderRadius: "6px", padding: "18px 22px", marginBottom: "24px" }}>
             <div style={{ fontSize: "12px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "8px", fontFamily: "sans-serif" }}>The K-Shape Is Cracking</div>
             <div style={{ fontSize: "15px", color: "#1f2937", lineHeight: 1.8, fontFamily: "sans-serif" }}>
-              The lower half of the K -- households under $60K -- is running out of cushion simultaneously. Savings at 2.6%, credit cards at 21.5% APR, real wages negative, SNAP cuts October 1. When this cohort pulls back: discount retail and fast food lose volume first, then small business suppliers, then regional employment. Dollar stores are not defensive here. They are the first casualties.
+              The lower half of the K -- households under $60K -- is running out of cushion simultaneously. Savings at 2.6%, credit cards at 21.5% APR, real wages negative, SNAP cuts October 1. Dollar stores are not defensive. They are the first casualties.
             </div>
           </div>
 
@@ -1300,26 +1391,18 @@ export default function MacroMonitor() {
           </div>
 
           {/* Pozsar / Dalio Framework */}
-          <div style={{ marginBottom: "28px" }}>
-            <div style={{ fontSize: "13px", color: "#4338ca", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "6px", fontFamily: "sans-serif" }}>The Intellectual Framework</div>
-            <div style={{ fontSize: "13px", color: "#6b7280", marginBottom: "16px", fontFamily: "sans-serif" }}>Two macro frameworks that explain why the indicators move the way they do.</div>
-            <div style={{ display: "flex", flexDirection: "column", gap: "12px", marginBottom: "24px" }}>
-              <div style={{ background: "#f5f3ff", border: "1px solid #c4b5fd", borderLeft: "4px solid #7c3aed", borderRadius: "0 6px 6px 0", padding: "16px 18px" }}>
-                <div style={{ fontSize: "13px", color: "#5b21b6", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "8px", fontFamily: "sans-serif" }}>Zoltan Pozsar -- Bretton Woods III</div>
-                <div style={{ fontSize: "14px", color: "#374151", lineHeight: 1.8, fontFamily: "sans-serif" }}>
-                  The post-Cold War bargain fractured when the West weaponized dollar reserves in 2022. Commodity nations are diversifying into gold, building mBridge, and pricing resources outside the dollar. Pozsar: Russia is a G-SIB of commodities, China a G-SIB of factories. Bretton Woods III is commodity-backed money replacing dollar-backed money. Investment implication: gold, silver, copper, agricultural commodities, and commodity-producing nations benefit.
-                </div>
-              </div>
-              <div style={{ background: "#fff7ed", border: "1px solid #fed7aa", borderLeft: "4px solid #ea580c", borderRadius: "0 6px 6px 0", padding: "16px 18px" }}>
-                <div style={{ fontSize: "13px", color: "#9a3412", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "8px", fontFamily: "sans-serif" }}>Ray Dalio -- Big Debt Cycle and Debasement</div>
-                <div style={{ fontSize: "14px", color: "#374151", lineHeight: 1.8, fontFamily: "sans-serif" }}>
-                  Sovereigns choose debasement over default. The U.S. pays $1 trillion annually in interest, doubling by 2036. Dalio's framework: gold and commodities over paper assets, international over U.S. concentration, real over financial assets. Gold is the world's second-largest reserve asset. Central banks understand the cycle.
-                </div>
-              </div>
+          <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginBottom: "24px" }}>
+            <div style={{ background: "#f5f3ff", border: "1px solid #c4b5fd", borderLeft: "4px solid #7c3aed", borderRadius: "0 6px 6px 0", padding: "14px 16px" }}>
+              <div style={{ fontSize: "11px", color: "#5b21b6", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "6px", fontFamily: "sans-serif" }}>Pozsar -- Bretton Woods III</div>
+              <div style={{ fontSize: "13px", color: "#374151", lineHeight: 1.7, fontFamily: "sans-serif" }}>The post-Cold War bargain fractured in 2022 when the West weaponized dollar reserves. Commodity nations are building the exit infrastructure -- mBridge, gold reserves, non-dollar pricing. Bretton Woods III is commodity-backed money replacing dollar-backed money.</div>
+            </div>
+            <div style={{ background: "#fff7ed", border: "1px solid #fed7aa", borderLeft: "4px solid #ea580c", borderRadius: "0 6px 6px 0", padding: "14px 16px" }}>
+              <div style={{ fontSize: "11px", color: "#9a3412", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "6px", fontFamily: "sans-serif" }}>Dalio -- Big Debt Cycle</div>
+              <div style={{ fontSize: "13px", color: "#374151", lineHeight: 1.7, fontFamily: "sans-serif" }}>Sovereigns choose debasement over default. The U.S. pays $1 trillion annually in interest, doubling by 2036. Gold and commodities over paper assets. Real over financial. Central banks understand the cycle.</div>
             </div>
           </div>
 
-          {/* Contagion Timeline */}
+          {/* Contagion Timeline */}/* Contagion Timeline */}
           <div style={{ marginBottom: "28px" }}>
             <div style={{ fontSize: "13px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "6px", fontFamily: "sans-serif" }}>K-Shape Contagion Timeline</div>
             <div style={{ fontSize: "14px", color: "#6b7280", marginBottom: "20px", fontFamily: "sans-serif" }}>
