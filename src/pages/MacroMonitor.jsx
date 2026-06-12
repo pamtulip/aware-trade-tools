@@ -185,6 +185,52 @@ export default function MacroMonitor() {
           <p style={{ fontSize: "14px", color: "#6b7280", marginTop: 0, marginBottom: "16px", fontFamily: "sans-serif", lineHeight: 1.5 }}>
             Who has jobs, who is losing them, and what those jobs pay.
           </p>
+
+          {/* Overall labor summary */}
+          <div style={{ background: "#fff5f5", border: "1px solid #fca5a5", borderLeft: "4px solid #dc2626", borderRadius: "0 6px 6px 0", padding: "16px 20px", marginBottom: "16px" }}>
+            <div style={{ fontSize: "12px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "8px", fontFamily: "sans-serif" }}>The Labor Market in One Paragraph</div>
+            <div style={{ fontSize: "14px", color: "#1f2937", lineHeight: 1.8, fontFamily: "sans-serif" }}>
+              The headline numbers look fine. 172,000 jobs added in May, unemployment at 4.3%. Underneath, the composition is deteriorating. Healthcare added 52,000 jobs and leisure and hospitality added 39,000 -- lower-wage, lower-multiplier sectors. Manufacturing is flat. Financial services employment is down 107,000 from peak. Tech is cutting 1,136 workers per day. Small business hiring is at a five-year low. Jobless claims hit 242,000 -- the highest since August 2023. Real wages are negative at -0.8% after inflation. The labor market is not collapsing. It is hollowing: good headline numbers hiding a deteriorating composition.
+            </div>
+          </div>
+
+          {/* Composition breakdown */}
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px", marginBottom: "20px" }}>
+            <div style={{ background: "#fff5f5", border: "1px solid #fca5a5", borderRadius: "4px", padding: "12px 14px" }}>
+              <div style={{ fontSize: "11px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: "8px", fontFamily: "sans-serif" }}>Sectors Adding Jobs</div>
+              {[
+                { sector: "Healthcare", jobs: "+52,000", note: "Non-cyclical. Demand driven by aging population and lower-K health stress." },
+                { sector: "Leisure & Hospitality", jobs: "+39,000", note: "Upper-K still dining and traveling. First to lose volume when upper-K tightens." },
+                { sector: "Government", jobs: "+21,000", note: "Federal employment rising despite DOGE mandate. State and local driving growth." },
+              ].map((item, i) => (
+                <div key={i} style={{ marginBottom: "8px", paddingBottom: "8px", borderBottom: i < 2 ? "1px solid #fecaca" : "none" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "2px" }}>
+                    <span style={{ fontSize: "13px", fontWeight: "600", color: "#111827", fontFamily: "sans-serif" }}>{item.sector}</span>
+                    <span style={{ fontSize: "13px", fontWeight: "700", color: "#15803d", fontFamily: "sans-serif" }}>{item.jobs}</span>
+                  </div>
+                  <div style={{ fontSize: "11px", color: "#6b7280", fontFamily: "sans-serif", lineHeight: 1.4 }}>{item.note}</div>
+                </div>
+              ))}
+            </div>
+            <div style={{ background: "#fff5f5", border: "1px solid #fca5a5", borderRadius: "4px", padding: "12px 14px" }}>
+              <div style={{ fontSize: "11px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: "8px", fontFamily: "sans-serif" }}>Sectors Cutting or Flat</div>
+              {[
+                { sector: "Technology", jobs: "-184K YTD", note: "1,136 layoffs/day. 48% attributed to AI. Upper-K spending class being trimmed." },
+                { sector: "Financial Services", jobs: "-107K from peak", note: "Down from 2024 peak. Mortgage, investment banking, fintech all contracting." },
+                { sector: "Manufacturing", jobs: "Flat", note: "No growth. Tariff uncertainty freezing capital investment decisions." },
+              ].map((item, i) => (
+                <div key={i} style={{ marginBottom: "8px", paddingBottom: "8px", borderBottom: i < 2 ? "1px solid #fecaca" : "none" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "2px" }}>
+                    <span style={{ fontSize: "13px", fontWeight: "600", color: "#111827", fontFamily: "sans-serif" }}>{item.sector}</span>
+                    <span style={{ fontSize: "13px", fontWeight: "700", color: "#dc2626", fontFamily: "sans-serif" }}>{item.jobs}</span>
+                  </div>
+                  <div style={{ fontSize: "11px", color: "#6b7280", fontFamily: "sans-serif", lineHeight: 1.4 }}>{item.note}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Tech callout */}
           <div style={{ background: "#fff5f5", border: "1px solid #fca5a5", borderLeft: "4px solid #dc2626", borderRadius: "0 6px 6px 0", padding: "14px 18px", marginBottom: "20px" }}>
             <div style={{ fontSize: "12px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "6px", fontFamily: "sans-serif" }}>Tech Layoffs Are an Upper-K Story</div>
             <div style={{ fontSize: "14px", color: "#1f2937", lineHeight: 1.7, fontFamily: "sans-serif" }}>184,000 tech workers have lost jobs in 2026. Nearly half attributed to AI displacement. Software developer employment under 26 is down 20% since 2024. These are not lower-K jobs. This is the spending class being trimmed.</div>
