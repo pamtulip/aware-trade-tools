@@ -543,6 +543,50 @@ export default function MacroMonitor() {
       {activeTab === "ideas" && (
         <div style={{ padding: "28px", maxWidth: "800px" }}>
 
+          {/* Stagflation Playbook */}
+          <div style={{ background: "#fff5f5", border: "2px solid #dc2626", borderRadius: "6px", padding: "20px 22px", marginBottom: "28px" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "12px" }}>
+              <span style={{ fontSize: "11px", fontWeight: "700", color: "#ffffff", background: "#dc2626", padding: "2px 10px", borderRadius: "3px", fontFamily: "sans-serif", letterSpacing: "0.08em" }}>STAGFLATION PLAYBOOK</span>
+              <span style={{ fontSize: "12px", color: "#dc2626", fontFamily: "sans-serif" }}>What historically works -- and what is different this time</span>
+            </div>
+
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px", marginBottom: "14px" }}>
+              {[
+                { label: "Real Assets", detail: "Gold, silver, copper, commodities. Outperform when money loses purchasing power. Central banks buying 1,000+ tonnes/yr.", verdict: "Own it", color: "#15803d" },
+                { label: "Pricing Power Equities", detail: "Consumer staples, healthcare, utilities, energy. Companies that raise prices without losing volume.", verdict: "Tilt toward", color: "#15803d" },
+                { label: "Short Duration Fixed Income", detail: "T-bills, SGOV. Captures current rates without duration risk. Long bonds lose value with CPI at 4.2%.", verdict: "Overweight", color: "#15803d" },
+                { label: "International / Dollar Hedge", detail: "Weakening dollar raises foreign asset values in dollar terms. Latin America, commodity-exporting nations.", verdict: "Diversify into", color: "#15803d" },
+                { label: "Growth / Long Duration", detail: "High-multiple stocks lose value when rates stay elevated. S&P 500 at CAPE 39.9 implies 1.9% real returns.", verdict: "Underweight", color: "#dc2626" },
+                { label: "Long-Term Bonds", detail: "Duration risk in a 4.2% inflation environment. TLT only works if the Warsh cut thesis materializes.", verdict: "Thesis-dependent", color: "#92400e" },
+              ].map((item, i) => (
+                <div key={i} style={{ background: "#ffffff", border: "1px solid #fca5a5", borderRadius: "4px", padding: "12px 14px" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "6px" }}>
+                    <div style={{ fontSize: "13px", fontWeight: "700", color: "#111827", fontFamily: "sans-serif" }}>{item.label}</div>
+                    <span style={{ fontSize: "10px", fontWeight: "700", color: item.color, fontFamily: "sans-serif", whiteSpace: "nowrap", marginLeft: "8px" }}>{item.verdict}</span>
+                  </div>
+                  <div style={{ fontSize: "12px", color: "#4b5563", lineHeight: 1.5, fontFamily: "sans-serif" }}>{item.detail}</div>
+                </div>
+              ))}
+            </div>
+
+            <div style={{ borderTop: "1px solid #fca5a5", paddingTop: "12px" }}>
+              <div style={{ fontSize: "12px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: "8px", fontFamily: "sans-serif" }}>What is different from the 1970s</div>
+              <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+                {[
+                  "The Fed cannot use the Volcker playbook. Debt at 124% of GDP means raising rates to 20% would make interest payments larger than the entire federal budget.",
+                  "This stagflation is K-shaped. The lower half is already in crisis. Upper-K is still spending but losing professional-class jobs to AI at 1,136/day.",
+                  "Programmable payment infrastructure did not exist in the 1970s. Benefit restrictions and banking surveillance add a deflationary mechanism for the lower half.",
+                  "Two new investment categories: Medicaid managed care as the counter-cyclical policy play, and stablecoin infrastructure as the programmable money buildout.",
+                ].map((text, i) => (
+                  <div key={i} style={{ display: "flex", gap: "8px", alignItems: "flex-start" }}>
+                    <span style={{ color: "#dc2626", fontFamily: "sans-serif", flexShrink: 0, marginTop: "1px" }}>›</span>
+                    <span style={{ fontSize: "13px", color: "#374151", fontFamily: "sans-serif", lineHeight: 1.5 }}>{text}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
           {/* Disclaimer */}
           <div style={{ background: "#eef2ff", border: "1px solid #c7d2fe", borderLeft: "4px solid #4f46e5", borderRadius: "0 6px 6px 0", padding: "14px 18px", marginBottom: "24px" }}>
             <div style={{ fontSize: "12px", color: "#4338ca", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "5px", fontFamily: "sans-serif" }}>For Informational Purposes Only</div>
