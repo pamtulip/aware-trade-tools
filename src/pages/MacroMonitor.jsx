@@ -27,10 +27,6 @@ const data = {
       signal: "yellow",
       signalLabel: "WATCH",
       category: "inflation",
-      behind: [
-        { stat: "Gap between headline and core", value: "1.3 points", context: "Energy is doing the work. If core starts rising too, that." },
-        { stat: "Shelter inflation", value: "Still elevated", context: "Housing costs are the biggest piece of core CPI." },
-      ],
     },
     {
       id: "ppi",
@@ -41,11 +37,6 @@ const data = {
       signal: "green",
       signalLabel: "COOL",
       category: "inflation",
-      behind: [
-        { stat: "What this means", value: "Relief signal", context: "Wholesale prices are what producers pay before costs reach." },
-        { stat: "The split picture", value: "PPI cool, CPI still hot", context: "Consumer prices are still 4.2% driven by energy." },
-        { stat: "Fed implication", value: "Hold confirmed, cut possible later", context: "A cool PPI does not give the Fed reason to cut now with CPI." },
-      ],
     },
     {
       id: "fed",
@@ -71,11 +62,6 @@ const data = {
       signal: "green",
       signalLabel: "STRONG",
       category: "labor",
-      behind: [
-        { stat: "Where the jobs are", value: "Leisure, hospitality, local govt", context: "These sectors are adding jobs." },
-        { stat: "Financial services jobs lost since May 2025", value: "107,000", context: "Higher-paid white-collar employment has been shrinking for." },
-        { stat: "Hiring rate", value: "Frozen", context: "Job openings are not being filled at the pace of prior." },
-      ],
     },
     {
       id: "unemployment",
@@ -86,12 +72,6 @@ const data = {
       signal: "yellow",
       signalLabel: "WATCH",
       category: "labor",
-      behind: [
-        { stat: "U-6  --  the real unemployment rate", value: "8.1%", context: "U-6 adds discouraged workers and people working part-time." },
-        { stat: "Long-term unemployed", value: "27.5% of jobless", context: "More than 1 in 4 unemployed people have been out of work." },
-        { stat: "Working part-time, want full-time", value: "4.8 million", context: "These workers are counted as employed in the headline." },
-        { stat: "Labor force participation rate", value: "61.8%", context: "Before the pandemic it was 63.3%." },
-      ],
     },
     {
       id: "wages",
@@ -112,12 +92,6 @@ const data = {
       signal: "red",
       signalLabel: "RISING",
       category: "labor",
-      behind: [
-        { stat: "Beat by", value: "+22,000", context: "Forecasters expected 220,000. The actual number was 242,000." },
-        { stat: "Last time this high", value: "August 2023", context: "Claims have been quietly rising for weeks." },
-        { stat: "What it means next to payrolls", value: "Contradiction", context: "May payrolls added 172,000 jobs." },
-        { stat: "Federal employee claims", value: "Rising", context: "Federal workforce reduction claims have been ticking up." },
-      ],
     },
     {
       id: "umich",
@@ -145,11 +119,6 @@ const data = {
       signal: "red",
       signalLabel: "CRITICAL",
       category: "inflation",
-      behind: [
-        { stat: "Extra annual fuel cost on a typical household", value: "$800–1,200", context: "Estimated additional cost at current energy inflation." },
-        { stat: "Energy as share of spending for lower-income.", value: "8–10%", context: "vs. about 3–4% for higher-income households." },
-        { stat: "Geopolitical variable", value: "Active", context: "President Trump warned Iran will pay the price this week." },
-      ],
     },
     {
       id: "snap",
@@ -170,11 +139,6 @@ const data = {
       signal: "red",
       signalLabel: "ACTIVE",
       category: "policy",
-      behind: [
-        { stat: "Red flags listed that describe ordinary life", value: "18", context: "Shared address, shared phone number, ITIN use, cash." },
-        { stat: "Agencies coordinating", value: "5", context: "FinCEN, IRS, FDIC, OCC, and the National Credit Union." },
-        { stat: "SAR tracking code", value: "FINANCIALINTEGRITY-2026-A002", context: "Banks are asked to tag suspicious activity reports with." },
-      ],
     },
     {
       id: "cc-delinquency",
@@ -185,13 +149,6 @@ const data = {
       signal: "yellow",
       signalLabel: "ELEVATED",
       category: "stress",
-      behind: [
-        { stat: "Big bank delinquency rate", value: "~3%", context: "Large institutions look relatively stable." },
-        { stat: "Small bank delinquency rate", value: "6.4%", context: "Community banks serve lower-income and rural households." },
-        { stat: "Total credit card debt", value: "$1.252 trillion", context: "Down slightly from the Q4 2025 record of $1.277 trillion,." },
-        { stat: "Average APR on cards carrying a balance", value: "21.52%", context: "Down slightly from 22.3% in Q4 2025, but still near." },
-        { stat: "Charge-off rate", value: "3.8%", context: "When a bank charges off a card account it exits the." },
-      ],
     },
     {
       id: "auto-delinquency",
@@ -202,12 +159,6 @@ const data = {
       signal: "red",
       signalLabel: "STRESS",
       category: "stress",
-      behind: [
-        { stat: "Subprime auto delinquency (60+ days)", value: "6.8%", context: "The highest level on record going back to the early 1990s,." },
-        { stat: "Prime auto delinquency", value: "0.42%", context: "Prime borrowers are fine. The stress is entirely." },
-        { stat: "Total auto loan balances", value: "$1.68 trillion", context: "Up $43 billion year over year. Auto loan balances surged." },
-        { stat: "Why auto delinquency matters", value: "Leading indicator", context: "Car payments are typically the last bill people stop paying." },
-      ],
     },
     {
       id: "mortgage-delinquency",
@@ -218,12 +169,6 @@ const data = {
       signal: "red",
       signalLabel: "RISING",
       category: "stress",
-      behind: [
-        { stat: "FHA loan delinquency rate", value: "11.52%", context: "FHA loans serve first-time and lower-income homebuyers." },
-        { stat: "VA loan delinquency rate", value: "~6.7%", context: "About 225 basis points above conventional loans." },
-        { stat: "Foreclosure process rate", value: "0.64%", context: "Up 11 basis points from Q4 2025 and 15 basis points from a." },
-        { stat: "Foreclosure actions started in Q1", value: "0.24%", context: "Up 4 basis points from last quarter. The pipeline is." },
-      ],
     },
     {
       id: "total-household-debt",
@@ -234,12 +179,6 @@ const data = {
       signal: "yellow",
       signalLabel: "WATCH",
       category: "economy",
-      behind: [
-        { stat: "Share of debt in delinquency", value: "4.8%", context: "Nearly 1 in 20 dollars of household debt is past due." },
-        { stat: "Credit card debt increase since 2021", value: "+63%", context: "$482 billion in new credit card debt in five years." },
-        { stat: "New auto loans in Q1", value: "$182 billion", context: "Originations remain high despite delinquency stress,." },
-        { stat: "The K-shape in one sentence", value: "Aggregate looks stable. Components do not.", context: "Total debt rose only $18 billion." },
-      ],
     },
     {
       id: "sp500",
@@ -265,12 +204,6 @@ const data = {
       signal: "red",
       signalLabel: "OVERVALUED",
       category: "markets",
-      behind: [
-        { stat: "Historical median CAPE", value: "16.1", context: "The market is trading at nearly 2.5 times its historical." },
-        { stat: "Only times CAPE was higher", value: "1999-2000 and 2020-2022", context: "Both periods ended in significant corrections." },
-        { stat: "Regular P/E ratio", value: "24.8", context: "The trailing P/E is 24.8, near its 20-year average of 25.3." },
-        { stat: "What this means for your 401K", value: "Lower expected returns", context: "If you are in an index fund and 10+ years from retirement,." },
-      ],
     },
     {
       id: "vix",
@@ -281,12 +214,6 @@ const data = {
       signal: "yellow",
       signalLabel: "ELEVATED",
       category: "markets",
-      behind: [
-        { stat: "What the VIX measures", value: "Expected volatility, next 30 days", context: "The VIX is the market's best guess about how much the S&P." },
-        { stat: "Why it jumped 11.8% Tuesday", value: "CPI + claims combination", context: "Hot inflation plus rising unemployment claims in the same." },
-        { stat: "Implication for your portfolio", value: "Hedging costs are rising", context: "A higher VIX means options-based protection costs more." },
-        { stat: "MOVE index (bond volatility)", value: "~77", context: "Treasury market volatility is also elevated, off its March." },
-      ],
     },
     {
       id: "credit-spreads",
@@ -297,12 +224,6 @@ const data = {
       signal: "red",
       signalLabel: "COMPLACENT",
       category: "markets",
-      behind: [
-        { stat: "What spreads are saying", value: "No fear of defaults", context: "At 300 basis points, high yield spreads are pricing a very." },
-        { stat: "What default rates are saying", value: "4.2–4.5% trailing default rate", context: "Moody's trailing 12-month high yield default rate is 4.2 to." },
-        { stat: "Investment grade spreads", value: "~85 bps  --  near 25-year tights", context: "Investment grade corporate bonds are also priced for." },
-        { stat: "The risk in plain language", value: "The bond market is not worried. It should be.", context: "Tight spreads while defaults are rising means investors are." },
-      ],
     },
     {
       id: "sixty-forty",
@@ -313,12 +234,6 @@ const data = {
       signal: "red",
       signalLabel: "BROKEN",
       category: "markets",
-      behind: [
-        { stat: "Why the 60/40 worked for 40 years", value: "Stocks and bonds moved opposite", context: "When stocks fell, investors fled to bonds, pushing bond." },
-        { stat: "Why it stopped working", value: "Inflation changed the math", context: "When inflation is high, the Fed cannot cut rates to rescue." },
-        { stat: "2022 was the warning", value: "Both stocks and bonds fell 15–20%", context: "2022 was the worst year for the 60/40 since the 1930s." },
-        { stat: "What replaces it", value: "Real assets, short duration, alternatives", context: "TIPS, commodities, short-term bonds, and real assets tend." },
-      ],
     },
     {
       id: "ten-year",
@@ -344,12 +259,6 @@ const data = {
       signal: "red",
       signalLabel: "STUCK",
       category: "economy",
-      behind: [
-        { stat: "Rate one year ago", value: "6.85%", context: "Rates have fallen modestly over the past year but are not." },
-        { stat: "Monthly payment: $400K home at 6.55%", value: "$2,530/month", context: "The same mortgage at the 2021 average rate of 3.1% would." },
-        { stat: "Why rates are stuck", value: "10-year yield + inflation", context: "The Fed does not set mortgage rates directly." },
-        { stat: "Refinance rate", value: "6.69%", context: "Refinancing costs more than a new purchase loan." },
-      ],
     },
     {
       id: "home-affordability",
@@ -360,12 +269,6 @@ const data = {
       signal: "red",
       signalLabel: "CRISIS",
       category: "economy",
-      behind: [
-        { stat: "Historical norm", value: "3 to 4x income", context: "For most of the post-war era, a median home cost 3 to 4." },
-        { stat: "What created this gap", value: "Low rates + limited supply + investor buying", context: "A decade of near-zero rates inflated asset prices." },
-        { stat: "Stuck market dynamic", value: "No one can afford to buy or sell", context: "Existing homeowners with 3% mortgages will not sell and." },
-        { stat: "Freddie Mac: income growth vs. home prices", value: "Income growth outpacing prices  --  marginally", context: "Freddie Mac noted in June that income growth is marginally." },
-      ],
     },
     {
       id: "savings-rate",
@@ -376,12 +279,6 @@ const data = {
       signal: "red",
       signalLabel: "DEPLETING",
       category: "consumer",
-      behind: [
-        { stat: "Historical average savings rate", value: "8.4%", context: "From 1959 to 2026, Americans saved an average of 8.4% of." },
-        { stat: "What happened to savings", value: "Inflation absorbed them", context: "Pandemic-era savings built a buffer through 2022." },
-        { stat: "April spending increase vs. income", value: "Spending +0.5%, income flat", context: "In April 2026, consumer spending rose 0.5% while personal." },
-        { stat: "Why 2.6% matters", value: "No cushion for October", context: "SNAP cuts hit October 1. Energy bills peak in Q4." },
-      ],
     },
     {
       id: "retail-sales",
@@ -532,12 +429,6 @@ const data = {
       signal: "yellow",
       signalLabel: "BUILDING",
       category: "dollar",
-      behind: [
-        { stat: "What Agora is", value: "Western tokenized cross-border settlement", context: "The BIS-led Western answer to mBridge." },
-        { stat: "Prototype confirmed May 27 2026", value: "Atomic settlement works", context: "BIS confirmed atomic multi-currency settlement is." },
-        { stat: "The programmability clause", value: "Smart contracts in transactions", context: "Agora allows institutions to embed compliance requirements." },
-        { stat: "mBridge vs. Agora", value: "Two parallel architectures", context: "mBridge settles outside the dollar system. Agora modernizes." },
-      ],
     },
     {
       id: "petrodollar",
@@ -548,12 +439,6 @@ const data = {
       signal: "yellow",
       signalLabel: "WATCH",
       category: "dollar",
-      behind: [
-        { stat: "What the agreement was", value: "1974 US-Saudi arrangement", context: "Saudi Arabia agreed to price oil in dollars and recycle." },
-        { stat: "What expiration means  --  documented", value: "No legal obligation to price in dollars", context: "Saudi Arabia is no longer bound by any agreement to price." },
-        { stat: "What expiration means  --  structural.", value: "Possible multi-currency pricing", context: "Saudi Arabia has discussed yuan-denominated oil sales with." },
-        { stat: "Why it matters regardless", value: "Treasury recycling at risk", context: "For decades, Saudi oil revenues became dollar purchases,." },
-      ],
     },
   ],
   behind_narrative: [
@@ -910,26 +795,77 @@ export default function MacroMonitor() {
       {activeTab === "indicators" && (
         <>
           <div style={{ padding: "20px 28px" }}>
+            <p style={{ fontSize: "14px", color: "#6b7280", marginTop: 0, marginBottom: "20px", fontFamily: "sans-serif", lineHeight: 1.6 }}>
+              The most important signal from each category. Click a tab above for the full picture.
+            </p>
             {[
-              { id: "inflation", label: "Inflation" },
-              { id: "labor", label: "Labor" },
-              { id: "monetary", label: "Monetary" },
-              { id: "economy", label: "Economy" },
-              { id: "markets", label: "Markets" },
-              { id: "debt", label: "Debt & Credit" },
-              { id: "dollar", label: "Dollar / Petrodollar" },
-              { id: "policy", label: "Policy" },
-            ].map(({ id: catId, label: catLabel }) => {
-              const catItems = filtered.filter(d => d.category === catId);
+              { id: "inflation", label: "Inflation", tab: null },
+              { id: "labor", label: "Labor", tab: null },
+              { id: "monetary", label: "Monetary", tab: null },
+              { id: "consumer", label: "Consumer", tab: "consumer" },
+              { id: "markets", label: "Markets", tab: "markets" },
+              { id: "debt", label: "Debt & Credit", tab: "debt" },
+              { id: "dollar", label: "Dollar / Petrodollar", tab: null },
+              { id: "policy", label: "Policy", tab: null },
+            ].map(({ id: catId, label: catLabel, tab: catTab }) => {
+              const catItems = filtered.filter(d => d.category === catId || (catId === "consumer" && d.category === "stress"));
               if (catItems.length === 0) return null;
+              const priority = ["red","yellow","gray","green"];
+              const lead = catItems.sort((a,b) => priority.indexOf(a.signal) - priority.indexOf(b.signal))[0];
+              const c = signalColors[lead.signal];
+              const isOpen = expandedBehind === lead.id;
               return (
-                <div key={catId} style={{ marginBottom: "28px" }}>
-                  <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "14px" }}>
+                <div key={catId} style={{ marginBottom: "20px" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "10px" }}>
                     <div style={{ fontSize: "11px", color: "#6b7280", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.12em", fontFamily: "sans-serif", whiteSpace: "nowrap" }}>{catLabel}</div>
                     <div style={{ flex: 1, height: "1px", background: "#f3f4f6" }} />
+                    {catTab && (
+                      <button onClick={() => setActiveTab(catTab)} style={{ background: "none", border: "none", fontSize: "11px", color: "#4f46e5", cursor: "pointer", fontFamily: "sans-serif", whiteSpace: "nowrap", padding: "0" }}>
+                        Full view →
+                      </button>
+                    )}
                   </div>
-                  <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "14px" }}>
-                    {catItems.map((item) => {
+                  <div style={{ background: c.bg, border: `1px solid ${c.border}`, borderRadius: "6px", overflow: "hidden" }}>
+                    <div style={{ padding: "16px 18px" }}>
+                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px" }}>
+                        <div style={{ fontSize: "12px", color: "#4b5563", fontFamily: "sans-serif", fontWeight: "600", textTransform: "uppercase", letterSpacing: "0.05em" }}>{lead.label}</div>
+                        <span style={{ fontSize: "10px", color: c.text, fontFamily: "sans-serif", fontWeight: "600", display: "flex", alignItems: "center", gap: "4px" }}>
+                          <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: c.dot, display: "inline-block" }} />
+                          {lead.signalLabel}
+                        </span>
+                      </div>
+                      <div style={{ fontSize: "26px", fontWeight: "700", color: "#111827", lineHeight: 1, marginBottom: "4px" }}>{lead.value}</div>
+                      <div style={{ fontSize: "13px", color: "#6b7280", fontFamily: "sans-serif", marginBottom: "8px" }}>{lead.sub}</div>
+                      <div style={{ borderTop: `1px solid ${c.border}`, paddingTop: "8px", fontSize: "13px", color: "#4b5563", fontFamily: "sans-serif", lineHeight: 1.5 }}>{lead.note}</div>
+                    </div>
+                    {lead.behind && lead.behind.length > 0 && (
+                      <>
+                        <button onClick={() => setExpandedBehind(isOpen ? null : lead.id)} style={{ width: "100%", background: "none", border: "none", borderTop: `1px solid ${c.border}`, padding: "8px 18px", fontSize: "12px", color: c.text, fontWeight: "600", cursor: "pointer", fontFamily: "sans-serif", display: "flex", justifyContent: "space-between" }}>
+                          <span>Behind the numbers</span>
+                          <span style={{ transform: isOpen ? "rotate(180deg)" : "none" }}>▾</span>
+                        </button>
+                        {isOpen && (
+                          <div style={{ borderTop: `1px solid ${c.border}`, padding: "12px 18px", display: "flex", flexDirection: "column", gap: "10px" }}>
+                            {lead.behind.map((b, i) => (
+                              <div key={i}>
+                                <div style={{ display: "flex", justifyContent: "space-between", gap: "8px", marginBottom: "2px" }}>
+                                  <span style={{ fontSize: "13px", color: "#374151", fontFamily: "sans-serif" }}>{b.stat}</span>
+                                  <span style={{ fontSize: "13px", fontWeight: "700", color: c.text, fontFamily: "sans-serif", whiteSpace: "nowrap" }}>{b.value}</span>
+                                </div>
+                                <div style={{ fontSize: "12px", color: "#6b7280", lineHeight: 1.5, fontFamily: "sans-serif" }}>{b.context}</div>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </>
+      )}
               const c = signalColors[item.signal];
               const isOpen = expandedBehind === item.id;
               return (
@@ -975,14 +911,7 @@ export default function MacroMonitor() {
                   )}
                 </div>
               );
-                    })}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </>
-      )}
+
 
       {/* ── MARKETS ── */}
       {activeTab === "markets" && (
