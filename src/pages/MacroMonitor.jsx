@@ -436,7 +436,7 @@ const data = {
       category: "dollar",
     },
   ],
-    contagion:  contagion: [
+    contagion: [
     { stage: "Stage 1", status: "complete", label: "Lower-K Balance Sheets Broke", date: "2023-2025",
       text: "Subprime auto delinquency hit record highs. Small bank credit card delinquency reached 6.4%. FHA mortgage delinquency.", level: "red" },
     { stage: "Stage 2", status: "active", label: "Lower-K Spending Contracting", date: "Now  --  Q3 2026",
