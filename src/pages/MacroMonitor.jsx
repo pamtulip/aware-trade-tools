@@ -337,6 +337,31 @@ export default function MacroMonitor() {
             <div style={{ fontSize: "12px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "8px", fontFamily: "sans-serif" }}>The Fed's Impossible Position</div>
             <div style={{ fontSize: "15px", color: "#1f2937", lineHeight: 1.8 }}>The Fed is on hold at 3.50-3.75%. It cannot cut because CPI is 4.2%. It cannot hike because labor is fragile and the debt service burden would become untenable. The April vote was 8-4, the most divided committee in decades. The Warsh cut thesis: if.</div>
           </div>
+
+          {/* Bond vigilante card */}
+          <div style={{ background: "#fffbeb", border: "1px solid #fcd34d", borderLeft: "4px solid #f59e0b", borderRadius: "0 6px 6px 0", padding: "16px 20px", marginTop: "16px" }}>
+            <div style={{ fontSize: "12px", color: "#92400e", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "8px", fontFamily: "sans-serif" }}>Nobody Is Buying Our Treasuries</div>
+            <div style={{ fontSize: "14px", color: "#1f2937", lineHeight: 1.8, fontFamily: "sans-serif", marginBottom: "12px" }}>
+              The Fed controls the short end of the yield curve. The bond market controls the long end. When bid-to-cover ratios weaken on 10 and 30-year auctions, primary dealers are forced to absorb what the market refused. That pushes long yields up regardless of what the Fed decides. Mortgage rates follow. The entire rate-sensitive economy tightens without a single Fed vote.
+            </div>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "8px", marginBottom: "12px" }}>
+              {[
+                { label: "Japan", value: "$1.24T", trend: "Stable" },
+                { label: "UK", value: "$897B", trend: "Stable" },
+                { label: "China", value: "$693B", trend: "Declining since 2022" },
+              ].map((item, i) => (
+                <div key={i} style={{ background: "#ffffff", border: "1px solid #fde68a", borderRadius: "4px", padding: "8px 10px", textAlign: "center" }}>
+                  <div style={{ fontSize: "11px", color: "#92400e", fontFamily: "sans-serif", marginBottom: "2px" }}>{item.label}</div>
+                  <div style={{ fontSize: "14px", fontWeight: "700", color: "#111827", fontFamily: "sans-serif", marginBottom: "2px" }}>{item.value}</div>
+                  <div style={{ fontSize: "10px", color: "#6b7280", fontFamily: "sans-serif" }}>{item.trend}</div>
+                </div>
+              ))}
+            </div>
+            <div style={{ fontSize: "13px", color: "#92400e", fontFamily: "sans-serif", lineHeight: 1.6, background: "#fef3c7", padding: "10px 12px", borderRadius: "4px" }}>
+              <strong>The Warsh cut ceiling:</strong> Even if the Fed cuts short-term rates, the long end of the curve may keep rising if fiscal credibility erodes. The Japan scenario -- Fed cutting while 30-year yields rise simultaneously -- is not hypothetical. It is the logical endpoint of $39 trillion in debt with no consolidation plan.
+            </div>
+          </div>
+
         </div>
       )}
 
