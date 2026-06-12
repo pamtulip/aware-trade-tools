@@ -625,16 +625,17 @@ const data = {
       id: "domestic-eq", theme: "Domestic Equity", weight: "28%",
       signal: "yellow", conviction: "Medium", assetClass: "Equities",
       bestAccount: "Taxable for long-term holds (capital gains rates).",
-      rationale: "Broad domestic equity exposure with a tilt toward industrials, utilities, and energy services.",
+      rationale: "Broad domestic equity with a tilt toward industrials, utilities, and energy services. Broad small cap (SCHA) replaced with quality-screened OUSM -- small cap has lower-K consumer exposure, floating rate debt sensitivity, and no international revenue buffer. When Stage 3 contagion arrives in Q4, undifferentiated small cap feels it first. OUSM screens for quality and dividend yield within small cap, keeping the long-cycle rate-cut optionality without the balance sheet risk.",
       instruments: [
         { name: "US Industrials ETF", ticker: "XLI", type: "ETF" },
         { name: "US Utilities ETF", ticker: "XLU", type: "ETF" },
         { name: "US Oil & Gas Equipment & Services ETF", ticker: "OIH", type: "ETF" },
         { name: "US Large Cap Equal Weight ETF", ticker: "RSP", type: "ETF" },
-        { name: "US Small Cap Core Blend ETF", ticker: "SCHA", type: "ETF" },
+        { name: "Capital Group Conservative Equity ETF -- active, strong balance sheets, dividends", ticker: "CGCV", type: "Active ETF" },
+        { name: "O'Shares US Small-Cap Quality Dividend ETF -- quality-screened small cap", ticker: "OUSM", type: "ETF" },
         { name: "US Biotech ETF", ticker: "XBI", type: "ETF" },
       ],
-      caveat: "Small cap has meaningful lower-K consumer exposure.",
+      caveat: "OUSM screens for quality and dividends within small cap -- better than broad SCHA in this environment. Biotech is macro-independent. OIH timing caution applies -- see energy exposure card.",
     },
     {
       id: "intl-eq", theme: "International Equity", weight: "20%",
@@ -646,6 +647,7 @@ const data = {
         { name: "Developed International Markets ETF", ticker: "EFA", type: "ETF" },
         { name: "Emerging Markets ETF", ticker: "EEM", type: "ETF" },
         { name: "Global Metals & Mining Producers ETF", ticker: "PICK", type: "ETF" },
+        { name: "Capital Group International Core Equity ETF -- active, dividend focus, incl. EM", ticker: "CGIC", type: "Active ETF" },
       ],
       caveat: "Dollar weakness thesis reverses if Iran conflict drives safe-haven dollar demand.",
     },
@@ -681,10 +683,10 @@ const data = {
       bestAccount: "IRA -- commodity ETFs generate K-1 tax forms in taxable accounts, which is an administrative.",
       rationale: "Broad inflation hedge. Energy CPI at 23.5%, food price pressure building into Q4.",
       instruments: [
-        { name: "Invesco DB Commodity Index Tracking Fund", ticker: "DBC", type: "ETF" },
-        { name: "iShares GSCI Commodity Dynamic Roll Strategy ETF", ticker: "COMT", type: "ETF" },
+        { name: "Invesco Optimum Yield Diversified Commodity Strategy -- no K-1, tax-efficient", ticker: "PDBC", type: "ETF" },
+        { name: "Invesco DB Commodity Index Tracking Fund -- generates K-1, use in IRA", ticker: "DBC", type: "ETF" },
       ],
-      caveat: "Commodities are volatile. The basket smooths single-commodity risk but still moves significantly.",
+      caveat: "Critical tax note: commodity ETFs holding futures directly generate K-1 forms in taxable accounts, delaying tax filing. PDBC avoids this through its fund structure -- use PDBC in taxable, DBC in IRA.",
     },
     {
       id: "healthcare-broad", theme: "Healthcare", weight: "3-5% new position",
@@ -701,17 +703,65 @@ const data = {
     },
   ],
   caution: [
-    { id: "c0", theme: "S&P 500 Index Funds -- Know What You Own", ticker: "SPY, VOO, IVV",
-      reason: "Index funds are not bad -- they are the right answer most of the time." },
-    { id: "c05", theme: "American Balanced Fund / 60/40 Mutual Funds", ticker: "ABALX, AMECX",
-      reason: "Classic 60/40 structure in active clothing. Active management does not fix the structural problem when stocks and bonds." },
-    { id: "c06", theme: "Growth Fund of America", ticker: "AGTHX",
-      reason: "Large cap U.S. growth tilt at Shiller CAPE 39.9. High-quality management does not change the valuation problem. The S&P." },
-    { id: "c1", theme: "Long-Duration Bonds (standalone)", ticker: "TLT", reason: "TLT held outside the Warsh cut thesis carries pure duration risk." },
-    { id: "c2", theme: "Dollar Store / Lower-K Consumer", ticker: "DG, DLTR", reason: "Dollar General and Dollar Tree look defensive but are not." },
-    { id: "c3", theme: "Consumer Discretionary Broad", ticker: "XLY", reason: "Real wages negative, SNAP cuts October 1, savings at 2.6%." },
-    { id: "c4", theme: "ARK Innovation / High-Duration Growth", ticker: "ARKK", reason: "High-multiple growth stocks are vulnerable if the Fed holds or is forced to hike." },
-    { id: "c5", theme: "REITs", ticker: "VNQ, O", reason: "Mortgage rates at 6.55%, FHA delinquency at 11.52%, foreclosure pipeline filling." },
+    { id: "c0", theme: "S&P 500 Index Funds -- Know What You Own",
+      reason: "Index funds are not bad -- they are the right answer most of the time. But CAPE at 39.9 implies 1.9% annual returns over the next decade, below 4.2% inflation. Top 10 stocks are 35% of the index -- concentration at high multiples. If you own a target-date fund in your 401k you already own this. Supplement with quality, dividend income, and inflation hedges.",
+      instruments: [
+        { name: "SPDR S&P 500 ETF", ticker: "SPY", type: "Caution" },
+        { name: "Vanguard S&P 500 ETF", ticker: "VOO", type: "Caution" },
+        { name: "iShares Core S&P 500 ETF", ticker: "IVV", type: "Caution" },
+      ],
+    },
+    { id: "c05", theme: "American Balanced Fund / 60/40 Mutual Funds",
+      reason: "Classic 60/40 in active clothing. Active management does not fix the structural problem when stocks and bonds fall together in an inflationary environment. The bond sleeve carries duration risk regardless of who manages it. CGCP is the better alternative for the bond allocation.",
+      instruments: [
+        { name: "American Balanced Fund", ticker: "ABALX", type: "Caution" },
+        { name: "Income Fund of America", ticker: "AMECX", type: "Caution" },
+      ],
+    },
+    { id: "c06", theme: "Growth Fund of America",
+      reason: "Large cap U.S. growth tilt at Shiller CAPE 39.9. High-quality management does not change the valuation problem. The same implied 1.9% decade return applies. Expensive entry point with fees on top.",
+      instruments: [
+        { name: "Growth Fund of America", ticker: "AGTHX", type: "Caution" },
+        { name: "American Funds New Perspective", ticker: "ANWPX", type: "Caution" },
+      ],
+    },
+    { id: "c1", theme: "Long-Duration Bonds (standalone)",
+      reason: "TLT held outside the Warsh cut thesis carries pure duration risk. With CPI at 4.2% and the Fed on hold, there is no near-term catalyst for long bond recovery. The 7.5% allocation in the Hedged Tactical Model is thesis-dependent -- size accordingly.",
+      instruments: [
+        { name: "iShares 20+ Year Treasury Bond ETF", ticker: "TLT", type: "Caution" },
+        { name: "Vanguard Long-Term Treasury ETF", ticker: "VGLT", type: "Caution" },
+      ],
+    },
+    { id: "c2", theme: "Dollar Store / Lower-K Consumer",
+      reason: "Dollar General and Dollar Tree look defensive but are not. When SNAP shrinks and savings are gone, even $1.25 items get cut. Q4 2026 earnings will likely surprise to the downside as Stage 3 contagion arrives.",
+      instruments: [
+        { name: "Dollar General", ticker: "DG", type: "Caution" },
+        { name: "Dollar Tree / Family Dollar", ticker: "DLTR", type: "Caution" },
+        { name: "Darden Restaurants -- casual dining", ticker: "DRI", type: "Caution" },
+      ],
+    },
+    { id: "c3", theme: "Consumer Discretionary Broad",
+      reason: "Real wages negative, SNAP cuts October 1, savings at 2.6%. The consumer discretionary sector faces pressure from multiple directions simultaneously in Q4 2026. The lower K is the demand engine -- and it is cracking.",
+      instruments: [
+        { name: "Consumer Discretionary Select Sector SPDR", ticker: "XLY", type: "Caution" },
+        { name: "Vanguard Consumer Discretionary ETF", ticker: "VCR", type: "Caution" },
+      ],
+    },
+    { id: "c4", theme: "ARK Innovation / High-Duration Growth",
+      reason: "High-multiple growth stocks are vulnerable if the Fed holds or is forced to hike. No near-term catalyst for rate cuts with CPI at 4.2%. These funds are long-duration equity -- they behave like long bonds when rates stay high.",
+      instruments: [
+        { name: "ARK Innovation ETF", ticker: "ARKK", type: "Caution" },
+        { name: "ARK Next Generation Internet ETF", ticker: "ARKW", type: "Caution" },
+      ],
+    },
+    { id: "c5", theme: "REITs",
+      reason: "Mortgage rates at 6.55%, FHA delinquency at 11.52%, foreclosure pipeline filling. REITs are rate-sensitive and the housing market is frozen. Healthcare REITs (WELL, VTR) face the same headwinds despite the healthcare thesis -- the rate sensitivity overrides the demand thesis near-term.",
+      instruments: [
+        { name: "Vanguard Real Estate ETF", ticker: "VNQ", type: "Caution" },
+        { name: "Realty Income -- net lease REIT", ticker: "O", type: "Caution" },
+        { name: "Welltower -- healthcare REIT", ticker: "WELL", type: "Caution" },
+      ],
+    },
   ],
   consider: [
     {
@@ -1260,7 +1310,9 @@ export default function MacroMonitor() {
                       <div style={{ flex: 1 }}>
                         <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "4px", flexWrap: "wrap" }}>
                           <span style={{ fontSize: "14px", fontWeight: "700", color: "#dc2626", fontFamily: "sans-serif" }}>{item.theme}</span>
-                          <span style={{ fontSize: "11px", padding: "1px 7px", borderRadius: "3px", background: "#fee2e2", color: "#dc2626", fontFamily: "sans-serif", border: "1px solid #fca5a5" }}>{item.ticker}</span>
+                          {item.instruments && item.instruments.slice(0,2).map((inst,i) => inst.ticker && (
+                            <span key={i} style={{ fontSize: "11px", padding: "1px 7px", borderRadius: "3px", background: "#fee2e2", color: "#dc2626", fontFamily: "sans-serif", border: "1px solid #fca5a5" }}>{inst.ticker}</span>
+                          ))}
                         </div>
                         <div style={{ fontSize: "13px", color: "#4b5563", lineHeight: 1.5, fontFamily: "sans-serif" }}>
                           {item.reason.slice(0, 100)}{item.reason.length > 100 && !isExpanded ? "..." : ""}
@@ -1270,7 +1322,20 @@ export default function MacroMonitor() {
                     </div>
                     {isExpanded && (
                       <div style={{ borderTop: "1px solid #fca5a5", padding: "14px 16px", background: "#fff5f5" }}>
-                        <div style={{ fontSize: "14px", color: "#374151", lineHeight: 1.8, fontFamily: "sans-serif" }}>{item.reason}</div>
+                        <div style={{ fontSize: "14px", color: "#374151", lineHeight: 1.8, fontFamily: "sans-serif", marginBottom: item.instruments && item.instruments.length > 0 ? "14px" : "0" }}>{item.reason}</div>
+                        {item.instruments && item.instruments.length > 0 && (
+                          <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+                            {item.instruments.map((inst, i) => (
+                              <div key={i} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "7px 10px", background: "#ffffff", borderRadius: "3px", border: "1px solid #fecaca" }}>
+                                <span style={{ fontSize: "13px", color: "#1f2937", fontFamily: "sans-serif" }}>{inst.name}</span>
+                                <div style={{ display: "flex", gap: "8px", alignItems: "center", flexShrink: 0 }}>
+                                  {inst.ticker && <span style={{ fontSize: "13px", fontWeight: "700", color: "#dc2626", fontFamily: "sans-serif" }}>{inst.ticker}</span>}
+                                  <span style={{ fontSize: "10px", color: "#9ca3af", border: "1px solid #fecaca", padding: "1px 5px", borderRadius: "2px", fontFamily: "sans-serif" }}>{inst.type}</span>
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        )}
                       </div>
                     )}
                   </div>
