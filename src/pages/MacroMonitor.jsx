@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import monitorData from "./data.js";
+import monitorData from "../data.js";
 
 const data = monitorData;
 
