@@ -685,24 +685,10 @@ const data = {
       ],
       caveat: "Commodities are volatile. The basket smooths single-commodity risk but still moves significantly.",
     },
-    {
-      id: "tips-add", theme: "Consider Adding: TIPS", weight: "Replace some IEF",
-      signal: "yellow", conviction: "Medium", assetClass: "Fixed Income",
-      bestAccount: "IRA / 401k -- TIPS interest is taxed annually on the inflation adjustment even if you do not.",
-      rationale: "The model has no direct CPI linkage in its bond allocation.",
-      instruments: [
-        { name: "Vanguard Short-Term Inflation-Protected Securities ETF", ticker: "VTIP", type: "ETF" },
         { name: "iShares TIPS Bond ETF", ticker: "TIP", type: "ETF" },
       ],
       caveat: "TIPS underperform when inflation falls faster than expected.",
     },
-    {
-      id: "medicaid-add", theme: "Consider Adding: Medicaid Managed Care", weight: "3-5% new position",
-      signal: "yellow", conviction: "Medium", assetClass: "Equities",
-      bestAccount: "Roth IRA -- policy-driven growth potential and counter-cyclical characteristics make this a good.",
-      rationale: "Not in the current model. When SNAP cuts hit October 1 and lower-K health stress rises, Medicaid enrollment expands.",
-      instruments: [
-        { name: "Molina Healthcare -- concentrated Medicaid exposure", ticker: "MOH", type: "Stock" },
         { name: "Centene Corporation -- largest Medicaid operator", ticker: "CNC", type: "Stock" },
         { name: "Health Care Select Sector SPDR", ticker: "XLV", type: "ETF" },
       ],
@@ -745,7 +731,7 @@ const data = {
       id: "staples", theme: "Consumer Staples", ticker: "VDC, XLP",
       signal: "yellow", conviction: "Medium", assetClass: "Equities",
       bestAccount: "Taxable -- low turnover, qualified dividends. Works in IRA too.",
-      rationale: "The model has utilities but no explicit consumer staples position.",
+      rationale: "This is not a lower-K play. It is an upper-K defensive play. Lower-K households are cutting spending including staples -- the savings rate and SNAP data confirm it. The thesis is pricing power and upper-K trading-down behavior. When upper-income consumers feel squeezed, they trade down within categories: premium olive oil becomes store brand, restaurants become grocery runs. Staples companies with broad price-point coverage capture that trade-down. They can also raise prices without losing volume -- which is what outperforms in stagflation. Volume may soften at the bottom of the income scale; margins hold because the products are genuinely necessary for most of the distribution.",
       instruments: [
         { name: "Vanguard Consumer Staples ETF", ticker: "VDC", type: "ETF" },
         { name: "Consumer Staples Select Sector SPDR", ticker: "XLP", type: "ETF" },
