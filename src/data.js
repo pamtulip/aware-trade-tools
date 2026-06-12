@@ -732,6 +732,23 @@ const monitorData = {
       caveat: "X Money platform risk: X controls your account through its terms of service. If your account.",
     },
   ],
+  thesis: [
+    { label: "Real Wage Gap", text: "Wages up 3.4%. Prices up 4.2%. Workers are losing purchasing power every month this gap continues.", level: "red" },
+    { label: "Stagflation Trap", text: "Strong headline jobs, frozen hiring, inflation re-accelerating. The Fed cannot cut. Classic trap.", level: "yellow" },
+    { label: "Benefits Cliff", text: "SNAP cuts take effect October 1. Same quarter energy bills peak and surveillance pricing accelerates.", level: "red" },
+    { label: "Payment Rail Weaponization", text: "FinCEN advisory turns every bank account into an immigration file. The architecture was built. Now it is being used.", level: "red" },
+  ],
+  contagion: [
+    { stage: "Stage 1", status: "complete", label: "Lower-K Balance Sheets Broke", date: "2023-2025",
+      text: "Subprime auto delinquency hit record highs. Small bank credit card delinquency reached 6.4%. FHA mortgage delinquency at 11.52%. Savings rate collapsed to 2.6%.", level: "red" },
+    { stage: "Stage 2", status: "active", label: "Lower-K Spending Contracting", date: "Now -- Q3 2026",
+      text: "NFIB retail sector most pessimistic of all industries. Jobless claims jumped to 242,000. Small business hiring at lowest since May 2020.", level: "red" },
+    { stage: "Stage 3", status: "approaching", label: "Corporate Earnings Miss -- Lower-K Visible", date: "Q4 2026 / Jan-Feb 2027",
+      text: "SNAP cuts land October 1. Lower-K spending cliff becomes visible in Q4 earnings. Dollar General, Dollar Tree, casual dining report in January 2027.", level: "yellow" },
+    { stage: "Stage 4", status: "risk", label: "Upper-K Contagion", date: "Q4 2026 -- Q2 2027",
+      text: "The upper K is insulated until unemployment rises into the professional class or credit markets reprice. Two of three triggers already show early signals.", level: "yellow" },
+  ],
+
 };
 
 export default monitorData;
