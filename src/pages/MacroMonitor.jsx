@@ -793,7 +793,6 @@ export default function MacroMonitor() {
 
       {/* ── INDICATORS ── */}
       {activeTab === "indicators" && (
-        <>
           <div style={{ padding: "20px 28px" }}>
             <p style={{ fontSize: "14px", color: "#6b7280", marginTop: 0, marginBottom: "20px", fontFamily: "sans-serif", lineHeight: 1.6 }}>
               The most important signal from each category. Click a tab above for the full picture.
@@ -914,7 +913,6 @@ export default function MacroMonitor() {
               );
             })}
           </div>
-        </>
       )}
 
       {/* ── MARKETS ── */}
