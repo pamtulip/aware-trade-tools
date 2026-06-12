@@ -671,6 +671,7 @@ const data = {
         { name: "Long-Term Treasury Bond ETF", ticker: "TLT", type: "ETF" },
         { name: "Intermediate-Term Treasury Bond ETF", ticker: "IEF", type: "ETF" },
         { name: "EM Bonds Local Currency ETF", ticker: "EBND", type: "ETF" },
+        { name: "Capital Group Core Plus Income ETF -- active duration management", ticker: "CGCP", type: "Active ETF" },
       ],
       caveat: "TLT is a thesis-dependent position. With CPI at 4.2% and the Fed on hold, long bonds carry duration risk.",
     },
@@ -689,6 +690,10 @@ const data = {
   caution: [
     { id: "c0", theme: "S&P 500 Index Funds -- Know What You Own", ticker: "SPY, VOO, IVV",
       reason: "Index funds are not bad -- they are the right answer most of the time." },
+    { id: "c05", theme: "American Balanced Fund / 60/40 Mutual Funds", ticker: "ABALX, AMECX",
+      reason: "Classic 60/40 structure in active clothing. Active management does not fix the structural problem when stocks and bonds fall together in an inflationary environment. The bond sleeve carries duration risk regardless of who manages it. CGCP is a better alternative for the bond allocation specifically." },
+    { id: "c06", theme: "Growth Fund of America", ticker: "AGTHX",
+      reason: "Large cap U.S. growth tilt at Shiller CAPE 39.9. High-quality management does not change the valuation problem. The S&P 500 passive issue applies here too -- expensive entry point with 1.9% implied decade returns." },
     { id: "c1", theme: "Long-Duration Bonds (standalone)", ticker: "TLT", reason: "TLT held outside the Warsh cut thesis carries pure duration risk." },
     { id: "c2", theme: "Dollar Store / Lower-K Consumer", ticker: "DG, DLTR", reason: "Dollar General and Dollar Tree look defensive but are not." },
     { id: "c3", theme: "Consumer Discretionary Broad", ticker: "XLY", reason: "Real wages negative, SNAP cuts October 1, savings at 2.6%." },
@@ -703,6 +708,7 @@ const data = {
       rationale: "The model has Large Cap Equal Weight at 2.5% but no quality filter.",
       instruments: [
         { name: "iShares MSCI USA Quality Factor ETF", ticker: "QUAL", type: "ETF" },
+        { name: "Capital Group Conservative Equity ETF -- same team as American Mutual", ticker: "CGCV", type: "Active ETF" },
       ],
       caveat: "Quality stocks still carry market risk. They outperform in relative terms but still fall in a broad selloff.",
     },
@@ -715,6 +721,7 @@ const data = {
         { name: "Vanguard Dividend Appreciation ETF -- dividend growth focus", ticker: "VIG", type: "ETF" },
         { name: "iShares Select Dividend ETF -- current yield focus", ticker: "DVY", type: "ETF" },
         { name: "Schwab U.S. Dividend Equity ETF", ticker: "SCHD", type: "ETF" },
+        { name: "Capital Group Dividend Value ETF -- active, avoids yield traps", ticker: "CGDV", type: "Active ETF" },
       ],
       caveat: "Dividend stocks are rate-sensitive. If rates rise further, high-yield dividend stocks face headwinds.",
     },
@@ -737,6 +744,7 @@ const data = {
       instruments: [
         { name: "iShares MSCI Japan ETF", ticker: "EWJ", type: "ETF" },
         { name: "WisdomTree Japan Hedged Equity Fund -- currency hedged", ticker: "DXJ", type: "ETF" },
+        { name: "Capital Group International Equity ETF -- active, can overweight Japan", ticker: "CGIE", type: "Active ETF" },
       ],
       caveat: "DXJ hedges out the yen, which is better if the dollar strengthens.",
     },
