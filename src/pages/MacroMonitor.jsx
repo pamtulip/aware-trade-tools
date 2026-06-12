@@ -948,10 +948,10 @@ export default function MacroMonitor() {
             })}
           </div>
 
-          {/* Portfolio Context  --  New Harbor */}
+          {/* Portfolio Context  --  Hedged Tactical Model */}
           <div style={{ marginTop: "36px" }}>
             <div style={{ fontSize: "13px", color: "#4338ca", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "6px", fontFamily: "sans-serif" }}>
-              Portfolio Context  --  New Harbor Hedged Tactical Model
+              Portfolio Context  --  Hedged Tactical Model
             </div>
             <div style={{ fontSize: "14px", color: "#6b7280", marginBottom: "20px", fontFamily: "sans-serif", lineHeight: 1.6 }}>
               How the current allocation maps against the macro thesis. As of April 21, 2026.
@@ -1009,7 +1009,7 @@ export default function MacroMonitor() {
               <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
                 {[
                   { pos: "Medicaid Managed Care  --  MOH, CNC (3-5%)", note: "Not in the portfolio. Paid per enrolled member regardless of markets. When SNAP cuts hit and lower-K health stress rises, Medicaid enrollment expands...." },
-                  { pos: "Pricing Power Screen  --  QUAL (2-3%)", note: "New Harbor has Large Cap Equal Weight at 2.5% which gives broad exposure without quality filter. QUAL screens specifically for high return on equity, stable..." },
+                  { pos: "Pricing Power Screen  --  QUAL (2-3%)", note: "Hedged Tactical Model has Large Cap Equal Weight at 2.5% which gives broad exposure without quality filter. QUAL screens specifically for high return on equity, stable..." },
                   { pos: "TIPS or VTIP (replace some intermediate bonds)", note: "The intermediate Treasury bond allocation at 5% provides rate exposure but no CPI linkage. Swapping a portion into VTIP would add direct inflation..." },
                 ].map((item, i) => (
                   <div key={i} style={{ background: "#fff5f5", border: "1px solid #fca5a5", borderRadius: "4px", padding: "12px 14px" }}>
