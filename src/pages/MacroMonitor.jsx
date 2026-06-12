@@ -101,7 +101,7 @@ const data = {
       note: "Real wages are negative. Prices are rising faster than pay.",
       signal: "red",
       signalLabel: "SQUEEZE",
-      category: "labor",
+      category: "consumer",
     },
     {
       id: "jobless",
@@ -159,7 +159,7 @@ const data = {
       note: "States must cover 75% of admin costs. Some may limit or exit the.",
       signal: "red",
       signalLabel: "STRUCTURAL",
-      category: "policy",
+      category: "stress",
     },
     {
       id: "fincen",
@@ -184,7 +184,7 @@ const data = {
       note: "Headline is improving. Small bank rate is 6.4%  --  more than.",
       signal: "yellow",
       signalLabel: "ELEVATED",
-      category: "consumer",
+      category: "stress",
       behind: [
         { stat: "Big bank delinquency rate", value: "~3%", context: "Large institutions look relatively stable." },
         { stat: "Small bank delinquency rate", value: "6.4%", context: "Community banks serve lower-income and rural households." },
@@ -201,7 +201,7 @@ const data = {
       note: "Subprime auto at record highs. Car payments are the last bill.",
       signal: "red",
       signalLabel: "STRESS",
-      category: "consumer",
+      category: "stress",
       behind: [
         { stat: "Subprime auto delinquency (60+ days)", value: "6.8%", context: "The highest level on record going back to the early 1990s,." },
         { stat: "Prime auto delinquency", value: "0.42%", context: "Prime borrowers are fine. The stress is entirely." },
@@ -217,7 +217,7 @@ const data = {
       note: "FHA loans at 11.52%. Foreclosure starts rising.",
       signal: "red",
       signalLabel: "RISING",
-      category: "consumer",
+      category: "stress",
       behind: [
         { stat: "FHA loan delinquency rate", value: "11.52%", context: "FHA loans serve first-time and lower-income homebuyers." },
         { stat: "VA loan delinquency rate", value: "~6.7%", context: "About 225 basis points above conventional loans." },
@@ -233,7 +233,7 @@ const data = {
       note: "4.8% of all outstanding debt is in some stage of delinquency.",
       signal: "yellow",
       signalLabel: "WATCH",
-      category: "consumer",
+      category: "economy",
       behind: [
         { stat: "Share of debt in delinquency", value: "4.8%", context: "Nearly 1 in 20 dollars of household debt is past due." },
         { stat: "Credit card debt increase since 2021", value: "+63%", context: "$482 billion in new credit card debt in five years." },
@@ -375,7 +375,7 @@ const data = {
       note: "The household buffer is thinning. Historical average is 8.4%.",
       signal: "red",
       signalLabel: "DEPLETING",
-      category: "economy",
+      category: "consumer",
       behind: [
         { stat: "Historical average savings rate", value: "8.4%", context: "From 1959 to 2026, Americans saved an average of 8.4% of." },
         { stat: "What happened to savings", value: "Inflation absorbed them", context: "Pandemic-era savings built a buffer through 2022." },
@@ -391,7 +391,7 @@ const data = {
       note: "Nominal numbers look healthy but are inflated by high gas prices..",
       signal: "yellow",
       signalLabel: "WATCH",
-      category: "economy",
+      category: "consumer",
       behind: [
         { stat: "The nominal number is misleading", value: "Gas inflates the headline", context: "Retail sales are not adjusted for inflation. When gas." },
         { stat: "What is actually being cut", value: "Clothing, furniture, restaurants", context: "Clothing and furniture sales have dropped. Restaurant sales." },
@@ -841,7 +841,7 @@ const TAB_LABELS = { indicators: "Indicators", consumer: "Consumer", markets: "M
 const CATEGORIES = [
   { id: "all", label: "All" }, { id: "inflation", label: "Inflation" },
   { id: "labor", label: "Labor" }, { id: "monetary", label: "Monetary" },
-  { id: "consumer", label: "Consumer" }, { id: "stress", label: "Consumer Stress" },
+  { id: "consumer", label: "Consumer" },
   { id: "markets", label: "Markets" }, { id: "economy", label: "Economy" },
   { id: "debt", label: "Debt & Credit" }, { id: "dollar", label: "Dollar / Petrodollar" },
   { id: "policy", label: "Policy" },
