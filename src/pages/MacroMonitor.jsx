@@ -912,7 +912,10 @@ export default function MacroMonitor() {
                   )}
                 </div>
               );
-
+            })}
+          </div>
+        </>
+      )}
 
       {/* ── MARKETS ── */}
       {activeTab === "markets" && (
