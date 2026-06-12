@@ -569,10 +569,10 @@ const data = {
       triggers: ["Jobless claims crossing 300K consistently", "High yield spreads widening past 450 bps", "Upper-income quintile UMich sentiment falling"], level: "yellow" },
   ],
   ideas: [
-    { id: "k-intro", theme: "The K-Shape Is Cracking  --  Read First", signal: "red", conviction: "High", assetClass: "Macro Framework", isFramework: true,
+    { id: "k-intro", theme: "The K-Shape Is Cracking  --  Read First", signal: "red", conviction: "High", assetClass: "Macro Framework", isFramework: true, bestAccount: null,
       rationale: "The lower half of the K  --  households under $60K  --  is running out of cushion simultaneously. Savings at 2.6%, credit at 21.5% APR, real wages negative, SNAP cuts October 1. When this cohort pulls back: discount retail and fast food lose volume first, then small business suppliers, then regional employment. Dollar stores are not defensive here. They are the first casualties.",
       instruments: [], caveat: "Framework card. Sets context for ideas below." },
-    { id: "tips", theme: "Inflation Protection  --  TIPS and I-Bonds", signal: "red", conviction: "High", assetClass: "Fixed Income",
+    { id: "tips", theme: "Inflation Protection  --  TIPS and I-Bonds", signal: "red", conviction: "High", assetClass: "Fixed Income", bestAccount: "IRA / 401k -- TIPS interest is taxed annually even if you do not sell. Shelter in a tax-deferred account. I-Bonds must be held in your own name and cannot go in an IRA.",
       rationale: "CPI at 4.2% and rising. Real yields on regular bonds are negative. TIPS adjust principal with CPI. VTIP is better than TIP in a rising-rate environment due to shorter duration.",
       instruments: [
         { name: "iShares TIPS Bond ETF", ticker: "TIP", type: "ETF" },
@@ -580,7 +580,7 @@ const data = {
         { name: "I-Bonds via TreasuryDirect.gov", ticker: null, type: "Direct" },
       ],
       caveat: "TIPS underperform when inflation falls fast. I-Bonds capped at $10K per person per year." },
-    { id: "energy", theme: "Energy Exposure", signal: "red", conviction: "High", assetClass: "Equities / Commodities",
+    { id: "energy", theme: "Energy Exposure", bestAccount: "Roth IRA — if you believe energy has significant upside, tax-free growth is the best outcome. Taxable works for long-term holds.", signal: "red", conviction: "High", assetClass: "Equities / Commodities",
       rationale: "Energy CPI up 23.5%. WTI near $91, up 42% year over year. Strait of Hormuz near-closed with no timeline. Midstream pipelines paid on volume not oil price, with inflation-linked contract escalators  --  more stable than pure exploration.",
       instruments: [
         { name: "Energy Select Sector SPDR", ticker: "XLE", type: "ETF" },
@@ -588,7 +588,7 @@ const data = {
         { name: "iShares U.S. Oil & Gas Exploration", ticker: "IEO", type: "ETF" },
       ],
       caveat: "Iran ceasefire could reverse quickly. AMLP more stable than USO for long holds." },
-    { id: "gold", theme: "Hard Asset Hedge  --  Gold", signal: "red", conviction: "Medium", assetClass: "Commodities",
+    { id: "gold", theme: "Hard Asset Hedge  --  Gold", signal: "red", conviction: "Medium", assetClass: "Commodities", bestAccount: "IRA -- Gold ETFs (GLD, IAU) are taxed as collectibles at 28% in taxable accounts. Holding in an IRA avoids that rate. Physical gold has no account.",
       rationale: "Elevated inflation, dollar erosion, geopolitical conflict, central banks buying 1,000+ tonnes annually. Gold pays no yield but does not lose purchasing power. Central banks are hedging dollar dependency  --  individual investors can do the same.",
       instruments: [
         { name: "SPDR Gold Shares", ticker: "GLD", type: "ETF" },
@@ -596,7 +596,7 @@ const data = {
         { name: "Physical gold via reputable dealer", ticker: null, type: "Direct" },
       ],
       caveat: "Volatile short-term. Responds to real rates and dollar strength. Size as a hedge not a primary position." },
-    { id: "shortduration", theme: "Short-Term Bonds and Cash", signal: "yellow", conviction: "High", assetClass: "Fixed Income / Cash",
+    { id: "shortduration", theme: "Short-Term Bonds and Cash", bestAccount: "Taxable — T-bill and SGOV interest is exempt from state and local taxes, which matters in high-tax states like Connecticut. Works in IRA too.", signal: "yellow", conviction: "High", assetClass: "Fixed Income / Cash",
       rationale: "Fed on hold at 3.50-3.75% with June cut ruled out. Short-term instruments capture today's rates without duration risk. If inflation re-accelerates, longer bonds lose value while short paper rolls over at higher rates.",
       instruments: [
         { name: "3-Month T-Bills via TreasuryDirect.gov or brokerage", ticker: null, type: "Direct" },
@@ -604,7 +604,7 @@ const data = {
         { name: "Vanguard Ultra-Short Bond ETF", ticker: "VUSB", type: "ETF" },
       ],
       caveat: "Yield advantage disappears when Fed cuts. Watch September 2026 FOMC." },
-    { id: "k-winners", theme: "K-Shape Winners  --  Upper Half Still Spending", signal: "yellow", conviction: "Medium", assetClass: "Equities",
+    { id: "k-winners", theme: "K-Shape Winners  --  Upper Half Still Spending", signal: "yellow", conviction: "Medium", assetClass: "Equities", bestAccount: "Taxable -- long-term capital gains rates apply if held over a year. QUAL and VDC have low turnover and minimal annual tax drag.",
       rationale: "The upper K is under pressure but still spending  --  trading down within categories. Warehouse clubs serve cost-conscious upper-income households. Companies with true pricing power outperform in stagflation. The top 10% account for nearly half of all consumer spending.",
       instruments: [
         { name: "Costco Wholesale  --  cost-conscious upper income", ticker: "COST", type: "Stock" },
@@ -612,7 +612,7 @@ const data = {
         { name: "Vanguard Consumer Staples ETF", ticker: "VDC", type: "ETF" },
       ],
       caveat: "Costco is consensus  --  valuation already reflects its defensive status. QUAL and VDC more diversified." },
-    { id: "healthcare", theme: "Medicaid Managed Care  --  Policy Tailwind", signal: "yellow", conviction: "Medium", assetClass: "Equities",
+    { id: "healthcare", theme: "Medicaid Managed Care  --  Policy Tailwind", signal: "yellow", conviction: "Medium", assetClass: "Equities", bestAccount: "Roth IRA -- policy-driven growth potential makes this a good candidate for tax-free compounding. Individual names over ETF if you want concentration.",
       rationale: "When SNAP cuts reduce food security, healthcare utilization rises in lower-income populations. Medicaid managed care companies are paid per enrolled member regardless of markets. As states offset federal cuts, Medicaid enrollment expands. This benefits from the same environment hurting consumers.",
       instruments: [
         { name: "Molina Healthcare  --  concentrated Medicaid", ticker: "MOH", type: "Stock" },
@@ -620,7 +620,7 @@ const data = {
         { name: "Health Care Select Sector SPDR", ticker: "XLV", type: "ETF" },
       ],
       caveat: "Subject to state contract risk. OBBBA cuts are federal  --  states may reduce managed care contracts to offset costs. Research state exposure before investing." },
-    { id: "k-victims", theme: "K-Shape Victims  --  Handle With Serious Care", signal: "red", conviction: "High", assetClass: "Equities  --  Caution",
+    { id: "k-victims", theme: "K-Shape Victims  --  Handle With Serious Care", signal: "red", conviction: "High", assetClass: "Equities  --  Caution", bestAccount: "Taxable -- if holding for a potential short-term correction, taxable preserves flexibility. Tax-loss harvesting available if positions decline.",
       rationale: "Businesses dependent on discretionary spending by households under $60K are most exposed. Dollar stores look defensive but are not  --  when SNAP shrinks and savings are gone, even $1.25 items get cut. Not a short call. A flag that Q4 2026 earnings will surprise to the downside.",
       instruments: [
         { name: "Dollar General  --  primary lower-K exposure", ticker: "DG", type: "Caution" },
@@ -629,7 +629,7 @@ const data = {
         { name: "Darden Restaurants  --  casual dining", ticker: "DRI", type: "Caution" },
       ],
       caveat: "Not a recommendation to short. A Q4 earnings risk flag. Dollar stores serve the lower K  --  when that cohort has nothing left, even dollar stores lose." },
-    { id: "avoid-duration", theme: "Avoid Long Duration", signal: "red", conviction: "High", assetClass: "Fixed Income  --  Avoid",
+    { id: "avoid-duration", theme: "Avoid Long Duration", bestAccount: "N/A — this is a caution flag, not a buy recommendation. If you hold TLT in any account, the duration risk applies regardless of account type.", signal: "red", conviction: "High", assetClass: "Fixed Income  --  Avoid",
       rationale: "Long-duration bonds lose value when inflation stays high. TLT has lost roughly 45% since 2020. With CPI at 4.2% and the Fed on hold, conditions for long-duration recovery are not present. The 60/40 is broken because bonds stopped cushioning stock losses when inflation is high.",
       instruments: [
         { name: "iShares 20+ Year Treasury Bond ETF", ticker: "TLT", type: "Avoid" },
@@ -941,6 +941,11 @@ export default function MacroMonitor() {
                       <div style={{ fontSize: "14px", color: "#4b5563", borderTop: `1px solid ${c.border}`, paddingTop: "12px", lineHeight: 1.7, fontFamily: "sans-serif" }}>
                         <span style={{ fontWeight: "700" }}>Watch: </span>{idea.caveat}
                       </div>
+                      {idea.bestAccount && (
+                        <div style={{ fontSize: "14px", color: "#374151", borderTop: `1px solid ${c.border}`, paddingTop: "12px", marginTop: "8px", lineHeight: 1.7, fontFamily: "sans-serif", background: "#f9fafb", padding: "10px 12px", borderRadius: "4px" }}>
+                          <span style={{ fontWeight: "700", color: "#15803d" }}>Best account: </span>{idea.bestAccount}
+                        </div>
+                      )}
                     </div>
                   )}
                 </div>
