@@ -417,6 +417,23 @@ const data = {
       ],
     },
     {
+      id: "tech-layoffs",
+      label: "Tech Layoffs (2026 YTD)",
+      value: "184,000+",
+      sub: "Through June 2026. 1,136 layoffs per day -- double 2025 pace.",
+      note: "48% explicitly attributed to AI displacement. Amazon, Oracle, Meta, Intuit leading. On pace for 370,000 full year.",
+      signal: "red",
+      signalLabel: "ACCELERATING",
+      category: "labor",
+      behind: [
+        { stat: "2026 vs 2025 pace", value: "1,136/day vs 564/day", context: "The 2026 pace is double 2025. 33% increase over same period last year. On pace to approach the 2023 post-pandemic record of 430,000." },
+        { stat: "AI attribution rate", value: "48% of Q1 cuts", context: "Nearly half of Q1 2026 tech layoffs explicitly attributed to AI by the companies themselves. Up from under 8% in 2025. The euphemism is gone." },
+        { stat: "Largest cuts", value: "Amazon 30K, Oracle 30K, Meta 8K", context: "All announced record AI capital expenditure the same quarter they cut headcount. Combined hyperscaler AI capex: $700 billion in 2026." },
+        { stat: "Young engineer impact", value: "Software dev employment under 26 down 20% since 2024", context: "Stanford HAI data. AI is not just displacing entry-level workers -- it is closing the entry point entirely." },
+        { stat: "The Aware Trade thesis connection", value: "Workers built the tool that eliminated their leverage", context: "Project Maven 2018 to 2026: the same workers who built AI infrastructure are being displaced by it. Upper-K job losses compress the spending assumptions the consumer thesis relies on." },
+      ],
+    },
+    {
       id: "nfib",
       label: "NFIB Small Business Optimism",
       value: "95.3",
