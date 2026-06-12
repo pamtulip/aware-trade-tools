@@ -901,7 +901,7 @@ export default function MacroMonitor() {
             </div>
           </div>
 
-          {/* Contagion Timeline */}/* Contagion Timeline */}
+          {/* Contagion Timeline */}
           <div style={{ marginBottom: "28px" }}>
             <div style={{ fontSize: "13px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "6px", fontFamily: "sans-serif" }}>K-Shape Contagion Timeline</div>
             <div style={{ fontSize: "14px", color: "#6b7280", marginBottom: "20px", fontFamily: "sans-serif" }}>
@@ -990,8 +990,6 @@ export default function MacroMonitor() {
               </div>
             ))}
           </div>
-        </div>
-
         </div>
       )}
       <div style={{ padding: "16px 28px", borderTop: "1px solid #f3f4f6", fontSize: "12px", color: "#9ca3af", fontFamily: "sans-serif" }}>
