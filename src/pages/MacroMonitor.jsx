@@ -14,8 +14,8 @@ const data = {
       category: "inflation",
       behind: [
         { stat: "Real impact on a $60K household", value: "−$2,520/yr", context: "4.2% inflation on typical household spending." },
-        { stat: "Share of May's increase from energy", value: "Over 60%", context: "Most of the spike was gasoline. Core inflation is softer, but." },
-        { stat: "Months above 3.5% in a row", value: "2", context: "April was 3.8%. May is 4.2%. The trend is moving in the wrong." },
+        { stat: "Share of May's increase from energy", value: "Over 60%", context: "Most of the spike was gasoline. Core inflation is softer,." },
+        { stat: "Months above 3.5% in a row", value: "2", context: "April was 3.8%. May is 4.2%. The trend is moving in the." },
       ],
     },
     {
@@ -28,7 +28,7 @@ const data = {
       signalLabel: "WATCH",
       category: "inflation",
       behind: [
-        { stat: "Gap between headline and core", value: "1.3 points", context: "Energy is doing the work. If core starts rising too, that is the." },
+        { stat: "Gap between headline and core", value: "1.3 points", context: "Energy is doing the work. If core starts rising too, that." },
         { stat: "Shelter inflation", value: "Still elevated", context: "Housing costs are the biggest piece of core CPI." },
       ],
     },
@@ -37,14 +37,14 @@ const data = {
       label: "PPI (May)",
       value: "−0.2%",
       sub: "Month over month. Forecast was +0.7%. First monthly decline.",
-      note: "Wholesale inflation cooling. Gives the Fed more room. Pipeline pressure.",
+      note: "Wholesale inflation cooling. Gives the Fed more room. Pipeline.",
       signal: "green",
       signalLabel: "COOL",
       category: "inflation",
       behind: [
-        { stat: "What this means", value: "Relief signal", context: "Wholesale prices are what producers pay before costs reach your." },
+        { stat: "What this means", value: "Relief signal", context: "Wholesale prices are what producers pay before costs reach." },
         { stat: "The split picture", value: "PPI cool, CPI still hot", context: "Consumer prices are still 4.2% driven by energy." },
-        { stat: "Fed implication", value: "Hold confirmed, cut possible later", context: "A cool PPI does not give the Fed reason to cut now with CPI at." },
+        { stat: "Fed implication", value: "Hold confirmed, cut possible later", context: "A cool PPI does not give the Fed reason to cut now with CPI." },
       ],
     },
     {
@@ -59,7 +59,7 @@ const data = {
       behind: [
         { stat: "Votes to cut rates at last meeting", value: "4 out of 12", context: "The most divided Fed vote in over three decades." },
         { stat: "Real interest rate (adjusted for inflation)", value: "About −0.5%", context: "At 3.625% midpoint against 4.2% CPI, the real rate is still." },
-        { stat: "Market odds of a cut in June", value: "Under 5%", context: "After yesterday's CPI report, markets have essentially ruled out." },
+        { stat: "Market odds of a cut in June", value: "Under 5%", context: "After yesterday's CPI report, markets have essentially." },
       ],
     },
     {
@@ -73,8 +73,8 @@ const data = {
       category: "labor",
       behind: [
         { stat: "Where the jobs are", value: "Leisure, hospitality, local govt", context: "These sectors are adding jobs." },
-        { stat: "Financial services jobs lost since May 2025", value: "107,000", context: "Higher-paid white-collar employment has been shrinking for a." },
-        { stat: "Hiring rate", value: "Frozen", context: "Job openings are not being filled at the pace of prior years." },
+        { stat: "Financial services jobs lost since May 2025", value: "107,000", context: "Higher-paid white-collar employment has been shrinking for." },
+        { stat: "Hiring rate", value: "Frozen", context: "Job openings are not being filled at the pace of prior." },
       ],
     },
     {
@@ -82,14 +82,14 @@ const data = {
       label: "Unemployment Rate",
       value: "4.3%",
       sub: "Unchanged. Has held between 4.3% and 4.5% since July 2025.",
-      note: "The broader U-6 rate is 8.1%. Long-term unemployed: 27.5% of all jobless.",
+      note: "The broader U-6 rate is 8.1%. Long-term unemployed: 27.5% of all.",
       signal: "yellow",
       signalLabel: "WATCH",
       category: "labor",
       behind: [
-        { stat: "U-6  --  the real unemployment rate", value: "8.1%", context: "U-6 adds discouraged workers and people working part-time who." },
-        { stat: "Long-term unemployed", value: "27.5% of jobless", context: "More than 1 in 4 unemployed people have been out of work for 27." },
-        { stat: "Working part-time, want full-time", value: "4.8 million", context: "These workers are counted as employed in the headline figure." },
+        { stat: "U-6  --  the real unemployment rate", value: "8.1%", context: "U-6 adds discouraged workers and people working part-time." },
+        { stat: "Long-term unemployed", value: "27.5% of jobless", context: "More than 1 in 4 unemployed people have been out of work." },
+        { stat: "Working part-time, want full-time", value: "4.8 million", context: "These workers are counted as employed in the headline." },
         { stat: "Labor force participation rate", value: "61.8%", context: "Before the pandemic it was 63.3%." },
       ],
     },
@@ -102,18 +102,13 @@ const data = {
       signal: "red",
       signalLabel: "SQUEEZE",
       category: "labor",
-      behind: [
-        { stat: "Real wage growth after inflation", value: "−0.8%", context: "Wages up 3.4%. Prices up 4.2%." },
-        { stat: "Wage growth vs. energy inflation", value: "3.4% vs. 23.5%", context: "Energy costs are rising nearly 7 times faster than wages." },
-        { stat: "Who is getting raises", value: "Hospitality and leisure", context: "Wage gains are concentrated in lower-wage sectors." },
-      ],
     },
     {
       id: "jobless",
       label: "Weekly Jobless Claims",
       value: "242,000",
       sub: "Highest since August 2023. Forecast was 220,000.",
-      note: "Jumped 22,000 above forecast. Labor market cracks appearing beneath the.",
+      note: "Jumped 22,000 above forecast. Labor market cracks appearing beneath.",
       signal: "red",
       signalLabel: "RISING",
       category: "labor",
@@ -121,24 +116,24 @@ const data = {
         { stat: "Beat by", value: "+22,000", context: "Forecasters expected 220,000. The actual number was 242,000." },
         { stat: "Last time this high", value: "August 2023", context: "Claims have been quietly rising for weeks." },
         { stat: "What it means next to payrolls", value: "Contradiction", context: "May payrolls added 172,000 jobs." },
-        { stat: "Federal employee claims", value: "Rising", context: "Federal workforce reduction claims have been ticking up week." },
+        { stat: "Federal employee claims", value: "Rising", context: "Federal workforce reduction claims have been ticking up." },
       ],
     },
     {
       id: "umich",
       label: "Consumer Sentiment (June prelim.)",
       value: "48.9",
-      sub: "June 12, 2026. Up from 44.8 May final. Still near historic lows.",
-      note: "Relief rally, not recovery. Gas dropped $4.56 to $4.12 -- prices stopped climbing, not cheap. Long-run inflation expectations rose to 3.9% from 3.5%.",
+      sub: "June 12, 2026. Up from 44.8 May final. Still near historic.",
+      note: "Relief rally, not recovery. Gas dropped $4.56 to $4.12 -- prices.",
       signal: "red",
       signalLabel: "NEAR LOWS",
       category: "consumer",
       behind: [
-        { stat: "June prelim vs May final", value: "48.9 vs 44.8", context: "Up 4.1 points. Relief from gas prices flattening, not economic improvement." },
-        { stat: "Gas price move", value: "$4.56 to $4.12 over 3 weeks", context: "Prices stopped climbing. $4.12 is still very high -- the direction matters more than the level to consumers." },
-        { stat: "Long-run inflation expectations", value: "3.9% -- up from 3.5%", context: "Rose despite the sentiment bump. Consumers expect inflation to persist. This constrains the Fed." },
-        { stat: "Who drove the improvement", value: "Lower-income households", context: "Families with thin margins felt gas price relief most. Any drop at the pump feels like a raise." },
-        { stat: "The bottom line", value: "Still near historic lows", context: "48.9 means things did not get worse this month. It does not mean consumers think the economy is good." },
+        { stat: "June prelim vs May final", value: "48.9 vs 44.8", context: "Up 4.1 points. Relief from gas prices flattening, not." },
+        { stat: "Gas price move", value: "$4.56 to $4.12 over 3 weeks", context: "Prices stopped climbing. $4.12 is still very high -- the." },
+        { stat: "Long-run inflation expectations", value: "3.9% -- up from 3.5%", context: "Rose despite the sentiment bump. Consumers expect inflation." },
+        { stat: "Who drove the improvement", value: "Lower-income households", context: "Families with thin margins felt gas price relief most. Any." },
+        { stat: "The bottom line", value: "Still near historic lows", context: "48.9 means things did not get worse this month. It does not." },
       ],
         },
     {
@@ -161,15 +156,10 @@ const data = {
       label: "SNAP Benefit Cuts",
       value: "Oct 1",
       sub: "$187 billion cut over 10 years",
-      note: "States must cover 75% of admin costs. Some may limit or exit the program.",
+      note: "States must cover 75% of admin costs. Some may limit or exit the.",
       signal: "red",
       signalLabel: "STRUCTURAL",
       category: "policy",
-      behind: [
-        { stat: "Average monthly benefit reduction", value: "About $14/month", context: "CBO estimate per household by 2034." },
-        { stat: "Households losing internet deduction", value: "13 million", context: "The bill removes internet costs from the SNAP calculation,." },
-        { stat: "Timing overlap", value: "Q4 2026", context: "SNAP cuts, seasonal energy highs, and surveillance pricing." },
-      ],
     },
     {
       id: "fincen",
@@ -181,9 +171,9 @@ const data = {
       signalLabel: "ACTIVE",
       category: "policy",
       behind: [
-        { stat: "Red flags listed that describe ordinary life", value: "18", context: "Shared address, shared phone number, ITIN use, cash transactions." },
+        { stat: "Red flags listed that describe ordinary life", value: "18", context: "Shared address, shared phone number, ITIN use, cash." },
         { stat: "Agencies coordinating", value: "5", context: "FinCEN, IRS, FDIC, OCC, and the National Credit Union." },
-        { stat: "SAR tracking code", value: "FINANCIALINTEGRITY-2026-A002", context: "Banks are asked to tag suspicious activity reports with this." },
+        { stat: "SAR tracking code", value: "FINANCIALINTEGRITY-2026-A002", context: "Banks are asked to tag suspicious activity reports with." },
       ],
     },
     {
@@ -191,16 +181,16 @@ const data = {
       label: "Credit Card Delinquency",
       value: "2.9%",
       sub: "Q1 2026. Above pre-pandemic level of 2.6%.",
-      note: "Headline is improving. Small bank rate is 6.4%  --  more than double the.",
+      note: "Headline is improving. Small bank rate is 6.4%  --  more than.",
       signal: "yellow",
       signalLabel: "ELEVATED",
-      category: "stress",
+      category: "consumer",
       behind: [
         { stat: "Big bank delinquency rate", value: "~3%", context: "Large institutions look relatively stable." },
         { stat: "Small bank delinquency rate", value: "6.4%", context: "Community banks serve lower-income and rural households." },
-        { stat: "Total credit card debt", value: "$1.252 trillion", context: "Down slightly from the Q4 2025 record of $1.277 trillion, but up." },
-        { stat: "Average APR on cards carrying a balance", value: "21.52%", context: "Down slightly from 22.3% in Q4 2025, but still near historic." },
-        { stat: "Charge-off rate", value: "3.8%", context: "When a bank charges off a card account it exits the delinquency." },
+        { stat: "Total credit card debt", value: "$1.252 trillion", context: "Down slightly from the Q4 2025 record of $1.277 trillion,." },
+        { stat: "Average APR on cards carrying a balance", value: "21.52%", context: "Down slightly from 22.3% in Q4 2025, but still near." },
+        { stat: "Charge-off rate", value: "3.8%", context: "When a bank charges off a card account it exits the." },
       ],
     },
     {
@@ -208,14 +198,14 @@ const data = {
       label: "Auto Loan Delinquency",
       value: "5.6%",
       sub: "Q1 2026. 90+ days past due. Near post-financial-crisis high.",
-      note: "Subprime auto at record highs. Car payments are the last bill people stop.",
+      note: "Subprime auto at record highs. Car payments are the last bill.",
       signal: "red",
       signalLabel: "STRESS",
-      category: "stress",
+      category: "consumer",
       behind: [
         { stat: "Subprime auto delinquency (60+ days)", value: "6.8%", context: "The highest level on record going back to the early 1990s,." },
-        { stat: "Prime auto delinquency", value: "0.42%", context: "Prime borrowers are fine. The stress is entirely concentrated in." },
-        { stat: "Total auto loan balances", value: "$1.68 trillion", context: "Up $43 billion year over year. Auto loan balances surged 23%." },
+        { stat: "Prime auto delinquency", value: "0.42%", context: "Prime borrowers are fine. The stress is entirely." },
+        { stat: "Total auto loan balances", value: "$1.68 trillion", context: "Up $43 billion year over year. Auto loan balances surged." },
         { stat: "Why auto delinquency matters", value: "Leading indicator", context: "Car payments are typically the last bill people stop paying." },
       ],
     },
@@ -227,12 +217,12 @@ const data = {
       note: "FHA loans at 11.52%. Foreclosure starts rising.",
       signal: "red",
       signalLabel: "RISING",
-      category: "stress",
+      category: "consumer",
       behind: [
         { stat: "FHA loan delinquency rate", value: "11.52%", context: "FHA loans serve first-time and lower-income homebuyers." },
         { stat: "VA loan delinquency rate", value: "~6.7%", context: "About 225 basis points above conventional loans." },
-        { stat: "Foreclosure process rate", value: "0.64%", context: "Up 11 basis points from Q4 2025 and 15 basis points from a year." },
-        { stat: "Foreclosure actions started in Q1", value: "0.24%", context: "Up 4 basis points from last quarter. The pipeline is filling." },
+        { stat: "Foreclosure process rate", value: "0.64%", context: "Up 11 basis points from Q4 2025 and 15 basis points from a." },
+        { stat: "Foreclosure actions started in Q1", value: "0.24%", context: "Up 4 basis points from last quarter. The pipeline is." },
       ],
     },
     {
@@ -243,11 +233,11 @@ const data = {
       note: "4.8% of all outstanding debt is in some stage of delinquency.",
       signal: "yellow",
       signalLabel: "WATCH",
-      category: "stress",
+      category: "consumer",
       behind: [
         { stat: "Share of debt in delinquency", value: "4.8%", context: "Nearly 1 in 20 dollars of household debt is past due." },
         { stat: "Credit card debt increase since 2021", value: "+63%", context: "$482 billion in new credit card debt in five years." },
-        { stat: "New auto loans in Q1", value: "$182 billion", context: "Originations remain high despite delinquency stress, suggesting." },
+        { stat: "New auto loans in Q1", value: "$182 billion", context: "Originations remain high despite delinquency stress,." },
         { stat: "The K-shape in one sentence", value: "Aggregate looks stable. Components do not.", context: "Total debt rose only $18 billion." },
       ],
     },
@@ -261,9 +251,9 @@ const data = {
       signalLabel: "RETREATING",
       category: "markets",
       behind: [
-        { stat: "Year-to-date performance", value: "Volatile", context: "The S&P hit highs in late 2025, pulled back sharply on tariff." },
-        { stat: "Implied future annual return (CAPE-based)", value: "1.9%", context: "At current valuations, the Shiller CAPE model implies a 1.9%." },
-        { stat: "Tuesday's selloff driver", value: "Hot CPI + rising claims", context: "Wednesday's CPI at 4.2% and Thursday's jobless claims at 242,000." },
+        { stat: "Year-to-date performance", value: "Volatile", context: "The S&P hit highs in late 2025, pulled back sharply on." },
+        { stat: "Implied future annual return (CAPE-based)", value: "1.9%", context: "At current valuations, the Shiller CAPE model implies a." },
+        { stat: "Tuesday's selloff driver", value: "Hot CPI + rising claims", context: "Wednesday's CPI at 4.2% and Thursday's jobless claims at." },
       ],
     },
     {
@@ -271,15 +261,15 @@ const data = {
       label: "Shiller CAPE Ratio",
       value: "39.9",
       sub: "June 1, 2026. Historical median: 16.1.",
-      note: "23.9% above its own long-term average of 32.2. Implies very low future.",
+      note: "23.9% above its own long-term average of 32.2. Implies very low.",
       signal: "red",
       signalLabel: "OVERVALUED",
       category: "markets",
       behind: [
-        { stat: "Historical median CAPE", value: "16.1", context: "The market is trading at nearly 2.5 times its historical median." },
+        { stat: "Historical median CAPE", value: "16.1", context: "The market is trading at nearly 2.5 times its historical." },
         { stat: "Only times CAPE was higher", value: "1999-2000 and 2020-2022", context: "Both periods ended in significant corrections." },
         { stat: "Regular P/E ratio", value: "24.8", context: "The trailing P/E is 24.8, near its 20-year average of 25.3." },
-        { stat: "What this means for your 401K", value: "Lower expected returns", context: "If you are in an index fund and 10+ years from retirement, the." },
+        { stat: "What this means for your 401K", value: "Lower expected returns", context: "If you are in an index fund and 10+ years from retirement,." },
       ],
     },
     {
@@ -287,15 +277,15 @@ const data = {
       label: "VIX  --  Fear Index",
       value: "22.2",
       sub: "June 10, 2026. Up 11.8% on the day.",
-      note: "52-week range: 13.4 to 35.3. Elevated but off the March peak of 29.5.",
+      note: "52-week range: 13.4 to 35.3. Elevated but off the March peak of.",
       signal: "yellow",
       signalLabel: "ELEVATED",
       category: "markets",
       behind: [
-        { stat: "What the VIX measures", value: "Expected volatility, next 30 days", context: "The VIX is the market's best guess about how much the S&P 500." },
+        { stat: "What the VIX measures", value: "Expected volatility, next 30 days", context: "The VIX is the market's best guess about how much the S&P." },
         { stat: "Why it jumped 11.8% Tuesday", value: "CPI + claims combination", context: "Hot inflation plus rising unemployment claims in the same." },
         { stat: "Implication for your portfolio", value: "Hedging costs are rising", context: "A higher VIX means options-based protection costs more." },
-        { stat: "MOVE index (bond volatility)", value: "~77", context: "Treasury market volatility is also elevated, off its March peak." },
+        { stat: "MOVE index (bond volatility)", value: "~77", context: "Treasury market volatility is also elevated, off its March." },
       ],
     },
     {
@@ -309,9 +299,9 @@ const data = {
       category: "markets",
       behind: [
         { stat: "What spreads are saying", value: "No fear of defaults", context: "At 300 basis points, high yield spreads are pricing a very." },
-        { stat: "What default rates are saying", value: "4.2–4.5% trailing default rate", context: "Moody's trailing 12-month high yield default rate is 4.2 to 4.5%." },
-        { stat: "Investment grade spreads", value: "~85 bps  --  near 25-year tights", context: "Investment grade corporate bonds are also priced for perfection." },
-        { stat: "The risk in plain language", value: "The bond market is not worried. It should be.", context: "Tight spreads while defaults are rising means investors are not." },
+        { stat: "What default rates are saying", value: "4.2–4.5% trailing default rate", context: "Moody's trailing 12-month high yield default rate is 4.2 to." },
+        { stat: "Investment grade spreads", value: "~85 bps  --  near 25-year tights", context: "Investment grade corporate bonds are also priced for." },
+        { stat: "The risk in plain language", value: "The bond market is not worried. It should be.", context: "Tight spreads while defaults are rising means investors are." },
       ],
     },
     {
@@ -324,10 +314,10 @@ const data = {
       signalLabel: "BROKEN",
       category: "markets",
       behind: [
-        { stat: "Why the 60/40 worked for 40 years", value: "Stocks and bonds moved opposite", context: "When stocks fell, investors fled to bonds, pushing bond prices." },
-        { stat: "Why it stopped working", value: "Inflation changed the math", context: "When inflation is high, the Fed cannot cut rates to rescue the." },
+        { stat: "Why the 60/40 worked for 40 years", value: "Stocks and bonds moved opposite", context: "When stocks fell, investors fled to bonds, pushing bond." },
+        { stat: "Why it stopped working", value: "Inflation changed the math", context: "When inflation is high, the Fed cannot cut rates to rescue." },
         { stat: "2022 was the warning", value: "Both stocks and bonds fell 15–20%", context: "2022 was the worst year for the 60/40 since the 1930s." },
-        { stat: "What replaces it", value: "Real assets, short duration, alternatives", context: "TIPS, commodities, short-term bonds, and real assets tend to." },
+        { stat: "What replaces it", value: "Real assets, short duration, alternatives", context: "TIPS, commodities, short-term bonds, and real assets tend." },
       ],
     },
     {
@@ -340,9 +330,9 @@ const data = {
       signalLabel: "ELEVATED",
       category: "economy",
       behind: [
-        { stat: "30-year mortgage rate right now", value: "6.55%", context: "Bankrate June 11, 2026. The 10-year yield drives mortgage rates." },
+        { stat: "30-year mortgage rate right now", value: "6.55%", context: "Bankrate June 11, 2026. The 10-year yield drives mortgage." },
         { stat: "Spread: mortgage over 10-year", value: "~2.05 percentage points", context: "Historically the spread runs 1.5 to 2 points." },
-        { stat: "CBO 10-year yield forecast, end 2026", value: "4.1%", context: "The Congressional Budget Office projects yields to ease to 4.1%." },
+        { stat: "CBO 10-year yield forecast, end 2026", value: "4.1%", context: "The Congressional Budget Office projects yields to ease to." },
       ],
     },
     {
@@ -356,7 +346,7 @@ const data = {
       category: "economy",
       behind: [
         { stat: "Rate one year ago", value: "6.85%", context: "Rates have fallen modestly over the past year but are not." },
-        { stat: "Monthly payment: $400K home at 6.55%", value: "$2,530/month", context: "The same mortgage at the 2021 average rate of 3.1% would cost." },
+        { stat: "Monthly payment: $400K home at 6.55%", value: "$2,530/month", context: "The same mortgage at the 2021 average rate of 3.1% would." },
         { stat: "Why rates are stuck", value: "10-year yield + inflation", context: "The Fed does not set mortgage rates directly." },
         { stat: "Refinance rate", value: "6.69%", context: "Refinancing costs more than a new purchase loan." },
       ],
@@ -366,14 +356,14 @@ const data = {
       label: "Home Price to Income Ratio",
       value: "~7.2x",
       sub: "2026 estimate. Historical average: ~3.5x.",
-      note: "Buying a home now requires more than 7 years of gross household income.",
+      note: "Buying a home now requires more than 7 years of gross household.",
       signal: "red",
       signalLabel: "CRISIS",
       category: "economy",
       behind: [
-        { stat: "Historical norm", value: "3 to 4x income", context: "For most of the post-war era, a median home cost 3 to 4 times." },
+        { stat: "Historical norm", value: "3 to 4x income", context: "For most of the post-war era, a median home cost 3 to 4." },
         { stat: "What created this gap", value: "Low rates + limited supply + investor buying", context: "A decade of near-zero rates inflated asset prices." },
-        { stat: "Stuck market dynamic", value: "No one can afford to buy or sell", context: "Existing homeowners with 3% mortgages will not sell and take on." },
+        { stat: "Stuck market dynamic", value: "No one can afford to buy or sell", context: "Existing homeowners with 3% mortgages will not sell and." },
         { stat: "Freddie Mac: income growth vs. home prices", value: "Income growth outpacing prices  --  marginally", context: "Freddie Mac noted in June that income growth is marginally." },
       ],
     },
@@ -389,7 +379,7 @@ const data = {
       behind: [
         { stat: "Historical average savings rate", value: "8.4%", context: "From 1959 to 2026, Americans saved an average of 8.4% of." },
         { stat: "What happened to savings", value: "Inflation absorbed them", context: "Pandemic-era savings built a buffer through 2022." },
-        { stat: "April spending increase vs. income", value: "Spending +0.5%, income flat", context: "In April 2026, consumer spending rose 0.5% while personal income." },
+        { stat: "April spending increase vs. income", value: "Spending +0.5%, income flat", context: "In April 2026, consumer spending rose 0.5% while personal." },
         { stat: "Why 2.6% matters", value: "No cushion for October", context: "SNAP cuts hit October 1. Energy bills peak in Q4." },
       ],
     },
@@ -397,17 +387,17 @@ const data = {
       id: "retail-sales",
       label: "Retail Sales (April / May due Jun 17)",
       value: "+0.5%",
-      sub: "April month over month. May report releases June 17 -- the most important release this month.",
-      note: "Nominal numbers look healthy but are inflated by high gas prices. Watch the ex-gas number on June 17 for the real consumer picture.",
+      sub: "April month over month. May report releases June 17 -- the.",
+      note: "Nominal numbers look healthy but are inflated by high gas prices..",
       signal: "yellow",
       signalLabel: "WATCH",
       category: "economy",
       behind: [
-        { stat: "The nominal number is misleading", value: "Gas inflates the headline", context: "Retail sales are not adjusted for inflation. When gas spikes, total sales jump -- but shoppers are paying more and getting less. Earlier this spring most of the monthly jump went straight to gas station cash registers." },
-        { stat: "What is actually being cut", value: "Clothing, furniture, restaurants", context: "Clothing and furniture sales have dropped. Restaurant sales slowed as families skip meals out to pay for fuel. Mall foot traffic down as people consolidate driving trips." },
-        { stat: "Where spending is shifting", value: "Online and warehouse clubs", context: "Online retailers seeing steady growth -- people buy online to avoid using fuel. Convenience store fuel transactions and in-store sales down ~10% as drivers shift to Costco and Sam's Club for cheaper gas." },
-        { stat: "How remaining spending is financed", value: "Savings drain and credit cards", context: "Tax refund season is over. People are increasingly draining savings and leaning on credit cards to cover the high cost of everyday living. Savings rate at 2.6%. Credit card delinquency at 6.4% at small banks." },
-        { stat: "What to watch June 17", value: "Ex-gas retail sales number", context: "If the ex-gasoline retail sales number is flat or negative, the headline growth is entirely energy inflation. That is the Stage 2 contagion signal the monitor has been tracking." },
+        { stat: "The nominal number is misleading", value: "Gas inflates the headline", context: "Retail sales are not adjusted for inflation. When gas." },
+        { stat: "What is actually being cut", value: "Clothing, furniture, restaurants", context: "Clothing and furniture sales have dropped. Restaurant sales." },
+        { stat: "Where spending is shifting", value: "Online and warehouse clubs", context: "Online retailers seeing steady growth -- people buy online." },
+        { stat: "How remaining spending is financed", value: "Savings drain and credit cards", context: "Tax refund season is over. People are increasingly draining." },
+        { stat: "What to watch June 17", value: "Ex-gas retail sales number", context: "If the ex-gasoline retail sales number is flat or negative,." },
       ],
     },
     {
@@ -415,13 +405,13 @@ const data = {
       label: "WTI Crude Oil",
       value: "~$91/barrel",
       sub: "June 10–11, 2026. Brent near $94.",
-      note: "Trump says Iran deal is close -- Tehran denies. If deal closes: energy falls,.",
+      note: "Trump says Iran deal is close -- Tehran denies. If deal closes:.",
       signal: "red",
       signalLabel: "ELEVATED",
       category: "economy",
       behind: [
         { stat: "Price one year ago", value: "~$64/barrel", context: "Oil is up roughly 42% year over year." },
-        { stat: "EIA peak forecast", value: "$115/barrel Q2 2026", context: "The Energy Information Administration forecast Brent peaking." },
+        { stat: "EIA peak forecast", value: "$115/barrel Q2 2026", context: "The Energy Information Administration forecast Brent." },
         { stat: "Strait of Hormuz status", value: "Near-total closure", context: "The Strait carries roughly 20% of global oil supply." },
         { stat: "Impact on every other price", value: "Diesel, fertilizer, transportation", context: "Oil does not just affect gas prices. Diesel moves freight." },
       ],
@@ -435,20 +425,13 @@ const data = {
       signal: "yellow",
       signalLabel: "FRAGILE",
       category: "economy",
-      behind: [
-        { stat: "52-year average", value: "98.0", context: "The index has been below its long-run average for two." },
-        { stat: "Uncertainty index", value: "91 (historical average: 68)", context: "The uncertainty component is 34% above its historical average." },
-        { stat: "Job openings small businesses cannot fill", value: "29%  --  lowest since May 2020", context: "Small businesses are not finding workers at the rates of prior." },
-        { stat: "Retail sector", value: "Lowest optimism of all industries", context: "Retail small businesses are the most pessimistic." },
-        { stat: "Ohio services owner, verbatim", value: "Sales down, utilities up, oil up", context: "Sales are typically lower in Q1, but we noticed it stayed lower." },
-      ],
     },
     {
       id: "fed-debt",
       label: "Federal Debt",
       value: "$39 trillion",
       sub: "Gross debt eclipsed $39T March 17 2026. Debt-to-GDP above.",
-      note: "Interest payments hit $1T annually -- surpassing defense spending for the.",
+      note: "Interest payments hit $1T annually -- surpassing defense spending.",
       signal: "red",
       signalLabel: "CRITICAL",
       category: "debt",
@@ -458,7 +441,7 @@ const data = {
       label: "Treasury Auction Demand",
       value: "Watch",
       sub: "Bid-to-cover ratios declining on longer maturities.",
-      note: "Weak auctions signal insufficient demand at current yields -- forcing.",
+      note: "Weak auctions signal insufficient demand at current yields --.",
       signal: "yellow",
       signalLabel: "WATCH",
       category: "debt",
@@ -468,7 +451,7 @@ const data = {
       label: "CRE Office Loan Delinquency",
       value: "12.34%",
       sub: "Record high as of January 2026. Trepp data.",
-      note: "Office vacancy above 20% nationally. $1 trillion in CRE loans maturing in.",
+      note: "Office vacancy above 20% nationally. $1 trillion in CRE loans.",
       signal: "red",
       signalLabel: "STRESS",
       category: "debt",
@@ -518,7 +501,7 @@ const data = {
       label: "mBridge  --  Cross-Border CBDC",
       value: "$55.5B settled",
       sub: "2,500x increase since 2022. 15-second settlement. No SWIFT.",
-      note: "China, UAE, Saudi Arabia, Thailand, Hong Kong. BIS withdrew Oct 2024.",
+      note: "China, UAE, Saudi Arabia, Thailand, Hong Kong. BIS withdrew Oct.",
       signal: "red",
       signalLabel: "ACTIVE",
       category: "dollar",
@@ -534,9 +517,9 @@ const data = {
       category: "dollar",
       behind: [
         { stat: "What Agora is", value: "Western tokenized cross-border settlement", context: "The BIS-led Western answer to mBridge." },
-        { stat: "Prototype confirmed May 27 2026", value: "Atomic settlement works", context: "BIS confirmed atomic multi-currency settlement is achievable." },
-        { stat: "The programmability clause", value: "Smart contracts in transactions", context: "Agora allows institutions to embed compliance requirements and." },
-        { stat: "mBridge vs. Agora", value: "Two parallel architectures", context: "mBridge settles outside the dollar system. Agora modernizes it.." },
+        { stat: "Prototype confirmed May 27 2026", value: "Atomic settlement works", context: "BIS confirmed atomic multi-currency settlement is." },
+        { stat: "The programmability clause", value: "Smart contracts in transactions", context: "Agora allows institutions to embed compliance requirements." },
+        { stat: "mBridge vs. Agora", value: "Two parallel architectures", context: "mBridge settles outside the dollar system. Agora modernizes." },
       ],
     },
     {
@@ -549,10 +532,10 @@ const data = {
       signalLabel: "WATCH",
       category: "dollar",
       behind: [
-        { stat: "What the agreement was", value: "1974 US-Saudi arrangement", context: "Saudi Arabia agreed to price oil in dollars and recycle revenues." },
-        { stat: "What expiration means  --  documented", value: "No legal obligation to price in dollars", context: "Saudi Arabia is no longer bound by any agreement to price oil in." },
-        { stat: "What expiration means  --  structural.", value: "Possible multi-currency pricing", context: "Saudi Arabia has discussed yuan-denominated oil sales with China." },
-        { stat: "Why it matters regardless", value: "Treasury recycling at risk", context: "For decades, Saudi oil revenues became dollar purchases, which." },
+        { stat: "What the agreement was", value: "1974 US-Saudi arrangement", context: "Saudi Arabia agreed to price oil in dollars and recycle." },
+        { stat: "What expiration means  --  documented", value: "No legal obligation to price in dollars", context: "Saudi Arabia is no longer bound by any agreement to price." },
+        { stat: "What expiration means  --  structural.", value: "Possible multi-currency pricing", context: "Saudi Arabia has discussed yuan-denominated oil sales with." },
+        { stat: "Why it matters regardless", value: "Treasury recycling at risk", context: "For decades, Saudi oil revenues became dollar purchases,." },
       ],
     },
   ],
@@ -605,7 +588,7 @@ const data = {
       id: "domestic-eq", theme: "Domestic Equity", weight: "28%",
       signal: "yellow", conviction: "Medium", assetClass: "Equities",
       bestAccount: "Taxable for long-term holds (capital gains rates).",
-      rationale: "Broad domestic equity with a tilt toward industrials, utilities, and energy services. Broad small cap (SCHA) replaced with quality-screened OUSM -- small cap.",
+      rationale: "Broad domestic equity with a tilt toward industrials, utilities, and energy services. Broad small cap (SCHA) replaced with quality-screened.",
       instruments: [
         { name: "US Industrials ETF", ticker: "XLI", type: "ETF" },
         { name: "US Utilities ETF", ticker: "XLU", type: "ETF" },
@@ -637,7 +620,7 @@ const data = {
       id: "gold-assets", theme: "Gold, Silver & Industrial Metals", weight: "12.5%",
       signal: "green", conviction: "High", assetClass: "Commodities",
       bestAccount: "IRA -- gold and silver ETFs taxed as collectibles at 28% in taxable accounts.",
-      rationale: "Two distinct theses in one allocation. Gold and silver as monetary hedges: when governments print money to service debt -- the only exit from a debt cycle.",
+      rationale: "Two distinct theses in one allocation. Gold and silver as monetary hedges: when governments print money to service debt -- the only exit.",
       instruments: [
         { name: "Gold Bullion ETF", ticker: "GLD", type: "ETF" },
         { name: "iShares Gold Trust -- lower expense ratio than GLD", ticker: "IAU", type: "ETF" },
@@ -682,7 +665,7 @@ const data = {
       id: "healthcare-broad", theme: "Healthcare", weight: "3-5% new position",
       signal: "green", conviction: "High", assetClass: "Equities",
       bestAccount: "Taxable -- qualified dividends at lower tax rate. Roth IRA for highest-growth names like.",
-      rationale: "Healthcare demand is non-discretionary. People do not stop needing medication or insurance when inflation is high. Stress -- financial, food insecurity,.",
+      rationale: "Healthcare demand is non-discretionary. People do not stop needing medication or insurance when inflation is high. Stress -- financial,.",
       instruments: [
         { name: "Health Care Select Sector SPDR -- broad exposure", ticker: "XLV", type: "ETF" },
         { name: "Vanguard Health Care ETF -- lower expense ratio", ticker: "VHT", type: "ETF" },
@@ -702,7 +685,7 @@ const data = {
       ],
     },
     { id: "c05", theme: "American Balanced / 60/40 Funds and Fund-of-Funds",
-      reason: "Two cautions. American Balanced (ABALX) is classic 60/40 in active clothing -- active management.",
+      reason: "Two cautions. American Balanced (ABALX) is classic 60/40 in active clothing -- active.",
       instruments: [
         { name: "American Balanced Fund", ticker: "ABALX", type: "Caution" },
         { name: "Income Fund of America", ticker: "AMECX", type: "Caution" },
@@ -710,7 +693,7 @@ const data = {
       ],
     },
     { id: "c06", theme: "Growth Fund of America",
-      reason: "Large cap U.S. growth tilt at Shiller CAPE 39.9. High-quality management does not change the.",
+      reason: "Large cap U.S. growth tilt at Shiller CAPE 39.9. High-quality management does not change.",
       instruments: [
         { name: "Growth Fund of America", ticker: "AGTHX", type: "Caution" },
         { name: "American Funds New Perspective", ticker: "ANWPX", type: "Caution" },
@@ -783,7 +766,7 @@ const data = {
       id: "staples", theme: "Consumer Staples", ticker: "VDC, XLP",
       signal: "yellow", conviction: "Medium", assetClass: "Equities",
       bestAccount: "Taxable -- low turnover, qualified dividends. Works in IRA too.",
-      rationale: "This is not a lower-K play. It is an upper-K defensive play. Lower-K households are cutting spending including staples -- the savings rate and SNAP data.",
+      rationale: "This is not a lower-K play. It is an upper-K defensive play. Lower-K households are cutting spending including staples -- the savings rate.",
       instruments: [
         { name: "Vanguard Consumer Staples ETF", ticker: "VDC", type: "ETF" },
         { name: "Consumer Staples Select Sector SPDR", ticker: "XLP", type: "ETF" },
@@ -806,7 +789,7 @@ const data = {
       id: "stablecoin-infra", theme: "Stablecoin & Payment Infrastructure", ticker: "V, MA, COIN",
       signal: "green", conviction: "High", assetClass: "Equities",
       bestAccount: "Taxable -- long-term capital gains if held over a year. V and MA are low-turnover holds.",
-      rationale: "The petrodollar agreement expired June 2024 with no renewal. The dollar cannot maintain global dominance through reserve status alone. Programmable financial.",
+      rationale: "The petrodollar agreement expired June 2024 with no renewal. The dollar cannot maintain global dominance through reserve status alone..",
       instruments: [
         { name: "Visa -- X Money runs on Visa Direct, Trusted Agent Protocol, stablecoin payout pilot", ticker: "V", type: "Stock" },
         { name: "Mastercard -- BVNK acquisition, Agent Pay, Recorded Future data fusion", ticker: "MA", type: "Stock" },
@@ -818,7 +801,7 @@ const data = {
       id: "ai-surveillance", theme: "AI & Surveillance Infrastructure", ticker: "PLTR, NVDA, MSI, AXON",
       signal: "red", conviction: "High", assetClass: "Equities",
       bestAccount: "Roth IRA for PLTR and NVDA if you believe in multi-year compounding. Taxable works for.",
-      rationale: "This is not a recommendation to buy AI because it is exciting. These are specific companies building the infrastructure this publication documents. Palantir.",
+      rationale: "This is not a recommendation to buy AI because it is exciting. These are specific companies building the infrastructure this publication.",
       instruments: [
         { name: "Palantir -- U.S. government surveillance infrastructure, $687M Q1 2026 govt revenue", ticker: "PLTR", type: "Stock" },
         { name: "Nvidia -- data center and government inference compute", ticker: "NVDA", type: "Stock" },
@@ -840,7 +823,7 @@ const data = {
         { name: "Vanguard Federal Money Market Fund", ticker: "VMFXX", type: "Fund" },
         { name: "X Money -- 6% APY, FDIC-insured via Cross River Bank, no minimum", ticker: "X Money", type: "Platform" },
       ],
-      caveat: "X Money platform risk: X controls your account through its terms of service. If your account is suspended, access to funds is not fully defined in the terms. For a cash buffer that needs to be accessible when markets dislocate, platform risk is a material consideration. SGOV and money market funds carry no equivalent risk. Cash drag is real if the market keeps rising.",
+      caveat: "X Money platform risk: X controls your account through its terms of service. If your account is suspended,.",
     },
   ],
 };
@@ -853,8 +836,8 @@ const signalColors = {
 };
 const convictionColors = { High: "#dc2626", Medium: "#92400e", Low: "#4b5563" };
 const thesisColors     = { red: "#dc2626", yellow: "#92400e", green: "#15803d" };
-const TABS = ["indicators", "stress", "markets", "debt", "behind", "ideas", "thesis"];
-const TAB_LABELS = { indicators: "Indicators", stress: "Consumer Stress", markets: "Markets", debt: "Debt & Credit", behind: "Behind the Numbers", ideas: "Investment Ideas", thesis: "Big Picture" };
+const TABS = ["indicators", "consumer", "markets", "debt", "behind", "ideas", "thesis"];
+const TAB_LABELS = { indicators: "Indicators", consumer: "Consumer", markets: "Markets", debt: "Debt & Credit", behind: "Behind the Numbers", ideas: "Investment Ideas", thesis: "Big Picture" };
 const CATEGORIES = [
   { id: "all", label: "All" }, { id: "inflation", label: "Inflation" },
   { id: "labor", label: "Labor" }, { id: "monetary", label: "Monetary" },
@@ -1119,20 +1102,75 @@ export default function MacroMonitor() {
         </div>
       )}
 
-      {/* ── CONSUMER STRESS ── */}
-      {activeTab === "stress" && (
+      {/* ── CONSUMER ── */}
+      {activeTab === "consumer" && (
         <div style={{ padding: "20px 28px" }}>
-          <p style={{ fontSize: "16px", color: "#6b7280", marginTop: 0, marginBottom: "24px", lineHeight: 1.6, fontFamily: "sans-serif" }}>
-            What household balance sheets look like beneath the headline numbers. All data Q1 2026.
-          </p>
+
+          {/* Sentiment & Spending section */}
+          <div style={{ fontSize: "11px", color: "#4338ca", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: "14px", fontFamily: "sans-serif" }}>
+            Sentiment & Spending
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "14px", marginBottom: "28px" }}>
+            {data.indicators.filter(d => d.category === "consumer").map((item) => {
+              const c = signalColors[item.signal];
+              const isOpen = expandedBehind === item.id;
+              return (
+                <div key={item.id} style={{ background: c.bg, border: `1px solid ${c.border}`, borderRadius: "6px", overflow: "hidden" }}>
+                  <div style={{ padding: "18px 20px" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "10px" }}>
+                      <div style={{ fontSize: "13px", color: "#4b5563", fontFamily: "sans-serif", fontWeight: "600", textTransform: "uppercase", letterSpacing: "0.05em" }}>{item.label}</div>
+                      <span style={{ fontSize: "10px", color: c.text, fontFamily: "sans-serif", fontWeight: "600", display: "flex", alignItems: "center", gap: "4px" }}>
+                        <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: c.dot, display: "inline-block" }} />
+                        {item.signalLabel}
+                      </span>
+                    </div>
+                    <div style={{ fontSize: "28px", fontWeight: "700", color: "#111827", lineHeight: 1, marginBottom: "4px" }}>{item.value}</div>
+                    <div style={{ fontSize: "13px", color: "#6b7280", fontFamily: "sans-serif", marginBottom: "10px" }}>{item.sub}</div>
+                    <div style={{ borderTop: `1px solid ${c.border}`, paddingTop: "10px", fontSize: "13px", color: "#4b5563", fontFamily: "sans-serif", lineHeight: 1.5 }}>{item.note}</div>
+                  </div>
+                  {item.behind && item.behind.length > 0 && (
+                    <>
+                      <button onClick={() => setExpandedBehind(isOpen ? null : item.id)} style={{ width: "100%", background: "none", border: "none", borderTop: `1px solid ${c.border}`, padding: "8px 20px", fontSize: "12px", color: c.text, fontWeight: "600", cursor: "pointer", fontFamily: "sans-serif", display: "flex", justifyContent: "space-between" }}>
+                        <span>Behind the numbers</span>
+                        <span style={{ transform: isOpen ? "rotate(180deg)" : "none" }}>▾</span>
+                      </button>
+                      {isOpen && (
+                        <div style={{ borderTop: `1px solid ${c.border}`, padding: "12px 20px", display: "flex", flexDirection: "column", gap: "12px" }}>
+                          {item.behind.map((b, i) => (
+                            <div key={i}>
+                              <div style={{ display: "flex", justifyContent: "space-between", gap: "8px", marginBottom: "3px" }}>
+                                <span style={{ fontSize: "13px", color: "#374151", fontFamily: "sans-serif" }}>{b.stat}</span>
+                                <span style={{ fontSize: "13px", fontWeight: "700", color: c.text, fontFamily: "sans-serif", whiteSpace: "nowrap" }}>{b.value}</span>
+                              </div>
+                              <div style={{ fontSize: "12px", color: "#6b7280", lineHeight: 1.5, fontFamily: "sans-serif" }}>{b.context}</div>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Divider */}
+          <div style={{ display: "flex", alignItems: "center", gap: "14px", marginBottom: "20px" }}>
+            <div style={{ fontSize: "11px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.12em", fontFamily: "sans-serif", whiteSpace: "nowrap" }}>
+              Stress Indicators
+            </div>
+            <div style={{ flex: 1, height: "1px", background: "#fca5a5" }} />
+          </div>
+
           {/* K-shape callout */}
-          <div style={{ background: "#fff5f5", border: "1px solid #fca5a5", borderLeft: "4px solid #dc2626", borderRadius: "0 6px 6px 0", padding: "16px 20px", marginBottom: "24px" }}>
+          <div style={{ background: "#fff5f5", border: "1px solid #fca5a5", borderLeft: "4px solid #dc2626", borderRadius: "0 6px 6px 0", padding: "16px 20px", marginBottom: "20px" }}>
             <div style={{ fontSize: "13px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "6px", fontFamily: "sans-serif" }}>The K-Shape in One Sentence</div>
-            <div style={{ fontSize: "15px", color: "#1f2937", lineHeight: 1.7, fontFamily: "sans-serif" }}>
+            <div style={{ fontSize: "14px", color: "#1f2937", lineHeight: 1.7, fontFamily: "sans-serif" }}>
               Every aggregate delinquency rate is a weighted average hiding a healthy top half and a distressed bottom half. FHA mortgages: 11.52%. Subprime auto: record 6.8%. Small bank cards: 6.4%. The average obscures the distribution.
             </div>
           </div>
-          {/* Stress grid from indicators */}
+
+          {/* Stress grid */}
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "14px", marginBottom: "28px" }}>
             {data.indicators.filter(d => d.category === "stress").map((item) => {
               const c = signalColors[item.signal];
@@ -1146,10 +1184,11 @@ export default function MacroMonitor() {
               );
             })}
           </div>
-                    {/* Narrative */}
+
+          {/* Narrative */}
           <div style={{ background: "#f9fafb", border: "1px solid #e5e7eb", borderLeft: "4px solid #dc2626", borderRadius: "0 6px 6px 0", padding: "20px 24px" }}>
             <div style={{ fontSize: "13px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "10px", fontFamily: "sans-serif" }}>The Debt Trap Beneath the Headline</div>
-            <div style={{ fontSize: "16px", color: "#1f2937", lineHeight: 1.8 }}>
+            <div style={{ fontSize: "15px", color: "#1f2937", lineHeight: 1.8 }}>
               Americans have added $482 billion in credit card debt since 2021, using plastic to absorb the inflation that wages did not cover. The interest rate on those cards averages 21.52%. At that rate, a $5,000 balance costs more than $1,000 a year just to carry. Subprime auto delinquency hit a record in January. FHA mortgage delinquency is near 12%. The pandemic-era relief that kept those numbers lower expired in September 2025. The squeeze is not coming. It is already running.
             </div>
           </div>
@@ -1446,7 +1485,7 @@ export default function MacroMonitor() {
           </div>
           <div style={{ padding: "8px 20px" }}>
             {[
-              { date: "Jun 17", label: "May Retail Sales", note: "Watch the ex-gas number. If flat or negative, headline growth is pure energy inflation.", signal: "red" },
+              { date: "Jun 17", label: "May Retail Sales", note: "Watch the ex-gas number. If flat or negative, headline growth is.", signal: "red" },
               { date: "Jun 16-17", label: "FOMC Meeting", note: "No move expected. Watch statement language for Warsh shift.", signal: "yellow" },
               { date: "Jun 26", label: "UMich June Final", note: "June prelim released June 12 at 48.9. Watch for revision up or down.", signal: "yellow" },
               { date: "Jul 2", label: "June Jobs Report", note: "Watch financial services vs. leisure composition.", signal: "yellow" },
