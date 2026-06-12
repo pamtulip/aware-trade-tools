@@ -909,8 +909,27 @@ export default function MacroMonitor() {
       {/* ── INDICATORS ── */}
       {activeTab === "indicators" && (
         <>
-          <div style={{ padding: "20px 28px", display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "14px" }}>
-            {filtered.map((item) => {
+          <div style={{ padding: "20px 28px" }}>
+            {[
+              { id: "inflation", label: "Inflation" },
+              { id: "labor", label: "Labor" },
+              { id: "monetary", label: "Monetary" },
+              { id: "economy", label: "Economy" },
+              { id: "markets", label: "Markets" },
+              { id: "debt", label: "Debt & Credit" },
+              { id: "dollar", label: "Dollar / Petrodollar" },
+              { id: "policy", label: "Policy" },
+            ].map(({ id: catId, label: catLabel }) => {
+              const catItems = filtered.filter(d => d.category === catId);
+              if (catItems.length === 0) return null;
+              return (
+                <div key={catId} style={{ marginBottom: "28px" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "14px" }}>
+                    <div style={{ fontSize: "11px", color: "#6b7280", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.12em", fontFamily: "sans-serif", whiteSpace: "nowrap" }}>{catLabel}</div>
+                    <div style={{ flex: 1, height: "1px", background: "#f3f4f6" }} />
+                  </div>
+                  <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "14px" }}>
+                    {catItems.map((item) => {
               const c = signalColors[item.signal];
               const isOpen = expandedBehind === item.id;
               return (
@@ -954,6 +973,10 @@ export default function MacroMonitor() {
                       )}
                     </>
                   )}
+                </div>
+              );
+                    })}
+                  </div>
                 </div>
               );
             })}
