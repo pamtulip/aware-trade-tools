@@ -623,9 +623,15 @@ export default function MacroMonitor() {
 
       {activeTab === "debt" && (
         <div style={{ padding: "20px 28px" }}>
-          <p style={{ fontSize: "14px", color: "#6b7280", marginTop: 0, marginBottom: "16px", fontFamily: "sans-serif", lineHeight: 1.5 }}>
-            The slow-motion repricing of everything built on cheap money.
-          </p>
+
+          {/* Debt summary */}
+          <div style={{ background: "#fff5f5", border: "1px solid #fca5a5", borderLeft: "4px solid #dc2626", borderRadius: "0 6px 6px 0", padding: "16px 20px", marginBottom: "16px" }}>
+            <div style={{ fontSize: "12px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "8px", fontFamily: "sans-serif" }}>Debt & Credit in One Paragraph</div>
+            <div style={{ fontSize: "14px", color: "#1f2937", lineHeight: 1.8, fontFamily: "sans-serif" }}>
+              The U.S. is paying more in interest on its debt than it spends on defense -- for the first time in history. Federal debt hit $39 trillion in March 2026. Interest payments exceeded $1 trillion annually and are projected to double by 2036. Treasury auction demand is weakening as foreign holders diversify away from U.S. debt. Office loan delinquency hit a record 12.34% as $1 trillion in commercial real estate loans mature in 2026 at refinancing rates 400 to 500 basis points higher than when they were originated. Regional banks hold 44% of their loan portfolios in CRE -- the same banks showing 6.4% credit card delinquency. Private equity has $1 trillion in unrealized assets frozen past their intended holding periods, with 62% of pension funds overallocated and no exit in sight. These are not separate stories. They are the same story: 15 years of cheap money created assets priced for a world that no longer exists, and the losses are flowing to the institutions that hold ordinary Americans' savings.
+            </div>
+          </div>
+
           <div style={{ background: "#fff5f5", border: "1px solid #fca5a5", borderLeft: "4px solid #dc2626", borderRadius: "0 6px 6px 0", padding: "14px 18px", marginBottom: "20px" }}>
             <div style={{ fontSize: "12px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "6px", fontFamily: "sans-serif" }}>The Connective Tissue</div>
             <div style={{ fontSize: "14px", color: "#1f2937", lineHeight: 1.7, fontFamily: "sans-serif" }}>Federal debt, CRE, and private equity all relied on near-zero rates. All are now refinancing at rates 400-500bps higher. The losses flow to pension funds, community banks, and insurance companies -- the institutions that hold ordinary Americans.</div>
