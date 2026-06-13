@@ -778,6 +778,50 @@ export default function MacroMonitor() {
             </div>
           </div>
 
+          {/* Recession Playbook */}
+          <div style={{ background: "#fffbeb", border: "2px solid #f59e0b", borderRadius: "6px", padding: "20px 22px", marginBottom: "28px" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "12px" }}>
+              <span style={{ fontSize: "11px", fontWeight: "700", color: "#ffffff", background: "#92400e", padding: "2px 10px", borderRadius: "3px", fontFamily: "sans-serif", letterSpacing: "0.08em" }}>RECESSION PLAYBOOK</span>
+              <span style={{ fontSize: "12px", color: "#92400e", fontFamily: "sans-serif" }}>K-shaped pre-recession -- where the stagflation and recession playbooks agree and conflict</span>
+            </div>
+
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px", marginBottom: "14px" }}>
+              {[
+                { label: "Defensive Equities", detail: "Consumer staples, healthcare, utilities. People still buy food and medicine. Reinforces the stagflation tilt already in the model.", verdict: "Already own", color: "#15803d" },
+                { label: "Cash & T-Bills", detail: "Recessions create buying opportunities. Dry powder at 4%+ yield lets you buy quality at distressed prices. 19% T-bill allocation correct for both scenarios.", verdict: "Already own", color: "#15803d" },
+                { label: "Quality Factor", detail: "High-quality companies with strong balance sheets survive recessions. Low debt, consistent earnings. QUAL and CGCV already in the model.", verdict: "Already own", color: "#15803d" },
+                { label: "Medicaid Managed Care", detail: "Counter-cyclical. When lower-K households lose employer insurance in a recession, Medicaid enrollment surges. MOH and CNC benefit directly.", verdict: "Consider adding", color: "#92400e" },
+                { label: "Long-Duration Bonds", detail: "In a clean recession the Fed cuts aggressively and TLT rallies. But if inflation stays elevated the Fed cannot cut as much. TLT only works if Warsh thesis and inflation cooperate simultaneously.", verdict: "Thesis-dependent", color: "#92400e" },
+                { label: "Cyclical Commodities", detail: "Copper and oil fall in a recession as industrial demand drops. Conflicts with the Bretton Woods III commodity thesis. Resolution: hold gold and silver as monetary metals, be cautious on copper timing.", verdict: "Tension", color: "#dc2626" },
+              ].map((item, i) => (
+                <div key={i} style={{ background: "#ffffff", border: "1px solid #fde68a", borderRadius: "4px", padding: "12px 14px" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "6px" }}>
+                    <div style={{ fontSize: "13px", fontWeight: "700", color: "#111827", fontFamily: "sans-serif" }}>{item.label}</div>
+                    <span style={{ fontSize: "10px", fontWeight: "700", color: item.color, fontFamily: "sans-serif", whiteSpace: "nowrap", marginLeft: "8px" }}>{item.verdict}</span>
+                  </div>
+                  <div style={{ fontSize: "12px", color: "#4b5563", lineHeight: 1.5, fontFamily: "sans-serif" }}>{item.detail}</div>
+                </div>
+              ))}
+            </div>
+
+            <div style={{ borderTop: "1px solid #fde68a", paddingTop: "12px" }}>
+              <div style={{ fontSize: "12px", color: "#92400e", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: "8px", fontFamily: "sans-serif" }}>Where the two playbooks conflict -- and the resolution</div>
+              <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+                {[
+                  "Stagflation says avoid long bonds. Recession says buy them. The Warsh cut thesis is the resolution -- if inflation comes down and the Fed cuts, both playbooks converge on TLT.",
+                  "Stagflation says hold commodities. Recession says reduce cyclicals. Resolution: gold and silver as monetary metals stay. Copper and oil are timing-dependent on the Iran deal and Q4 demand.",
+                  "The model's current positioning -- short duration heavy, gold heavy, quality tilt, international diversification -- is the correct hedged position for uncertainty between the two scenarios. It does not bet fully on either.",
+                  "The one unambiguous recession add not yet in the model at full weight: Medicaid managed care. Counter-cyclical, policy-driven, and the enrollment surge in a recession is not speculative -- it is mechanistic.",
+                ].map((text, i) => (
+                  <div key={i} style={{ display: "flex", gap: "8px", alignItems: "flex-start" }}>
+                    <span style={{ color: "#f59e0b", fontFamily: "sans-serif", flexShrink: 0, marginTop: "1px" }}>›</span>
+                    <span style={{ fontSize: "13px", color: "#374151", fontFamily: "sans-serif", lineHeight: 1.5 }}>{text}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
           {/* Disclaimer */}
           <div style={{ background: "#eef2ff", border: "1px solid #c7d2fe", borderLeft: "4px solid #4f46e5", borderRadius: "0 6px 6px 0", padding: "14px 18px", marginBottom: "24px" }}>
             <div style={{ fontSize: "12px", color: "#4338ca", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "5px", fontFamily: "sans-serif" }}>For Informational Purposes Only</div>
