@@ -822,6 +822,48 @@ export default function MacroMonitor() {
             </div>
           </div>
 
+          {/* Why Active Management */}
+          <div style={{ background: "#f0f9ff", border: "2px solid #7dd3fc", borderRadius: "6px", padding: "20px 22px", marginBottom: "28px" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "12px" }}>
+              <span style={{ fontSize: "11px", fontWeight: "700", color: "#ffffff", background: "#0369a1", padding: "2px 10px", borderRadius: "3px", fontFamily: "sans-serif", letterSpacing: "0.08em" }}>WHY ACTIVE MANAGEMENT NOW</span>
+              <span style={{ fontSize: "12px", color: "#0369a1", fontFamily: "sans-serif" }}>Passive wins in stable environments. This is not a stable environment.</span>
+            </div>
+            <div style={{ fontSize: "14px", color: "#1f2937", lineHeight: 1.8, fontFamily: "sans-serif", marginBottom: "14px" }}>
+              In a low-volatility, stable macro environment passive index funds win almost every time -- lower fees, no manager risk, broad diversification. That is the 2010s playbook. We are not in that environment. The composition of winners is changing quarter to quarter. Duration management matters more than it has in 40 years. The stagflation-to-recession transition is a sector rotation story that a passive index cannot execute. An active manager who reads the same data this monitor tracks can tilt toward energy when Iran tensions rise, toward healthcare when SNAP cuts hit, and shorten duration when inflation spikes. A passive index owns everything at market cap weight regardless of what the macro environment is doing.
+            </div>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "8px", marginBottom: "14px" }}>
+              {[
+                { condition: "Composition changing", passive: "Owns winners and losers equally", active: "Can tilt toward current winners" },
+                { condition: "Duration management", passive: "Fixed duration regardless of rates", active: "CGCP adjusts as rate path changes" },
+                { condition: "Sector rotation", passive: "Cannot rotate by design", active: "Can execute stagflation-to-recession shift" },
+              ].map((item, i) => (
+                <div key={i} style={{ background: "#ffffff", border: "1px solid #7dd3fc", borderRadius: "4px", padding: "10px 12px" }}>
+                  <div style={{ fontSize: "11px", color: "#0369a1", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "6px", fontFamily: "sans-serif" }}>{item.condition}</div>
+                  <div style={{ fontSize: "11px", color: "#dc2626", fontFamily: "sans-serif", marginBottom: "4px" }}>Passive: {item.passive}</div>
+                  <div style={{ fontSize: "11px", color: "#15803d", fontFamily: "sans-serif" }}>Active: {item.active}</div>
+                </div>
+              ))}
+            </div>
+            <div style={{ background: "#e0f2fe", border: "1px solid #7dd3fc", borderRadius: "4px", padding: "12px 14px" }}>
+              <div style={{ fontSize: "12px", color: "#0369a1", fontWeight: "700", fontFamily: "sans-serif", marginBottom: "8px", textTransform: "uppercase", letterSpacing: "0.06em" }}>Active funds in this model that earn the premium</div>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4px" }}>
+                {[
+                  { ticker: "GBUG", reason: "Tilts to royalty/streaming vs. high-cost miners" },
+                  { ticker: "METL", reason: "Overweights copper, underweights lithium on signals" },
+                  { ticker: "CGCP", reason: "Manages duration actively as rate path shifts" },
+                  { ticker: "CGCV", reason: "Quality and dividend tilt passive can't replicate" },
+                  { ticker: "CGNG", reason: "Overweights commodity-exporting nations for BW III" },
+                  { ticker: "CGHC", reason: "Tilts pharma/managed care, avoids device headwinds" },
+                ].map((item, i) => (
+                  <div key={i} style={{ display: "flex", gap: "8px", alignItems: "flex-start", padding: "4px 0" }}>
+                    <span style={{ fontSize: "12px", fontWeight: "700", color: "#0369a1", fontFamily: "sans-serif", minWidth: "48px", flexShrink: 0 }}>{item.ticker}</span>
+                    <span style={{ fontSize: "12px", color: "#374151", fontFamily: "sans-serif", lineHeight: 1.4 }}>{item.reason}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
           {/* Disclaimer */}
           <div style={{ background: "#eef2ff", border: "1px solid #c7d2fe", borderLeft: "4px solid #4f46e5", borderRadius: "0 6px 6px 0", padding: "14px 18px", marginBottom: "24px" }}>
             <div style={{ fontSize: "12px", color: "#4338ca", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "5px", fontFamily: "sans-serif" }}>For Informational Purposes Only</div>
