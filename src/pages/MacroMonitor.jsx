@@ -545,6 +545,44 @@ export default function MacroMonitor() {
             })}
           </div>
 
+          {/* K-shaped pre-recession card */}
+          <div style={{ background: "#fffbeb", border: "1px solid #fcd34d", borderLeft: "4px solid #f59e0b", borderRadius: "0 6px 6px 0", padding: "16px 20px", marginBottom: "20px" }}>
+            <div style={{ fontSize: "12px", color: "#92400e", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "8px", fontFamily: "sans-serif" }}>Are We Already in a Recession?</div>
+            <div style={{ fontSize: "14px", color: "#1f2937", lineHeight: 1.8, fontFamily: "sans-serif", marginBottom: "12px" }}>
+              Strip out gasoline price inflation and real consumer spending is flat to slightly negative. Wages up 3.4% against 4.2% inflation means real incomes are falling. Tax refund season ended in April. Savings rate at 2.6% -- nearly depleted. If not for nominal retail sales inflated by high gas prices, and if not for government and healthcare still hiring, the aggregate numbers would already look recessionary. The lower half of the income distribution is already in a personal recession by any measure relevant to their daily lives.
+            </div>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px" }}>
+              <div style={{ background: "#ffffff", border: "1px solid #fde68a", borderRadius: "4px", padding: "12px 14px" }}>
+                <div style={{ fontSize: "11px", color: "#92400e", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: "8px", fontFamily: "sans-serif" }}>Lower-K -- Already There</div>
+                {[
+                  "Real wages -0.8% after inflation",
+                  "Savings rate at 2.6% -- nearly gone",
+                  "Credit cards at 21.5% APR carrying delinquent balances",
+                  "SNAP cuts not yet arrived -- coming October 1",
+                ].map((item, i) => (
+                  <div key={i} style={{ fontSize: "12px", color: "#374151", fontFamily: "sans-serif", display: "flex", gap: "6px", marginBottom: "4px" }}>
+                    <span style={{ color: "#ef4444", flexShrink: 0 }}>›</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <div style={{ background: "#ffffff", border: "1px solid #fde68a", borderRadius: "4px", padding: "12px 14px" }}>
+                <div style={{ fontSize: "11px", color: "#92400e", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: "8px", fontFamily: "sans-serif" }}>Upper-K -- Holding the Average Up</div>
+                {[
+                  "Still spending but losing jobs at 1,136/day",
+                  "Government and healthcare hiring masking contraction",
+                  "Nominal retail inflated by gas -- not real growth",
+                  "Q4 earnings will be the first honest read",
+                ].map((item, i) => (
+                  <div key={i} style={{ fontSize: "12px", color: "#374151", fontFamily: "sans-serif", display: "flex", gap: "6px", marginBottom: "4px" }}>
+                    <span style={{ color: "#f59e0b", flexShrink: 0 }}>›</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
           {/* Divider */}
           <div style={{ display: "flex", alignItems: "center", gap: "14px", marginBottom: "20px" }}>
             <div style={{ fontSize: "11px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.12em", fontFamily: "sans-serif", whiteSpace: "nowrap" }}>
