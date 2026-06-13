@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 
 import monitorData from "../data.js";
@@ -74,27 +73,31 @@ export default function MacroMonitor() {
             What prices are doing and why. Energy is the driver. The Fed cannot fix this.
           </p>
 
-          {/* Stagflation risk card */}
+          {/* Stagflation lite card */}
           <div style={{ background: "#fff5f5", border: "2px solid #dc2626", borderRadius: "6px", padding: "16px 20px", marginBottom: "16px" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "8px" }}>
-              <span style={{ fontSize: "11px", fontWeight: "700", color: "#ffffff", background: "#dc2626", padding: "2px 10px", borderRadius: "3px", fontFamily: "sans-serif", letterSpacing: "0.08em" }}>STAGFLATION</span>
-              <span style={{ fontSize: "12px", color: "#dc2626", fontFamily: "sans-serif", fontWeight: "600" }}>Current condition — confirmed</span>
+              <span style={{ fontSize: "11px", fontWeight: "700", color: "#ffffff", background: "#dc2626", padding: "2px 10px", borderRadius: "3px", fontFamily: "sans-serif", letterSpacing: "0.08em" }}>STAGFLATIONARY CONDITIONS</span>
+              <span style={{ fontSize: "12px", color: "#dc2626", fontFamily: "sans-serif", fontWeight: "600" }}>Stagflation lite -- not yet 1970s severity</span>
             </div>
-            <div style={{ fontSize: "14px", color: "#1f2937", lineHeight: 1.7, fontFamily: "sans-serif" }}>
-              Stagflation is the simultaneous condition of persistent inflation and stagnating growth. The U.S. is in it. CPI at 4.2% prevents the Fed from cutting. Jobless claims at 242,000 and tech layoffs at 1,136/day prevent the Fed from hiking. The committee is 8-4 -- the most divided in decades. There is no exit that does not hurt.
+            <div style={{ fontSize: "14px", color: "#1f2937", lineHeight: 1.7, fontFamily: "sans-serif", marginBottom: "12px" }}>
+              Classic stagflation requires inflation above 5-6%, negative or near-zero GDP growth, and sharply rising unemployment. The 1970s saw CPI peak at 14.8% and two recessions. We are not there yet. What we have is the same mechanism with less severity: inflation elevated enough to prevent Fed easing, growth slowing enough to prevent Fed tightening. The trap is real. The depth is not yet 1970s level -- but the Q4 trajectory is toward it.
             </div>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "10px", marginTop: "12px" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "10px", marginBottom: "12px" }}>
               {[
-                { label: "Inflation", value: "4.2% CPI", status: "Too high to cut" },
-                { label: "Growth", value: "Slowing", status: "Too fragile to hike" },
-                { label: "Fed", value: "On hold", status: "Trapped" },
+                { label: "CPI Inflation", value: "4.2%", status: "Elevated -- too high to cut", compare: "1970s peak: 14.8%", signal: "red" },
+                { label: "GDP Growth", value: "Slowing", status: "Still positive -- not recession", compare: "1970s: two recessions", signal: "yellow" },
+                { label: "Unemployment", value: "4.3%", status: "Historically low -- rising", compare: "1970s peak: 10.8%", signal: "yellow" },
               ].map((item, i) => (
                 <div key={i} style={{ background: "#ffffff", border: "1px solid #fca5a5", borderRadius: "4px", padding: "10px 12px", textAlign: "center" }}>
                   <div style={{ fontSize: "11px", color: "#9ca3af", fontFamily: "sans-serif", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "4px" }}>{item.label}</div>
-                  <div style={{ fontSize: "15px", fontWeight: "700", color: "#dc2626", fontFamily: "sans-serif", marginBottom: "2px" }}>{item.value}</div>
-                  <div style={{ fontSize: "11px", color: "#6b7280", fontFamily: "sans-serif" }}>{item.status}</div>
+                  <div style={{ fontSize: "17px", fontWeight: "700", color: item.signal === "red" ? "#dc2626" : "#92400e", fontFamily: "sans-serif", marginBottom: "2px" }}>{item.value}</div>
+                  <div style={{ fontSize: "11px", color: "#4b5563", fontFamily: "sans-serif", marginBottom: "4px" }}>{item.status}</div>
+                  <div style={{ fontSize: "10px", color: "#9ca3af", fontFamily: "sans-serif", fontStyle: "italic" }}>{item.compare}</div>
                 </div>
               ))}
+            </div>
+            <div style={{ background: "#fef2f2", border: "1px solid #fca5a5", borderRadius: "4px", padding: "10px 12px", fontSize: "13px", color: "#7f1d1d", fontFamily: "sans-serif", lineHeight: 1.5 }}>
+              The Fed trap is real regardless of severity. CPI at 4.2% prevents cutting. Jobless claims at 242,000 and tech layoffs at 1,136/day prevent hiking. April vote was 8-4 -- most divided in decades. The Q4 convergence of SNAP cuts, energy seasonality, and earnings misses is the path from stagflation lite to the real thing.
             </div>
           </div>
 
@@ -646,8 +649,8 @@ export default function MacroMonitor() {
           {/* Stagflation Playbook */}
           <div style={{ background: "#fff5f5", border: "2px solid #dc2626", borderRadius: "6px", padding: "20px 22px", marginBottom: "28px" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "12px" }}>
-              <span style={{ fontSize: "11px", fontWeight: "700", color: "#ffffff", background: "#dc2626", padding: "2px 10px", borderRadius: "3px", fontFamily: "sans-serif", letterSpacing: "0.08em" }}>STAGFLATION PLAYBOOK</span>
-              <span style={{ fontSize: "12px", color: "#dc2626", fontFamily: "sans-serif" }}>What historically works -- and what is different this time</span>
+              <span style={{ fontSize: "11px", fontWeight: "700", color: "#ffffff", background: "#dc2626", padding: "2px 10px", borderRadius: "3px", fontFamily: "sans-serif", letterSpacing: "0.08em" }}>STAGFLATIONARY CONDITIONS PLAYBOOK</span>
+              <span style={{ fontSize: "12px", color: "#dc2626", fontFamily: "sans-serif" }}>Stagflation lite -- same mechanism, less severity. What historically works and what is different this time.</span>
             </div>
 
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px", marginBottom: "14px" }}>
