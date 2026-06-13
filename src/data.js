@@ -464,19 +464,6 @@ const monitorData = {
       note: "Saudi Arabia can now price oil in any currency.",
       signal: "yellow",
       signalLabel: "WATCH",
-      category: "dollar",
-    },
-  ],
-    contagion: [
-    { stage: "Stage 1", status: "complete", label: "Lower-K Balance Sheets Broke", date: "2023-2025",
-      text: "Subprime auto delinquency hit record highs. Small bank credit card delinquency reached 6.4%. FHA mortgage delinquency.", level: "red" },
-    { stage: "Stage 2", status: "active", label: "Lower-K Spending Contracting", date: "Now  --  Q3 2026",
-      text: "NFIB retail sector most pessimistic of all industries. Jobless claims jumped to 242,000. Small business hiring at.", level: "red" },
-    { stage: "Stage 3", status: "approaching", label: "Corporate Earnings Miss  --  Lower-K Visible", date: "Q4 2026 / Jan-Feb 2027",
-      text: "SNAP cuts land October 1. Energy bills peak seasonally. Lower-K spending cliff becomes visible in earnings for the.", level: "yellow" },
-    { stage: "Stage 4", status: "risk", label: "Upper-K Contagion", date: "Q4 2026  --  Q2 2027",
-      text: "The upper K is insulated until three things happen: unemployment rises into the professional class, home equity stops.", level: "yellow" },
-  ],
   ideas: [
     {
       id: "tbills", theme: "Short-Term Treasury Bills / Notes", weight: "19%",
