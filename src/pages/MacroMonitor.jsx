@@ -558,9 +558,15 @@ export default function MacroMonitor() {
 
       {activeTab === "markets" && (
         <div style={{ padding: "20px 28px" }}>
-          <p style={{ fontSize: "14px", color: "#6b7280", marginTop: 0, marginBottom: "16px", fontFamily: "sans-serif", lineHeight: 1.5 }}>
-            Valuation, volatility, and credit conditions. All data as of June 10-11, 2026.
-          </p>
+
+          {/* Markets summary */}
+          <div style={{ background: "#fff5f5", border: "1px solid #fca5a5", borderLeft: "4px solid #dc2626", borderRadius: "0 6px 6px 0", padding: "16px 20px", marginBottom: "16px" }}>
+            <div style={{ fontSize: "12px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "8px", fontFamily: "sans-serif" }}>Markets in One Paragraph</div>
+            <div style={{ fontSize: "14px", color: "#1f2937", lineHeight: 1.8, fontFamily: "sans-serif" }}>
+              The market is priced for a soft landing the consumer data does not support. The Shiller CAPE is at 39.9 -- the second highest reading in history outside the dot-com bubble -- implying roughly 1.9% annual real returns over the next decade, below current inflation. The top ten stocks are 35% of the S&P 500, the highest concentration since 1932. VIX at 22.2 is elevated but not panicked. High yield spreads are near 300 basis points while actual default rates run at 4.2-4.5% -- the market is not pricing in the credit stress that is already showing in small bank delinquency data. The 60/40 portfolio is structurally broken in an inflationary environment where stocks and bonds fall together. The market has not yet priced in what happens in Q4 when SNAP cuts, energy seasonality, and earnings misses from lower-K exposed companies all arrive simultaneously.
+            </div>
+          </div>
+
           <div style={{ background: "#fff5f5", border: "1px solid #fca5a5", borderLeft: "4px solid #dc2626", borderRadius: "0 6px 6px 0", padding: "14px 18px", marginBottom: "20px" }}>
             <div style={{ fontSize: "12px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "6px", fontFamily: "sans-serif" }}>Overvalued and Complacent</div>
             <div style={{ fontSize: "14px", color: "#1f2937", lineHeight: 1.7, fontFamily: "sans-serif" }}>Shiller CAPE at 39.9 implies roughly 1.9% annual returns over the next decade -- below current 4.2% inflation. VIX at 22.2 is elevated but not panicked. High yield spreads near 300bps while defaults run 4.2-4.5%. The market is pricing in a soft.</div>
