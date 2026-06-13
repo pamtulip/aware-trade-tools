@@ -713,6 +713,7 @@ const monitorData = {
     },
   ],
   thesis: [
+    { label: "K-Shaped Pre-Recession", text: "We are not in a recession. We are in a K-shaped pre-recession where one half of the economy is already there and the other half has not arrived yet. Strip out gas inflation and real spending is flat. Strip out government and healthcare hiring and payrolls are contracting.", level: "red" },
     { label: "Real Wage Gap", text: "Wages up 3.4%. Prices up 4.2%. Workers are losing purchasing power every month this gap continues.", level: "red" },
     { label: "Stagflation Trap", text: "Strong headline jobs, frozen hiring, inflation re-accelerating. The Fed cannot cut. Classic trap.", level: "yellow" },
     { label: "Benefits Cliff", text: "SNAP cuts take effect October 1. Same quarter energy bills peak and surveillance pricing accelerates.", level: "red" },
