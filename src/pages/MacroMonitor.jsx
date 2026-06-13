@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 
 import monitorData from "../data.js";
@@ -178,7 +179,7 @@ export default function MacroMonitor() {
           </div>
 
         </div>
-      )}  )}
+      )}
 
       {activeTab === "labor" && (
         <div style={{ padding: "20px 28px" }}>
@@ -989,6 +990,7 @@ export default function MacroMonitor() {
                 <span style={{ width: "7px", height: "7px", borderRadius: "50%", display: "inline-block", flexShrink: 0, marginTop: "5px", background: item.signal === "red" ? "#ef4444" : item.signal === "yellow" ? "#f59e0b" : "#9ca3af" }} />
               </div>
             ))}
+          </div>
           </div>
         </div>
       )}
