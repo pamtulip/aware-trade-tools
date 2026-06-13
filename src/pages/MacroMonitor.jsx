@@ -399,9 +399,14 @@ export default function MacroMonitor() {
 
       {activeTab === "dollar" && (
         <div style={{ padding: "20px 28px" }}>
-          <p style={{ fontSize: "14px", color: "#6b7280", marginTop: 0, marginBottom: "16px", fontFamily: "sans-serif", lineHeight: 1.5 }}>
-            Reserve currency status, petrodollar mechanics, and the infrastructure being built to replace the dollar system.
-          </p>
+
+          {/* Dollar summary */}
+          <div style={{ background: "#fff5f5", border: "1px solid #fca5a5", borderLeft: "4px solid #dc2626", borderRadius: "0 6px 6px 0", padding: "16px 20px", marginBottom: "16px" }}>
+            <div style={{ fontSize: "12px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "8px", fontFamily: "sans-serif" }}>Dollar & Global in One Paragraph</div>
+            <div style={{ fontSize: "14px", color: "#1f2937", lineHeight: 1.8, fontFamily: "sans-serif" }}>
+              The dollar is losing its grip slowly, then -- potentially -- all at once. The DXY has fallen roughly 10% from its January 2025 peak, the steepest H1 decline since 1973. Dollar share of global reserves is below 57% for the first time since 1995, down from 72% in 2001. The petrodollar agreement expired June 2024 with no renewal -- Saudi Arabia can now price oil in any currency. mBridge, the cross-border payment system connecting China, Hong Kong, UAE, Thailand, and Saudi Arabia, has settled $55.5 billion outside the dollar system. Central banks bought more than 1,000 tonnes of gold for the third consecutive year. Meanwhile stablecoins are becoming the dollar system's digital extension: total stablecoin supply crossed $321 billion with USDT at $188 billion and USDC at $78 billion, and the GENIUS Act signed July 2025 created a federal licensing framework for dollar-backed stablecoins. The irony: the infrastructure being built to preserve dollar dominance digitally is the same infrastructure that, if it migrates offshore, accelerates the erosion.
+            </div>
+          </div>
           <div style={{ background: "#fff5f5", border: "1px solid #fca5a5", borderLeft: "4px solid #dc2626", borderRadius: "0 6px 6px 0", padding: "14px 18px", marginBottom: "20px" }}>
             <div style={{ fontSize: "12px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "6px", fontFamily: "sans-serif" }}>The Pozsar Frame</div>
             <div style={{ fontSize: "14px", color: "#1f2937", lineHeight: 1.7, fontFamily: "sans-serif" }}>Cheap commodities from Russia and China underwrote Western inflation stability for 30 years. That bargain fractured in 2022 when the West weaponized dollar reserves. Commodity nations are building the exit infrastructure now.</div>
@@ -453,6 +458,31 @@ export default function MacroMonitor() {
             <div style={{ fontSize: "12px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "8px", fontFamily: "sans-serif" }}>Bretton Woods III in Real Time</div>
             <div style={{ fontSize: "15px", color: "#1f2937", lineHeight: 1.8 }}>The dollar reserve share is below 57% for the first time since 1995. The petrodollar agreement expired June 2024 with no renewal. mBridge settles $55.5 billion outside the dollar system. Project Agora is the Western response. Saudi Arabia joined.</div>
           </div>
+
+          {/* Stablecoin metrics */}
+          <div style={{ background: "#f0fdf4", border: "1px solid #86efac", borderLeft: "4px solid #15803d", borderRadius: "0 6px 6px 0", padding: "16px 20px", marginTop: "16px" }}>
+            <div style={{ fontSize: "12px", color: "#15803d", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "8px", fontFamily: "sans-serif" }}>Stablecoins -- The Dollar System's Digital Extension</div>
+            <div style={{ fontSize: "13px", color: "#1f2937", lineHeight: 1.7, fontFamily: "sans-serif", marginBottom: "12px" }}>
+              Stablecoins are not a crypto story. They are a dollar infrastructure story. $321 billion in dollar-backed stablecoins now circulate globally. The GENIUS Act (signed July 2025, implementation rules due July 18, 2026) converts stablecoins from a gray-zone product into a federally licensed, audited instrument comparable to a money market fund. Banks can now issue their own stablecoins. The irony: the infrastructure designed to preserve dollar dominance digitally is the same infrastructure that -- if it migrates offshore -- accelerates the erosion.
+            </div>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(155px, 1fr))", gap: "8px" }}>
+              {[
+                { label: "Total Stablecoin Supply", value: "$321B", note: "New all-time high April 2026" },
+                { label: "USDT Market Cap", value: "$188B", note: "58% share. Emerging markets." },
+                { label: "USDC Market Cap", value: "$78B", note: "Institutional standard. Circle." },
+                { label: "GENIUS Act deadline", value: "Jul 18, 2026", note: "Implementation rules due" },
+                { label: "Transfer volume 2025", value: "$33T", note: "Rivaling Visa annual throughput" },
+                { label: "Global holders", value: "232M+", note: "Total stablecoin holders" },
+              ].map((item, i) => (
+                <div key={i} style={{ background: "#ffffff", border: "1px solid #86efac", borderRadius: "4px", padding: "10px 12px" }}>
+                  <div style={{ fontSize: "10px", color: "#6b7280", fontFamily: "sans-serif", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: "3px" }}>{item.label}</div>
+                  <div style={{ fontSize: "16px", fontWeight: "700", color: "#15803d", fontFamily: "sans-serif", marginBottom: "2px" }}>{item.value}</div>
+                  <div style={{ fontSize: "10px", color: "#6b7280", fontFamily: "sans-serif" }}>{item.note}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
         </div>
       )}
 
