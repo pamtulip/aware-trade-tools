@@ -145,16 +145,6 @@ const monitorData = {
       category: "stress",
     },
     {
-      id: "fincen",
-      label: "FinCEN Banking Advisory",
-      value: "June 5",
-      sub: "Banks directed to flag customers by immigration status",
-      note: "Using an ITIN is now a red flag. So is sharing an address.",
-      signal: "red",
-      signalLabel: "ACTIVE",
-      category: "money",
-    },
-    {
       id: "cc-delinquency",
       label: "Credit Card Delinquency",
       value: "2.9%",
