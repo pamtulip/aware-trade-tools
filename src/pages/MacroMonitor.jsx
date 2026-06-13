@@ -988,22 +988,7 @@ export default function MacroMonitor() {
                         <span style={{ fontSize: "11px", color: "#9ca3af", fontFamily: "sans-serif" }}>{stage.date}</span>
                       </div>
                       <div style={{ fontSize: "15px", fontWeight: "700", color: "#111827", fontFamily: "sans-serif", marginBottom: "8px" }}>{stage.label}</div>
-                      <div style={{ fontSize: "14px", color: "#374151", lineHeight: 1.7, fontFamily: "sans-serif", marginBottom: stage.triggers.length > 0 ? "12px" : "0" }}>{stage.text}</div>
-                      {stage.triggers.length > 0 && (
-                        <div style={{ borderTop: `1px solid ${sc.border}`, paddingTop: "10px" }}>
-                          <div style={{ fontSize: "11px", color: sc.label, fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "6px", fontFamily: "sans-serif" }}>
-                            {stage.status === "complete" ? "Evidence" : "Watch for"}
-                          </div>
-                          <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
-                            {stage.triggers.map((t, j) => (
-                              <div key={j} style={{ fontSize: "13px", color: "#4b5563", fontFamily: "sans-serif", display: "flex", gap: "8px", alignItems: "flex-start" }}>
-                                <span style={{ color: sc.dot, marginTop: "2px", flexShrink: 0 }}>&#8250;</span>
-                                <span>{t}</span>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      )}
+                      <div style={{ fontSize: "14px", color: "#374151", lineHeight: 1.7, fontFamily: "sans-serif" }}>{stage.text}</div>
                     </div>
                   </div>
                 );
