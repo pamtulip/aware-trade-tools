@@ -464,6 +464,9 @@ const monitorData = {
       note: "Saudi Arabia can now price oil in any currency.",
       signal: "yellow",
       signalLabel: "WATCH",
+      category: "dollar",
+    },
+  ],
   ideas: [
     {
       id: "tbills", theme: "Short-Term Treasury Bills / Notes", weight: "19%",
