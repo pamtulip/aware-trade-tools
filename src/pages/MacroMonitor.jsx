@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 
 import monitorData from "../data.js";
@@ -459,6 +458,14 @@ export default function MacroMonitor() {
 
       {activeTab === "consumer" && (
         <div style={{ padding: "20px 28px" }}>
+
+          {/* Consumer summary */}
+          <div style={{ background: "#fff5f5", border: "1px solid #fca5a5", borderLeft: "4px solid #dc2626", borderRadius: "0 6px 6px 0", padding: "16px 20px", marginBottom: "20px" }}>
+            <div style={{ fontSize: "12px", color: "#dc2626", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "8px", fontFamily: "sans-serif" }}>The Consumer in One Paragraph</div>
+            <div style={{ fontSize: "14px", color: "#1f2937", lineHeight: 1.8, fontFamily: "sans-serif" }}>
+              The American consumer is holding together on the surface and deteriorating underneath. Headline retail sales look positive because high gas prices inflate the nominal number -- strip out gasoline and the picture is flat to falling. Consumer sentiment bounced to 48.9 in June because gas prices stopped rising, not because anything improved. The personal savings rate is at 2.6% -- nearly depleted. Credit card delinquency at small banks has reached 6.4%, approaching 2008 crisis levels. SNAP cuts take effect October 1 for 42 million Americans. The spending that remains is increasingly debt-financed. The lower half of the income distribution is already in crisis. The upper half is still spending but losing professional-class jobs at 1,136 per day. The Q4 convergence of SNAP cuts, energy seasonality, and depleted savings is the moment the surface cracks.
+            </div>
+          </div>
 
           {/* Sentiment & Spending section */}
           <div style={{ fontSize: "11px", color: "#4338ca", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: "14px", fontFamily: "sans-serif" }}>
